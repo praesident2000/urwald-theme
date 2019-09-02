@@ -7,7 +7,10 @@
     "test": "tests"
   },
   "dependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglifycss": "^1.1.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -27,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/bdp-adrian/urwald-theme/issues"
   },
-  "homepage": "https://github.com/bdp-adrian/urwald-theme#readme"
+  "homepage": "https://github.com/bdp-adrian/urwald-theme#readme",
+  "browserslist": [
+    "defaults"
+  ]
 }
