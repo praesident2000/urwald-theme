@@ -3,6 +3,13 @@ $jungle: #7E852E;
 $lime:   #AFCA08;
 $crab:   #EA5045;
 
-.test {
-    transition: all ease-in-out;
-}
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "mud":     $mud,
+    "jungle":  $jungle,
+    "lime":    $lime,
+    "crab":    $crab
+  ),
+  $theme-colors
+);
