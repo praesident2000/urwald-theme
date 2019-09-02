@@ -1,0 +1,31 @@
+{
+  "name": "urwald-theme",
+  "version": "0.1.0",
+  "description": "a wordpress theme",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdp-adrian/urwald-theme.git"
+  },
+  "keywords": [
+    "npm",
+    "gulp",
+    "sass"
+  ],
+  "author": "ab@buerodespraesidenten.de",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bdp-adrian/urwald-theme/issues"
+  },
+  "homepage": "https://github.com/bdp-adrian/urwald-theme#readme"
+}
