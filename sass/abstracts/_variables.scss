@@ -1,7 +1,9 @@
-$mud:    #284034;
-$jungle: #7E852E;
-$lime:   #AFCA08;
-$crab:   #EA5045;
+$mud:     #284034;
+$jungle:  #7E852E;
+$lime:    #AFCA08;
+$crab:    #EA5045;
+$eggshell:#F3F2F1;
+$white:   #FFFFFF;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
@@ -13,3 +15,26 @@ $theme-colors: map-merge(
   ),
   $theme-colors
 );
+
+$spacer: 1rem !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+$enable-grid-classes:       true !default;
+$grid-columns:                12 !default;
+$grid-gutter-width:         32px !default;
+
+$jungle-clip-path: url(../../assets/urwald-shape.svg#jungle);
