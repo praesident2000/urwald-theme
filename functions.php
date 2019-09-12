@@ -43,13 +43,87 @@ class StarterSite extends Timber\Site {
 		add_filter( 'timber/context', array( $this, 'add_to_context' ) );
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
+		add_action( 'init', array( $this, 'register_menus' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		parent::__construct();
 	}
 	/** This is where you can register custom post types. */
 	public function register_post_types() {
 
+		register_post_type( 'urwald_tour', [
+            'labels' => [
+                'name' => __( 'Touren' ),
+                'singular_name' => __( 'Tour' ),
+                'add_new_item' => __( 'Neue Tour hinzufügen' ),
+                'edit_item' => __( 'Tour bearbeiten' ),
+                'new_item' => __( 'Neue Tour' ),
+                'view_item' => __( 'Tour ansehen' ),
+                'all_items' => __( 'Alle Touren' ),
+                'search_items' => __( 'Touren durchsuchen' ),
+                'not_found' => __( 'Keine Touren gefunden.' ),
+                'not_found_in_trash' => __( 'Keine Touren im Papierkorb gefunden.' ),
+            ],
+            'menu_icon' => 'dashicons-location-alt',
+            'menu_position' => 21,
+            'supports' => ['title', 'custom-fields', 'revisions'],
+            'public' => true,
+            'has_archive' => true,
+            'show_in_nav_menus' => true,
+            'rewrite' => ['slug' => 'tours', 'with_front' => false],
+            'taxonomies' => ['category'],
+		] );
+
+		register_post_type( 'urwald_article', [
+            'labels' => [
+                'name' => __( 'Artikel' ),
+                'singular_name' => __( 'Artikel' ),
+                'add_new_item' => __( 'Neuen Artikel hinzufügen' ),
+                'edit_item' => __( 'Artikel bearbeiten' ),
+                'new_item' => __( 'Neue Artikel' ),
+                'view_item' => __( 'Artikel ansehen' ),
+                'all_items' => __( 'Alle Artikel' ),
+                'search_items' => __( 'Artikel durchsuchen' ),
+                'not_found' => __( 'Keine Artikel gefunden.' ),
+                'not_found_in_trash' => __( 'Keine Artikel im Papierkorb gefunden.' ),
+            ],
+            'menu_icon' => 'dashicons-editor-table',
+            'menu_position' => 20,
+            'supports' => ['title', 'custom-fields', 'revisions'],
+            'public' => true,
+            'has_archive' => true,
+            'show_in_nav_menus' => true,
+            'rewrite' => ['slug' => 'articles', 'with_front' => false],
+            'taxonomies' => ['category'],
+		] );
+
+		register_post_type( 'urwald_overlay', [
+            'labels' => [
+                'name' => __( 'Overlays' ),
+                'singular_name' => __( 'Overlay' ),
+                'add_new_item' => __( 'Neues Overlay hinzufügen' ),
+                'edit_item' => __( 'Overlay bearbeiten' ),
+                'new_item' => __( 'Neues Overlay' ),
+                'view_item' => __( 'Overlay ansehen' ),
+                'all_items' => __( 'Alle Overlays' ),
+                'search_items' => __( 'Overlays durchsuchen' ),
+                'not_found' => __( 'Keine Overlays gefunden.' ),
+                'not_found_in_trash' => __( 'Keine Overlays im Papierkorb gefunden.' ),
+            ],
+            'menu_icon' => 'dashicons-format-status',
+            'menu_position' => 22,
+            'supports' => ['title', 'custom-fields', 'revisions'],
+            'public' => true,
+            'has_archive' => false,
+            'show_in_nav_menus' => true,
+            'rewrite' => ['slug' => 'overlays', 'with_front' => false],
+		] );
+
 	}
+	public function register_menus()
+    {
+        register_nav_menu( 'main-menu', __( 'Hauptnavigation', 'urwald-theme' ) );
+    }
+
 	/** This is where you can register custom taxonomies. */
 	public function register_taxonomies() {
 
@@ -60,10 +134,9 @@ class StarterSite extends Timber\Site {
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
-		$context['foo'] = 'bar';
-		$context['stuff'] = 'I am a value set in your functions.php file';
-		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
-		$context['menu'] = new Timber\Menu();
+		// $context['notes'] = 'These values are available everytime you call Timber::get_context();';
+		$context['options'] = get_fields('options');
+		$context['main_menu']  = new TimberMenu( 'main-menu' );
 		$context['site'] = $this;
 		return $context;
 	}
@@ -81,13 +154,6 @@ class StarterSite extends Timber\Site {
 		add_theme_support( 'title-tag' );
 
 		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		 */
-		add_theme_support( 'post-thumbnails' );
-
-		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
@@ -100,33 +166,26 @@ class StarterSite extends Timber\Site {
 			)
 		);
 
-		/*
-		 * Enable support for Post Formats.
-		 *
-		 * See: https://codex.wordpress.org/Post_Formats
-		 */
-		add_theme_support(
-			'post-formats', array(
-				'aside',
-				'image',
-				'video',
-				'quote',
-				'link',
-				'gallery',
-				'audio',
-			)
-		);
-
 		add_theme_support( 'menus' );
 	}
 
-	/** This Would return 'foo bar!'.
-	 *
-	 * @param string $text being 'foo', then returned 'foo bar!'.
-	 */
-	public function myfoo( $text ) {
-		$text .= ' bar!';
-		return $text;
+	public function deregister_scripts()
+    {
+        wp_deregister_script( 'jquery' );
+
+        // We do not use widgets. Deregister react and react-dom from the real-media-library plugin.
+        wp_deregister_script( 'react' );
+        wp_deregister_script( 'react-dom' );
+
+        // No Embeds by default
+        wp_deregister_script( 'wp-embed' );
+	}
+	
+	public function wps_deregister_styles() {
+
+		// Remove the unused Gutenberg styles
+	    wp_dequeue_style( 'wp-block-library' );
+	    wp_deregister_style( 'wp-block-library' );
 	}
 
 	/** This is where you can add your own functions to twig.
@@ -142,3 +201,50 @@ class StarterSite extends Timber\Site {
 }
 
 new StarterSite();
+
+/**
+ * Hide WordPress core features to replace them with ACF
+ */
+function remove_wordpress_features()
+{
+	remove_post_type_support( 'page', 'editor' );
+	remove_post_type_support( 'page', 'thumbnail' );
+	remove_post_type_support( 'post', 'editor' );
+	remove_post_type_support( 'post', 'thumbnail' );
+	remove_post_type_support( 'post', 'tags' );
+}
+add_action( 'admin_init', 'remove_wordpress_features' );
+
+/**
+ * Disable comment features and hide the comments backend
+ */
+
+function remove_admin_menus() {
+	remove_menu_page( 'edit-comments.php' );
+}
+add_action( 'admin_menu', 'remove_admin_menus' );
+
+function remove_comment_support() {
+   remove_post_type_support( 'post', 'comments' );
+   remove_post_type_support( 'page', 'comments' );
+}
+add_action('init', 'remove_comment_support', 100);
+
+function remove_comments_admin_bar() {
+	global $wp_admin_bar;
+	$wp_admin_bar->remove_menu('comments');
+}
+add_action( 'wp_before_admin_bar_render', 'remove_comments_admin_bar' );
+
+function remove_dashboard_meta() {
+
+	remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );   // Incoming Links
+    remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );          // Plugins
+    remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );        // Quick Press
+    remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );      // Recent Drafts
+    remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );            // WordPress blog
+    remove_meta_box( 'dashboard_secondary', 'dashboard', 'side' );          // Other WordPress News    
+    remove_action( 'welcome_panel', 'wp_welcome_panel' );                   // Remove WordPress Welcome Panel
+
+}
+add_action( 'admin_init', 'remove_dashboard_meta' );
