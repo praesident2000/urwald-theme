@@ -1,10 +1,12 @@
-var gulp         = require('gulp');
-var gulpSass     = require('gulp-sass');
-var uglifycss    = require('gulp-uglifycss');
-var autoprefixer = require('gulp-autoprefixer');
+var gulp         = require('gulp'),
+    gulpSass     = require('gulp-sass'),
+    watch        = require('gulp-watch'),
+    uglifycss    = require('gulp-uglifycss'),
+    autoprefixer = require('gulp-autoprefixer');
 
 function sass(done) {
     gulp.src('./sass/**/*.scss')
+      .pipe(watch('sass/*.scss'))
       .pipe(gulpSass().on('error', gulpSass.logError))
       .pipe(gulp.dest('./css'));
     done();
@@ -13,7 +15,6 @@ function sass(done) {
 function css(done) {
     gulp.src('./css/**/*.css')
         .pipe(autoprefixer({
-        //   browsers: ['last 2 versions'],
           cascade: false
         }))
         .pipe(uglifycss({
