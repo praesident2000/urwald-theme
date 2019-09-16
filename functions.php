@@ -121,7 +121,9 @@ class StarterSite extends Timber\Site {
 	}
 	public function register_menus()
     {
-        register_nav_menu( 'main-menu', __( 'Hauptnavigation', 'urwald-theme' ) );
+		register_nav_menu( 'main-menu', __( 'Hauptnavigation', 'urwald-theme' ) );
+		register_nav_menu( 'meta-menu', __( 'Metanavigation', 'urwald-theme' ) );
+		register_nav_menu( 'legal-menu', __( 'Rechtliches', 'urwald-theme' ) );
     }
 
 	/** This is where you can register custom taxonomies. */
@@ -137,6 +139,8 @@ class StarterSite extends Timber\Site {
 		// $context['notes'] = 'These values are available everytime you call Timber::get_context();';
 		$context['options'] = get_fields('options');
 		$context['main_menu']  = new TimberMenu( 'main-menu' );
+		$context['meta_menu']  = new TimberMenu( 'meta-menu' );
+		$context['legal_menu'] = new TimberMenu( 'legal-menu' );
 		$context['site'] = $this;
 		return $context;
 	}
