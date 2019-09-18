@@ -1,0 +1,10 @@
+.image-fit {
+    &__image--clipped {
+        mask-image: $jungle-clip-path;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+    }
+}
+// .image-fluid {
+// }
