@@ -9,3 +9,10 @@ p {
 .screen-reader-text {
     display: none;
 }
+
+blockquote, .quote {
+    color: $lime;
+    font-size: 24px;
+    border-left: 1px solid $lime;
+    margin-left: $spacer;
+}

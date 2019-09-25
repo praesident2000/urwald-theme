@@ -1,0 +1,1 @@
+var cookieconsent  = require('cookieconsent');

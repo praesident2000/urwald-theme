@@ -79,6 +79,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5d838662d9e72": {
+                    "key": "layout_5d838662d9e72",
+                    "name": "teaser_slider",
+                    "label": "Teaser Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d8386b7d9e73",
+                            "label": "Tour",
+                            "name": "tour",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "urwald_tour"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 1,
+                            "multiple": 0,
+                            "return_format": "object",
+                            "ui": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d833a67e6bcd": {
                     "key": "layout_5d833a67e6bcd",
                     "name": "video",
@@ -171,5 +203,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1568881550
+    "modified": 1568900850
 }

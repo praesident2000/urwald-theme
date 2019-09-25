@@ -1,12 +1,12 @@
-// BASE
-@import "base/reset";
-@import "base/typography";
-@import "base/animations";
-
 // ABSTRACTS
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "abstracts/utilities";
+
+// BASE
+@import "base/reset";
+@import "base/typography";
+@import "base/animations";
 
 // VENDORS
 @import "../node_modules/bootstrap/scss/mixins/breakpoints";
@@ -16,6 +16,7 @@
 @import "../node_modules/bootstrap/scss/utilities/flex";
 
 @import "vendors/lozad";
+@import "vendors/rellax";
 
 // LAYOUT
 @import "layout/header";

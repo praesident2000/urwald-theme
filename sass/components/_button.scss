@@ -2,9 +2,28 @@
     appearance: none;
     border: 1px solid;
     background-color: transparent;
+    cursor: pointer;
     transition: background-color 0.75s ease-out;
 
     &--rounded {
         border-radius: 50rem;
+    }
+
+    &--map {
+        color: $white;
+        background-color: $crab;
+        border: none;
+        border-radius: 50rem 0 0 50rem;
+        position: fixed;
+        right: 0;
+        bottom: 5%;
+        animation: slideInRight 1s ease-out 1s;
+        animation-fill-mode: backwards;
+        z-index: 10;
+        padding: $spacer * 0.5 $spacer;
+
+        &:hover {
+            background-color: darken($crab, 15%);
+        }
     }
 }

@@ -1,7 +1,7 @@
 const Flickity = require('flickity');
 
 var flkty = new Flickity( '.teaser-slider', {
-    cellAlign: center,
+    cellAlign: 'center',
     wrapAround: true,
     setGallerySize: false,
     cellSelector: ".teaser-slider__slide"

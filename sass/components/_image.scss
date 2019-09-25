@@ -1,9 +1,39 @@
+%image_fullsize {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .image-fit {
-    &__image--clipped {
-        mask-image: $jungle-clip-path;
-        mask-repeat: no-repeat;
-        mask-size: contain;
-        mask-position: center;
+    @extend %image_fullsize;
+    z-index: 0;
+    overflow: hidden;
+
+    &__image {
+        @extend %image_fullsize;
+        display: block;
+        object-fit: cover;
+        z-index: 1;
+
+        &--masked {
+            mask-image: $jungle-clip-path;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
+        }
+
+    }
+
+    &__copyright {
+        position: absolute;
+        color: $white;
+        cursor: default;
+        bottom: $spacer;
+        right: $spacer;
+        font-size: 11px;
+        z-index: 1;
     }
 }
 // .image-fluid {

@@ -206,6 +206,18 @@ class StarterSite extends Timber\Site {
 
 new StarterSite();
 
+if( function_exists('acf_add_options_page') ) {
+ 	
+	// add parent
+   $parent = acf_add_options_page(array(
+	   'page_title' 	=> 'Optionen',
+	   'menu_title' 	=> 'Optionen',
+	   'menu_slug' 	    => 'theme-settings',
+	   'redirect' 		=> false
+   ));
+
+};
+
 /**
  * Hide WordPress core features to replace them with ACF
  */
