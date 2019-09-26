@@ -1,0 +1,19 @@
+body {
+    background-color: $mud;
+    color: $white;
+}
+
+.modal {
+
+    background-color: rgba($mud, 0.85);
+
+    &__dialog {
+        width: 100%;
+    }
+
+    &__content {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+    }
+}
