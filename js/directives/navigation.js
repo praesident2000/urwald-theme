@@ -18,14 +18,24 @@ window.addEventListener('click', (event) => {
     }
 });
 
-$window.scroll(() => {
+window.addEventListener('scroll', () => {
     let scroll = $window.scrollTop();
-    if( scroll > position ) {
-        header.removeClass('header--show');
-        console.log('scrollDown');
+    console.log(scroll);
+    if ( scroll > 100 ){
+        if( scroll > position ) {
+            header.removeClass('header--show');
+            header.removeClass('header--active');
+            console.log('scrollDown');
+        }
+        else {
+            header.addClass('header--show');
+            header.addClass('header--active');
+            console.log('scrollUp');
+        }
+        position = scroll;
     } else {
         header.addClass('header--show');
-        console.log('scrollUp');
+        header.removeClass('header--active');
+        console.log('scrollTop');
     }
-    position = scroll;
 });
