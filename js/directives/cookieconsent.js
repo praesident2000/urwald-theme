@@ -1,1 +1,1 @@
-var cookieconsent  = require('cookieconsent');
+const cookieconsent  = require('cookieconsent');

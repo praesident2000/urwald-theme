@@ -1,3 +1,3 @@
 const Rellax = require('rellax');
 
-var rellax = new Rellax('.rellax');
+const rellax = new Rellax('.rellax');
