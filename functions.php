@@ -141,6 +141,7 @@ class StarterSite extends Timber\Site {
 		$context['main_menu']  = new TimberMenu( 'main-menu' );
 		$context['meta_menu']  = new TimberMenu( 'meta-menu' );
 		$context['legal_menu'] = new TimberMenu( 'legal-menu' );
+		$context['zoom'] = 11;
 		$context['site'] = $this;
 		return $context;
 	}
