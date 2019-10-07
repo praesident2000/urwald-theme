@@ -1,9 +1,9 @@
 {% if menu %}
-	<ul class="{{ class }}__list">
+	<ul class="{{ class }}">
 	{% for item in menu %}
 		<li class="{{ class }}__item {{ item.classes | join(' ') }}">
 			<a class="{{ class }}__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-			{% include "menu.twig" with {'menu': item.children} %}
+			{% include "menu.twig" with {'menu': item.children, 'class': 'submenu'} %}
 		</li>
 	{% endfor %}
 	</ul>

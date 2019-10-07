@@ -2,10 +2,7 @@
 
     width: 100%;
     display: flex;
-
-    &__list {
-        display: flex;
-    }
+    align-content: center;
 
     &__item {
         border-top: 2px solid transparent;

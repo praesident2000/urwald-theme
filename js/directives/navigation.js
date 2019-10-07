@@ -8,6 +8,8 @@ let position = $window.scrollTop();
 
 item.on('click', (event) => {
     event.preventDefault();
+    const $parent = $(event.target).parent();
+    $parent.toggleClass('active');
     header.toggleClass('header--active');
 });
 
@@ -21,7 +23,7 @@ window.addEventListener('click', (event) => {
 window.addEventListener('scroll', () => {
     let scroll = $window.scrollTop();
     console.log(scroll);
-    if ( scroll > 100 ){
+    if ( scroll > 0 ){
         if( scroll > position ) {
             header.removeClass('header--show');
             header.removeClass('header--active');
