@@ -184,6 +184,63 @@
             "button_label": "Eintrag hinzufügen",
             "min": "",
             "max": ""
+        },
+        {
+            "key": "field_5da097e00e3d7",
+            "label": "Meta Featured",
+            "name": "content_meta_featured",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5da0980bb4a22": {
+                    "key": "layout_5da0980bb4a22",
+                    "name": "text",
+                    "label": "Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5da098120e3d8",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5da0982d0e3d9": {
+                    "key": "layout_5da0982d0e3d9",
+                    "name": "call_to_action",
+                    "label": "Call To Action",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Eintrag hinzufügen",
+            "min": "",
+            "max": ""
         }
     ],
     "location": [
@@ -203,5 +260,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1568900850
+    "modified": 1570805829
 }

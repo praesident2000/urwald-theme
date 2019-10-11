@@ -5,8 +5,11 @@
 
 // BASE
 @import "base/reset";
+@import "base/fonts";
 @import "base/typography";
 @import "base/animations";
+@import "base/links";
+
 
 // VENDORS
 @import "../node_modules/bootstrap/scss/mixins/breakpoints";
@@ -32,6 +35,8 @@
 @import "components/image";
 @import "components/modal";
 @import "components/menu";
+@import "components/hamburger";
+@import "components/hero";
 
 // PAGES
 

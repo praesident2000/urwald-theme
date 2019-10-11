@@ -137,13 +137,13 @@ class StarterSite extends Timber\Site {
 	 */
 	public function add_to_context( $context ) {
 		// $context['notes'] = 'These values are available everytime you call Timber::get_context();';
-		$context['options'] = get_fields('options');
 		$context['main_menu']  = new TimberMenu( 'main-menu' );
 		$context['meta_menu']  = new TimberMenu( 'meta-menu' );
 		$context['legal_menu'] = new TimberMenu( 'legal-menu' );
+		$context['options'] = get_fields('options');
 		$context['zoom'] = 11;
 		$context['site'] = $this;
-		return $context;
+		return $context; 
 	}
 
 	public function theme_supports() {
@@ -211,7 +211,7 @@ if( function_exists('acf_add_options_page') ) {
  	
 	// add parent
    $parent = acf_add_options_page(array(
-	   'page_title' 	=> 'Optionen',
+	   'page_title' 	=> 'Theme Optionen',
 	   'menu_title' 	=> 'Optionen',
 	   'menu_slug' 	    => 'theme-settings',
 	   'redirect' 		=> false

@@ -26,4 +26,8 @@
             background-color: darken($crab, 15%);
         }
     }
+
+    &:focus {
+        outline: none;
+    }
 }
