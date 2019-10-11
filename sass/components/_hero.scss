@@ -1,0 +1,34 @@
+.hero {
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+
+        & > * {
+            position: relative;
+        }
+
+        &__image {
+            height: 440px;
+        }
+
+        &__wrapper {
+            height: 100%;
+        }
+
+        &__title {
+            margin-top: 0;
+            margin-bottom: 0;
+            bottom: -$spacer * 1.8;
+            max-width: 33.3%;
+            position: absolute;
+        }
+
+        &__intro {
+            margin-top: $spacer * 4;
+            padding-left: $spacer * 2;
+        }
+
+        &__feature {
+            margin-top: $spacer;
+            padding-left: $spacer * 2;
+        }
+    }
+}

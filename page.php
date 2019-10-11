@@ -25,4 +25,8 @@ $context = Timber::get_context();
 
 $timber_post = new Timber\Post();
 $context['post'] = $timber_post;
-Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
+$templates = array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' );
+if ( is_home() ) {
+	array_unshift( $templates, 'home.twig' );
+}
+Timber::render( $templates , $context );
