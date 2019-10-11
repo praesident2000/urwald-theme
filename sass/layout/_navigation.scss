@@ -4,18 +4,32 @@
     display: flex;
     align-content: center;
 
-    &__item {
-        border-top: 2px solid transparent;
-    }
-
     &__link {
-        color: $black; /* should be white */
+        color: $white;
         font-weight: bold;
         text-decoration: none;
         text-transform: uppercase;
+
+        .header--active & {
+            color: $black;
+        }
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
         justify-content: flex-end;
+        margin-top: $spacer * 2;
+
+        &__item {
+            border-top: 2px solid transparent;
+            padding: $spacer $spacer * 2;
+
+            &.active {
+                border-color: $lime;
+            }
+
+            &.current {
+                border-color: $white;
+            }
+        }
     }
 }

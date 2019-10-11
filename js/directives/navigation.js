@@ -41,3 +41,8 @@ window.addEventListener('scroll', () => {
         console.log('scrollTop');
     }
 });
+
+$('.header .hamburger').on('click', function () {
+    $(this).toggleClass('hamburger--active');
+    $('.header').toggleClass('header--active');
+});

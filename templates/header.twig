@@ -1,12 +1,23 @@
 <header class="header header--show">
     <div class="header__wrapper container">
         {% block header %}
-            <h1 class="header__logo" role="banner">
-                <a class="hdr-logo-link" href="{{site.url}}" rel="home">Logo</a>
+            {% set logo = options.logo %}
+            <h1 class="header__logo-container" role="banner">
+                <a class="header__logo-link" href="{{site.url}}" rel="home">
+                    {% set logo = TimberImage(options.logo) %}
+                    <img class="header__logo-image lozad" src="{{ logo.src }}" alt="{{ logo.alt }}" />
+                    {% set logo = TimberImage(options.logo_inverted) %}
+                    <img class="header__logo-inverse-image lozad" src="{{ logo.src }}" alt="{{ logo.alt }}" />
+                </a>
             </h1>
             <nav id="nav-main" role="navigation">
                 {% include "menu.twig" with {'menu': main_menu.get_items, 'class': 'nav-main'} %}
             </nav><!-- #nav -->
+            <div class="hamburger">
+                <div class="hamburger__box">
+                    <div class="hamburger__inner"></div>
+                </div>
+            </div>
         {% endblock %}
     </div>
 </header>
