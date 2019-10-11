@@ -1,11 +1,14 @@
+const $        = require('jquery');
 const Flickity = require('flickity');
 
-const flkty = new Flickity( '.teaser-slider', {
-    cellAlign: 'center',
-    wrapAround: true,
-    setGallerySize: false,
-    cellSelector: ".teaser-slider__slide"
-  });
+if ($('.teaser-slider')[0]){
+    const flkty = new Flickity( '.teaser-slider', {
+        cellAlign: 'center',
+        wrapAround: true,
+        setGallerySize: false,
+        cellSelector: ".teaser-slider__slide"
+    });
+} 
   
 // START – Flickity previous next classes
 Flickity.createMethods.push( '_createPrevNextCells' );
