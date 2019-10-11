@@ -1,9 +1,50 @@
-h1, h2, h3, h4, h5, h6 {
+body {
+    font-family: "brandon-grotesque",sans-serif;
+}
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "merriweather",sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 65px;
+}
+
+h2 {
+    font-size: 38px;
+    line-height: 52px;
+}
+
+h3 {
+    font-size: 32px;
+    line-height: 44px;
+}
+
+h4 {
+    font-size: 28px;
+    line-height: 38px;
+}
+
+h5 {
+    font-size: 26px;
+    line-height: 36px;
+}
+
+h6 {
+    font-size: 20px;
+    line-height: 28px;
 }
 
 p {
+    font-size: 16px;
+    line-height: 20px;
+}
 
+.copy-intro {
+    font-size: 18px;
+    line-height: 22px;
 }
 
 .screen-reader-text {
@@ -12,7 +53,11 @@ p {
 
 blockquote, .quote {
     color: $lime;
-    font-size: 24px;
+    font-family: "merriweather",sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 28px;
     border-left: 1px solid $lime;
-    margin-left: $spacer;
+    margin-left: 0;
+    padding-left: $spacer;
 }
