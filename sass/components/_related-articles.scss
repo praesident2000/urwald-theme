@@ -1,0 +1,49 @@
+.related-articles {
+
+    &__title {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+.related-article {
+    position: relative;
+
+    &__image {
+        position: relative;
+        padding-top: 60%;
+    }
+
+    &__title {
+        padding-left: $spacer;
+    }
+
+    &__text {
+        padding-left: $spacer;
+    }
+
+    &__link {
+        padding-left: $spacer;
+        padding-top: $spacer;
+        display: block;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        
+        &__title {
+            font-size: 36px;
+            line-height: 48px;
+            margin-top: 0;
+            margin-bottom: 0;
+            bottom: -$spacer * 1.8;
+            max-width: 65%;
+            position: absolute;
+        }
+
+        &__text {
+            margin-top: $spacer * 1.8;
+            padding-top: $spacer;
+            max-width: 80%;
+        }
+    }
+}

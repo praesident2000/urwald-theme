@@ -1,0 +1,25 @@
+{% if post.show_related %}
+    <section class="related-articles">
+        <div class="related-articles__title">
+            {{ post.related_title }}
+        </div>
+        <div class="container">
+            <div class="row">
+                {% set related_articles = post.get_field('related_articles') %}
+                {% for related_article in related_articles %}
+                    <div class="related-article col-12 col-lg-{{ 12 / loop.length }}">
+                        {% set article_meta = TimberPost(related_article.article).get_field('meta') %}
+                        <div class="related-article__image">
+                            {% include "partial/image_fit.twig" with { 'image': article_meta.featured_image, 'masked': false } %}
+                            <h3 class="related-article__title">{{ article_meta.title }}</h3>
+                        </div>
+                        <div class="related-article__text">
+                            {{ article_meta.intro }}
+                        </div>
+                        <a class="related-article__link" href="{{ related_article.link }}">weiterlesen</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endif %}
