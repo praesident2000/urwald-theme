@@ -38,3 +38,39 @@
 }
 // .image-fluid {
 // }
+
+.image-module {
+    
+    &__image-container {
+        padding-top: 60%;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        &__image-container {
+            padding-top: 0%;
+            height: 520px;
+        }
+    }
+}
+
+.double-image-module {
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        height: 420px;
+
+        &__image-container {
+            position: absolute;
+            height: 90%;
+            width: 52.5%;
+
+            &:first-child {
+                top: 0;
+                left: 0;
+            }
+
+            &:last-child {
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+}

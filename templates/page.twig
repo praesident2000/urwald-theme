@@ -33,7 +33,10 @@
             </div>
         </section>
         <section class="{{post.post_type}}__content">
-            {% include "layouts/layouts.twig" %}
+            {% set content = post.rows %}
+            {% for row in content %}
+                {{ dump(row) }}
+            {% endfor %}
         </section>
     </article>
 {% endblock %}

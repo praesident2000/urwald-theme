@@ -18,7 +18,7 @@
             "layouts": {
                 "layout_5d8229ab4c39e": {
                     "key": "layout_5d8229ab4c39e",
-                    "name": "image_module",
+                    "name": "image",
                     "label": "Bild",
                     "display": "block",
                     "sub_fields": [
@@ -45,6 +45,121 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_5db01b8fceb2e",
+                            "label": "Beschriftung",
+                            "name": "description",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5db01c694d695": {
+                    "key": "layout_5db01c694d695",
+                    "name": "double_image",
+                    "label": "Doppelbild",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5db01c694d696",
+                            "label": "Bild 1",
+                            "name": "image_1",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5db01c694d697",
+                            "label": "Beschriftung 1",
+                            "name": "description_1",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5db01c744d698",
+                            "label": "Bild 2",
+                            "name": "image_2",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5db01c7c4d699",
+                            "label": "Beschriftung 2",
+                            "name": "description_2",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -52,7 +167,7 @@
                 },
                 "layout_5d822ab6c9a89": {
                     "key": "layout_5d822ab6c9a89",
-                    "name": "text_module",
+                    "name": "text",
                     "label": "Text",
                     "display": "block",
                     "sub_fields": [
@@ -187,7 +302,7 @@
         },
         {
             "key": "field_5da097e00e3d7",
-            "label": "Meta Featured",
+            "label": "Page Header Module",
             "name": "content_meta_featured",
             "type": "flexible_content",
             "instructions": "",
@@ -241,6 +356,25 @@
             "button_label": "Eintrag hinzufügen",
             "min": "",
             "max": ""
+        },
+        {
+            "key": "field_5da6f638a63e7",
+            "label": "Overlay Module",
+            "name": "content_modal",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -260,5 +394,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1570805829
+    "modified": 1571825111
 }

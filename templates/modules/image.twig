@@ -1,0 +1,8 @@
+<div class="image-module">
+    <div class="image-module__image-container">
+        {% include "partial/image_fit.twig" with { 'image': content.image, 'masked': false } %}
+    </div>
+    <div class="image-module__description">
+        {{ content.description }}
+    </div>
+</div>
