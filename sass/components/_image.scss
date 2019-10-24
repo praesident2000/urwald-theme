@@ -24,6 +24,10 @@
             mask-position: center;
         }
 
+        &--rounded {
+            border-radius: 50%;
+        }
+
     }
 
     &__copyright {
@@ -36,8 +40,14 @@
         z-index: 1;
     }
 }
-// .image-fluid {
-// }
+.image-fluid {
+    position: relative;
+    width: auto;
+
+    &--rounded {
+        border-radius: 50%;
+    }
+}
 
 .image-module {
     

@@ -3,7 +3,7 @@
 {% set copyright = image.get_field('copyright') %}
 <div class="image-fit">
     <img
-        class="image-fit__image lozad {% if masked %}image-fit__image--masked{% endif %}"
+        class="image-fit__image lozad {% if masked %}image-fit__image--masked{% endif %} {% if rounded %}image-fit__image--rounded{% endif %}"
         {# TO DO check if different srcset options #}
         data-src="{{ image.src }}"
         data-srcset="{{ image.src("medium") }} 320w,{{ image.src("medium_large") }} 768w,{{ image.src("large") }} 1024w,{{ image.src }} 1600w"
