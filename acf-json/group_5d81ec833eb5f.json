@@ -6,7 +6,7 @@
             "key": "field_5d81ec8efa6da",
             "label": "Layouts",
             "name": "rows",
-            "type": "flexible_content",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,40 +15,13 @@
                 "class": "",
                 "id": ""
             },
-            "layouts": {
-                "layout_5d81eca0ae7f3": {
-                    "key": "layout_5d81eca0ae7f3",
-                    "name": "1_column",
-                    "label": "Einzelspalte",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5d8223ecfa6dc",
-                            "label": "Content",
-                            "name": "column",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": "",
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                }
-            },
-            "button_label": "Layoutspalte hinzufügen",
-            "min": "",
-            "max": ""
+            "clone": [
+                "field_5d822461c9a87"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -75,5 +48,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1570459213
+    "modified": 1571232854
 }

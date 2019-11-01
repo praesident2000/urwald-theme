@@ -1,0 +1,17 @@
+.testimonial-slider{
+
+    height: 300px;
+
+    &__wrapper {
+        padding: 0;
+    }
+
+    &__slide {
+        width: 100%;
+    }
+
+    &__image {
+        padding-top: 100%;
+        max-width: 100%;
+    }
+}

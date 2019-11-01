@@ -1,0 +1,15 @@
+<div class="testimonial-slider">
+    {% for slide in content.slides %}
+        <div class="testimonial-slider__slide carousel-cell row">
+            {% set image = slide.image %}
+            <div class="testimonial-slider__wrapper col-6 col-lg-3">
+                <div class="testimonial-slider__image image--rounded">
+                    {% include 'partial/image_fit.twig' with { 'rounded': true } %}
+                </div>
+            </div>
+            <div class="col-6">
+                {{ slide.text }}
+            </div>
+        </div>
+    {% endfor %}
+</div>

@@ -165,35 +165,6 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_5d822ab6c9a89": {
-                    "key": "layout_5d822ab6c9a89",
-                    "name": "text",
-                    "label": "Text",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5d822ac3c9a8a",
-                            "label": "Text",
-                            "name": "text",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "visual",
-                            "toolbar": "full",
-                            "media_upload": 0,
-                            "delay": 1
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_5d838662d9e72": {
                     "key": "layout_5d838662d9e72",
                     "name": "teaser_slider",
@@ -221,6 +192,128 @@
                             "multiple": 0,
                             "return_format": "object",
                             "ui": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5db156ac1c866": {
+                    "key": "layout_5db156ac1c866",
+                    "name": "testimonial",
+                    "label": "Testimonial-Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5db158d81c867",
+                            "label": "Testimonial",
+                            "name": "slides",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 6,
+                            "layout": "table",
+                            "button_label": "Testimonial hinzufügen",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5db15b3a1c868",
+                                    "label": "Bild",
+                                    "name": "image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_5db15b511c869",
+                                    "label": "Zitat-Text",
+                                    "name": "text",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 3,
+                                    "new_lines": ""
+                                },
+                                {
+                                    "key": "field_5db15b7e1c86a",
+                                    "label": "Beschreibung",
+                                    "name": "description",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5d822ab6c9a89": {
+                    "key": "layout_5d822ab6c9a89",
+                    "name": "text",
+                    "label": "Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d822ac3c9a8a",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 1
                         }
                     ],
                     "min": "",
@@ -394,5 +487,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1571825111
+    "modified": 1571905151
 }

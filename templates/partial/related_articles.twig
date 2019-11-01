@@ -6,11 +6,13 @@
         <div class="container">
             <div class="row">
                 {% set related_articles = post.get_field('related_articles') %}
-                {% for related_article in related_articles %}
+                {% for related in related_articles %}
                     <div class="related-article col-12 col-lg-{{ 12 / loop.length }}">
-                        {% set article_meta = TimberPost(related_article.article).get_field('meta') %}
+
+                        {% set related_article = TimberPost(related.article) %}
+                        {% set article_meta = related_article.get_field('meta') %}
                         <div class="related-article__image">
-                            {% include "partial/image_fit.twig" with { 'image': article_meta.featured_image, 'masked': false } %}
+                            {% include "partial/image_fit.twig" with { 'image': article_meta.featured_image } %}
                             <h3 class="related-article__title">{{ article_meta.title }}</h3>
                         </div>
                         <div class="related-article__text">

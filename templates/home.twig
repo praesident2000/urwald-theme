@@ -18,5 +18,11 @@
             {% set post_content = post.get_field('content') %}
             {% include "layouts/content.twig" %}
         </section>
+        {% include "partial/related_articles.twig" %}
     </article>
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script src="{{ site.theme.link }}/dist/page.min.js"></script> 
 {% endblock %}
