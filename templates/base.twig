@@ -20,6 +20,7 @@
 		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
 
 		{% include 'header.twig' %}
+		{% include 'partial/share_content.twig' %}
 
 		<button id="map-cta" class="btn btn--map" data-toggle="modal" data-target="#mapModal">Karte</button>
 
@@ -48,7 +49,7 @@
 						// TO-DO use ACF values to configure outdoor active base map
 						frontendtype:   'tour',          // choose content type
 						zoom:           {{ zoom }},              // set initial zoom level
-						initDataPointList : { searchNearby : { radius : 50000 } },
+						initDataPointList: { searchNearby : { radius : 50000 } },
 						center:       [ 10.438, 51.102 ] // set initial map center
 					};
 
