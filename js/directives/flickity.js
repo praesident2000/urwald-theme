@@ -1,6 +1,17 @@
 const $        = require('jquery');
 const Flickity = require('flickity');
 
+if ($('.image-slider')[0]){
+    const flkty = new Flickity( '.image-slider', {
+        cellAlign: 'center',
+        cellSelector: ".image-slider__slide",
+        pageDots: false,
+        prevNextButtons: false,
+        setGallerySize: false,
+        wrapAround: true
+    });
+}
+
 if ($('.teaser-slider')[0]){
     const flkty = new Flickity( '.teaser-slider', {
         cellAlign: 'center',
@@ -8,7 +19,19 @@ if ($('.teaser-slider')[0]){
         setGallerySize: false,
         cellSelector: ".teaser-slider__slide"
     });
-} 
+}
+
+if ($('.testimonial-slider')[0]){
+    console.log("check");
+    const flkty = new Flickity( '.testimonial-slider', {
+        cellAlign: 'center',
+        pageDots: true,
+        prevNextButtons: false,
+        wrapAround: true,
+        setGallerySize: false,
+        cellSelector: ".testimonial-slider__slide"
+    });
+}
   
 // START – Flickity previous next classes
 Flickity.createMethods.push( '_createPrevNextCells' );
