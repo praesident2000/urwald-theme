@@ -3,6 +3,7 @@
     &__title {
         font-size: 20px;
         text-align: center;
+        padding-bottom: $spacer;
     }
 }
 
@@ -14,7 +15,7 @@
         padding-top: 60%;
     }
 
-    &__title {
+    &__wrapper {
         padding-left: $spacer;
     }
 
@@ -26,24 +27,49 @@
         padding-left: $spacer;
         padding-top: $spacer;
         display: block;
+        font-weight: bold;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
         
-        &__title {
-            font-size: 36px;
-            line-height: 48px;
-            margin-top: 0;
-            margin-bottom: 0;
+        &__image {
+            height: 360px;
+            padding-top: 0;
+        }
+
+        &__wrapper {
             bottom: -$spacer * 1.8;
             max-width: 65%;
             position: absolute;
+        }
+
+        &__kicker {
+            font-size: 18px;
+        }
+
+        &__title {
+            font-size: 36px;
+            line-height: 48px;
+            margin-top: $spacer * 0.375;
+            margin-bottom: 0;
         }
 
         &__text {
             margin-top: $spacer * 1.8;
             padding-top: $spacer;
             max-width: 80%;
+        }
+
+        &--large {
+            .related-article__image {
+                height: 480px;
+            }
+            .related-article__link, .related-article__text, .related-article__wrapper {
+                margin-left: 50%;
+            }
+            .related-article__text {
+                max-width: 40%;
+            }
         }
     }
 }
