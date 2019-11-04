@@ -4,12 +4,19 @@
     <article class="{{post.post_type}}" id="post-{{post.ID}}">
         <section class="{{post.post_type}}__header">
             {% set meta = post.meta %}
-            <div class="hero hero--home">
-                <div class="hero__image">
+            <div class="homepage-hero">
+                <div class="homepage-hero__image">
                     {% include "partial/image_fit.twig" with { 'image': meta.featured_image, 'masked': true } %}
-                    <div class="hero__wrapper">
-                        <h1 class="hero__title">{{ meta.title }}</h1>
-                        <div class="hero__intro copy-intro">{{ meta.intro }}</div>
+                    
+                </div>
+                <div class="homepage-hero__wrapper">
+                    <h1 class="homepage-hero__title">{{ meta.title }}</h1>   
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-3">
+                            <div class="homepage-hero__intro copy-intro">{{ meta.intro }}</div>
+                        </div>
                     </div>
                 </div>
             </div>

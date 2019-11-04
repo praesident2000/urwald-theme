@@ -30,29 +30,5 @@
             margin-top: $spacer;
             padding-left: $spacer * 2;
         }
-
-        &--home {
-            .hero__image {
-                height: 100vh;
-
-                .image-fit__image--masked {
-                    mask-position: left;
-                    transform: translate(125px,125px);
-                }
-
-                &::before {
-                    content: "";
-                    background: $lime;
-                    mask-image: $jungle-clip-path;
-                    mask-repeat: no-repeat;
-                    mask-size: contain;
-                    mask-position: left;
-                    height: 75%;
-                    width: 75%;
-                    display: block;
-                    transform: translate(0%, -25%);
-                }
-            } 
-        }
     }
 }
