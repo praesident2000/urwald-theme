@@ -1,0 +1,12 @@
+.image-slider {
+    height: 675px;
+
+    &__image {
+        height: 600px;
+        position: relative;
+    }
+
+    &__text {
+        padding-top: $spacer * 0.75;
+    }
+}

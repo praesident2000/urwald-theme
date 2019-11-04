@@ -1,0 +1,13 @@
+<div class="image-slider">
+    {% for slide in content.slides %}
+        <div class="image-slider__slide carousel-cell col-12 col-lg-8">
+            {% set image = slide.image %}
+            <div class="image-slider__image">
+                {% include 'partial/image_fit.twig' with {} %}
+            </div>
+            <div class="image-slider__text">
+                {{ slide.text }}
+            </div>
+        </div>
+    {% endfor %}
+</div>

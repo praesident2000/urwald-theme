@@ -27,6 +27,8 @@
         <div class="layout__container">
             {% include 'modules/read_more.twig' with {} %}
         </div>
+    {% elseif content.acf_fc_layout == 'image_slider' %}
+        {% include 'modules/image_slider.twig' with {} %}
     {% elseif content.acf_fc_layout == 'teaser_slider' %}
         {% include 'modules/teaser_slider.twig' with {} %}
     {% elseif content.acf_fc_layout == 'testimonial' %}
