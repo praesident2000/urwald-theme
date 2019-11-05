@@ -16,7 +16,7 @@
 		{% endif %}
 		<div class="tease__wrapper">
 			<p class="tease__kicker">{{ post.date }} - {{post.category}}</p>
-			<h3 class="tease__title"><a href="{{post.link}}">{{ meta.title }}</a></h3>
+			<h3 class="tease__title">{% if post_content %}<a href="{{post.link}}">{{ meta.title }}</a>{% else %}{{ meta.title }}{% endif %}</h3>
 			<p class="tease__intro">{{ meta.intro }}</p>
 			{% if post_content %}
 				<a class="tease__link" href="{{ post.link }}"><span class="arrow"></span>weiterlesen</a>
