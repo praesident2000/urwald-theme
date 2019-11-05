@@ -1,0 +1,1 @@
+const masonry     = require('./directives/masonry.js');
