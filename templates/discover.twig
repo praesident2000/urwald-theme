@@ -1,0 +1,68 @@
+{% extends "page.twig" %}
+
+{% block head %}
+	{{ parent() }}
+	<script type="text/javascript" src="//www.outdooractive.com/alpportal/oa_head.js?proj=api-dev-oa&amp;key=yourtest-outdoora-ctiveapi&amp;lang=de"></script>
+{% endblock %}
+
+{% block content %}
+	<article class="{{post.post_type}}" id="post-{{post.ID}}">
+        <section class="{{post.post_type}}__header">
+            {% set meta = post.meta %}
+            <div class="hero hero--alternate">
+                <div class="hero__image">
+                    {% include "partial/image_fit.twig" with { 'image': meta.featured_image, 'masked': true } %}
+                    <div class="hero__wrapper container">
+                        
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 offset-lg-1">
+                            <h1 class="hero__title">{{ meta.title }}</h1>
+                        </div>
+                        <div class="col-12 col-lg-5 offset-lg-2">
+                            <div class="hero__intro copy-intro">
+                                {{ meta.intro }}
+                            </div>
+                            <div class="hero__feature">
+                                {% for feature in meta.content_meta_featured %}
+                                    {{ feature.text }}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map">
+            <div class="container">
+                <div id="map_canvas" class="oax-top-cont map__wrapper"></div>
+            </div>
+        </section>
+
+        <section class="{{post.post_type}}__content">
+            {% set content = post.rows %}
+            {% for row in content %}
+                {{ dump(row) }}
+            {% endfor %}
+        </section>
+    </article>
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+
+        var conf = {
+            frontendtype:   "tour",          // choose content type
+            zoom:           11,              // set initial zoom level
+            initDataPointList : { searchNearby : { radius : 25000 } },
+            center:       [ 10.438, 51.102 ] // set initial map center
+        };
+
+        var fvp = oa.api.flexviewpage( conf );
+
+    </script>
+{% endblock %}
