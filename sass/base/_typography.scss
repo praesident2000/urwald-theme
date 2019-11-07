@@ -1,9 +1,9 @@
 body {
-    font-family: "brandon-grotesque",sans-serif;
+    font-family: $brandon;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "merriweather",sans-serif;
+    font-family: $merriweather;
     font-weight: bold;
 }
 
@@ -53,7 +53,7 @@ p {
 
 blockquote, .quote {
     color: $lime;
-    font-family: "merriweather",sans-serif;
+    font-family: $merriweather;
     font-size: 22px;
     font-style: italic;
     line-height: 28px;
