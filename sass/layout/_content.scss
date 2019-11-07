@@ -1,4 +1,8 @@
 .content {
     background-color: $mud;
     color: $white;
+
+    &__no-hero {
+        padding-top: 280px;
+    }
 }

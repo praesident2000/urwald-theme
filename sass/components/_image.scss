@@ -53,6 +53,7 @@
     
     &__image-container {
         padding-top: 60%;
+        position: relative;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
@@ -64,6 +65,8 @@
 }
 
 .double-image-module {
+    position: relative;
+    
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
         height: 420px;
 

@@ -1,6 +1,6 @@
 .layout {
 
-    &:not(:last-child) {
+    &__container:not(:last-child) {
         margin-bottom: $spacer * 4;
     }
 }

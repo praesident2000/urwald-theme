@@ -46,14 +46,17 @@
         }
     
         &:before {
-            top: -10px;
+            top: -9px;
             transition: top 75ms ease .12s,opacity 75ms ease;
         }
         
         &:after {
-            bottom: -10px;    
+            bottom: -9px;    
             transition: bottom 75ms ease .12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
         }
+    }
+    &:hover {
+        // TO-DO: change color on hover
     }
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
         position: absolute;
