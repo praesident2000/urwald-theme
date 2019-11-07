@@ -1,0 +1,44 @@
+{% extends "base.twig" %}
+
+{% block head %}
+	{{ parent() }}
+	<script type="text/javascript" src="//www.outdooractive.com/alpportal/oa_head.js?proj=api-dev-oa&amp;key=yourtest-outdoora-ctiveapi&amp;lang=de"></script>
+{% endblock %}
+
+{% set tour = post.get_field('tour_meta') %}
+{% set meta = post.meta %}	
+
+{% block content %}
+	<div class="content-wrapper">
+		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+			<div class="hero">
+                <div class="hero__image">
+                    {% include "partial/image_fit.twig" with { 'image': meta.featured_image } %}
+                    <div class="hero__wrapper container">
+
+                    </div>
+                </div>
+			</div>
+			
+			<div class="container urwald-oa">
+				<div class="oax-top-cont"></div>
+			</div>
+			
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+	{% set tour_id = tour.tour_id %}
+    <script>
+		var id = "{{ tour_id }}"; 
+		var conf = { 
+			id: id,
+			actionOpenType: "in-page"
+		};
+
+		// instantiate FlexView API detail page
+		dp = oa.api.detailpage( conf );
+	</script> 
+{% endblock %}

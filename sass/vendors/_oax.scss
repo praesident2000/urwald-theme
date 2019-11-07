@@ -1,3 +1,137 @@
-.oax {
-    text-align: left;
+.urwald-oa { // add parent element to overrule outdoor-active styling since it is added later
+    padding-top: $spacer * 2;
+
+    .oax {
+        text-align: left;
+        font-family: $brandon;
+        color: $white;
+    
+        &_bold, &_inline {
+            font-family: $merriweather;
+        }
+
+        .oax-part-singleviewpage {
+            background-color: transparent;
+        }
+
+        .oax .oax_detail_tabs {
+            background: transparent;
+            color: $white;
+        }
+
+        .oax_detail_tabs>input[type=radio]:checked+h2+div, .oax .oax_detail_tabs>input[type=radio]:checked+div {
+            background: transparent;
+            border-top: 1px solid $white;
+            border-bottom: 1px solid $white;
+            margin-top: -2px;
+            padding: $spacer * 2.5 0 15px;
+        }
+
+        .oax_detail_tabs>input[type=radio]:checked+h2 label, .oax .oax_detail_tabs .oax_active a, .oax .oax_detail_tabs .oax_active label {
+            border-bottom: 3px solid $lime;
+            color: $white;
+        }
+
+        .oax .oax_detail_tabs>h2 label, .oax .oax_detail_tabs>h2 a {
+            color: $white;
+        }
+
+        .oax_h1_deprecated, .oax_title_cont, .oax_font_grey_dark, .oax_font_gray, .oax_details_table .oax_left  {
+            color: $white;
+        }
+
+        .oax_ellipsis {
+            color: $lime;
+        }
+
+        .oax_claim .oax_ellipsis {
+            color: $white;
+        }
+
+        .oax_head_bar {
+            border-bottom: 1px solid #e7e7e7;
+            background: transparent !important;
+        }
+
+        .oax_btn_transpOnLight {
+            border: 1px solid transparent;
+            color: $white;
+        }
+
+        .oax_btn_custom {
+            border: 1px solid transparent;
+            background-color: transparent;
+            color: $white;
+
+            &:hover {
+                border: 1px solid $lime;
+                background-color: $lime;
+                color: $mud;
+            }
+        }
+
+        .oax .oax_h {
+            color: $white;
+            font-family: $brandon;
+        }
+
+        th, td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #fff;
+            text-align: left;
+        }
+
+        .oax-statistics-cont .oax_bold {
+            font-family: $brandon;
+            font-weight: normal;
+        }
+        .oax-statistics-cont > div {
+            color: $white;
+            padding: 0 $spacer * 0.5 $spacer * 0.5;
+            border-bottom: 1px solid $white;
+        }
+
+        .oax_s1_deprecated {
+            color: $white;
+        }
+
+        .oax .oax_details_table .oax_left, .oax .oax_details_table .oax_right {
+            padding: 12px 0px 10px 8px;
+        }
+
+        .oax_region_container {
+
+            & > div {
+                padding: $spacer * 0.5;
+            }
+            
+            hr {
+                border-color: $white;
+            }
+
+            .oax_h2_deprecated {
+                color: $white;
+                font-family: $brandon;
+            }
+
+            .oax_region_teaser_line {
+                color: $white;
+                font-family: $brandon;
+                font-style: normal;
+                height: auto;
+            }
+        }
+        .oax_logo_img {
+            display: flex;
+            justify-content: center;
+        }
+        
+    }
+    .oax .oax_slide_list_cont .oax_slide_control {
+        color: $white;
+    }
+
+    .alp-x-waitbox-fill {
+        background-color: transparent;
+    }
 }
