@@ -22,7 +22,7 @@
 		{% include 'header.twig' %}
 		{% include 'partial/share_content.twig' %}
 
-		<button id="map-cta" class="btn btn--map" data-toggle="modal" data-target="#mapModal">Karte</button>
+		<a href="{{ options.map_link}}" class="btn btn--map"><i class="far fa-map"></i></a>
 
 		<section id="content" role="main" class="content">
 			{% block content %}
@@ -32,8 +32,6 @@
 				{{sidebar}}
 			</aside>
 		</section>
-
-		{% include 'partial/map-modal.twig' %}
 		
 		{% block footer %}
 			{% include 'footer.twig' %}
@@ -43,19 +41,6 @@
 
 		{% block scripts %}
 		    <script src="{{ site.theme.link }}/dist/index.min.js"></script>
-			<script>
-				function initOA() {
-					let conf = {
-						// TO-DO use ACF values to configure outdoor active base map
-						frontendtype:   'tour',          // choose content type
-						zoom:           {{ zoom }},              // set initial zoom level
-						initDataPointList: { searchNearby : { radius : 50000 } },
-						center:       [ 10.438, 51.102 ] // set initial map center
-					};
-
-					let fvp = oa.api.flexviewpage( conf );
-				}
-			</script>
 		{% endblock %}
 	</body>
 </html>
