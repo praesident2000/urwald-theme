@@ -21,8 +21,8 @@
 
 		{% include 'header.twig' %}
 		{% include 'partial/share_content.twig' %}
-
-		<a href="{{ options.map_link}}" class="btn btn--map"><i class="far fa-map"></i></a>
+		{% set map_url = TimberPost(options.map_link).link %}
+		<a href="{{ map_url }}" class="btn btn--map"><i class="far fa-map"></i></a>
 
 		<section id="content" role="main" class="content">
 			{% block content %}
