@@ -1,0 +1,13 @@
+<div class="read-more">
+    {% if content.type %}
+        {% set overlay = TimberPost(content.overlay) %}
+        <button class="read-more__button" data-toggle="modal" data-target="#modal-{{ overlay.id }}"><div class="plus"><i class="plus__icon"></i></div> {{ content.label }}</button>
+        {% include 'partial/modal.twig' with { overlay:overlay, id:overlay.id } %}
+    {% else %}
+        {# Text #}
+        <button class="read-more__button"><div class="plus"><i class="plus__icon"></i></div> {{ content.label }}</button>
+        <div class="read-more__text">
+            {{ content.text }}
+        </div>
+    {% endif %}
+</div>

@@ -1,11 +1,7 @@
-body {
-    background-color: $mud;
-    color: $white;
-}
-
 .modal {
 
-    background-color: rgba($mud, 0.85);
+    background-color: rgba($white, 0.94);
+    color: $mud;
 
     &__dialog {
         max-width: 100%;

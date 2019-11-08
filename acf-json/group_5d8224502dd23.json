@@ -239,6 +239,111 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5dc52819248c3": {
+                    "key": "layout_5dc52819248c3",
+                    "name": "read_more",
+                    "label": "Mehr Erfahren",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dc528aa4b3f1",
+                            "label": "Beschriftung",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Mehr erfahren",
+                            "placeholder": "Mehr erfahren",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5dc528db4b3f2",
+                            "label": "Typ",
+                            "name": "type",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Overlay",
+                            "ui_off_text": "Text"
+                        },
+                        {
+                            "key": "field_5dc529124b3f3",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5dc528db4b3f2",
+                                        "operator": "!=",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5dc5294e4b3f4",
+                            "label": "Overlay",
+                            "name": "overlay",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5dc528db4b3f2",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "urwald_overlay"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "id",
+                            "ui": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d838662d9e72": {
                     "key": "layout_5d838662d9e72",
                     "name": "teaser_slider",
@@ -730,5 +835,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1572963220
+    "modified": 1573209802
 }

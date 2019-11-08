@@ -26,7 +26,9 @@
             </div>
         {% elseif content.acf_fc_layout == 'read_more' %}
             <div class="layout__container">
-                {% include 'modules/read_more.twig' with {} %}
+                <div class="container">
+                    {% include 'modules/read_more.twig' with {} %}
+                </div>
             </div>
         {% elseif content.acf_fc_layout == 'image_slider' %}
             <div class="layout__container">
