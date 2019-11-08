@@ -49,6 +49,28 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5dc40cc2cd4db",
+            "label": "Kartenlink",
+            "name": "map_link",
+            "type": "post_object",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
         }
     ],
     "location": [
@@ -68,5 +90,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1570539896
+    "modified": 1573129462
 }

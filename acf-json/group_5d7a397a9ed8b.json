@@ -1,6 +1,6 @@
 {
     "key": "group_5d7a397a9ed8b",
-    "title": "Post Meta",
+    "title": "Page\/Article Meta",
     "fields": [
         {
             "key": "field_5d7a39864eebc",
@@ -108,7 +108,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "urwald_article"
             }
         ],
         [
@@ -116,20 +116,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
-            }
-        ],
-        [
+            },
             {
-                "param": "post_type",
-                "operator": "==",
-                "value": "urwald_tour"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "urwald_article"
+                "param": "page_template",
+                "operator": "!=",
+                "value": "archive-post.php"
             }
         ]
     ],
@@ -141,5 +132,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1570807449
+    "modified": 1573125407
 }
