@@ -1,0 +1,13 @@
+.flickity-page-dots {
+    .dot {
+        width: 18px;
+        height: 18px;
+        background: transparent;
+        opacity: 1;
+        border: 1px solid $white;
+        
+        &.is-selected {
+            background: $white;
+        }
+    }
+} 
