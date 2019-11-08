@@ -1,59 +1,65 @@
-{% for content in post_content %}
-    {% if content.acf_fc_layout == 'accordion' %}
-        <div class="layout__container">
-            <div class="row">
-                <div class="{{ column_layout_classes }}">
-                    {% include 'modules/accordion.twig' with {} %}
+<div class="layout">
+    {% for content in post_content %}
+        {% if content.acf_fc_layout == 'accordion' %}
+            <div class="layout__container">
+                <div class="row">
+                    <div class="{{ column_layout_classes }}">
+                        {% include 'modules/accordion.twig' with {} %}
+                    </div>
                 </div>
             </div>
-        </div>
-    {% elseif content.acf_fc_layout == 'double_image' %}
-        <div class="layout__container container">
-            <div class="row">
-                <div class="col-12 col-md-10 offset-md-1">
-                    {% include 'modules/double_image.twig' %}
-                </div>
-            </div>
-        </div>
-    {% elseif content.acf_fc_layout == 'image' %}
-        <div class="layout__container container">
-            <div class="row">
-                <div class="col-12 col-md-10 offset-md-1">
-                    {% include 'modules/image.twig' %}
-                </div>
-            </div>
-        </div>
-    {% elseif content.acf_fc_layout == 'read_more' %}
-        <div class="layout__container">
-            {% include 'modules/read_more.twig' with {} %}
-        </div>
-    {% elseif content.acf_fc_layout == 'image_slider' %}
-        {% include 'modules/image_slider.twig' with {} %}
-    {% elseif content.acf_fc_layout == 'teaser_slider' %}
-        {% include 'modules/teaser_slider.twig' with {} %}
-    {% elseif content.acf_fc_layout == 'testimonial' %}
-        <div class="layout__container container">
+        {% elseif content.acf_fc_layout == 'double_image' %}
+            <div class="layout__container container">
                 <div class="row">
                     <div class="col-12 col-md-10 offset-md-1">
-                        {% include 'modules/testimonial_slider.twig' with {} %}
+                        {% include 'modules/double_image.twig' %}
+                    </div>
                 </div>
             </div>
-        </div>
-    {% elseif content.acf_fc_layout == 'text' %}
-        <div class="layout__container container">
-            <div class="row">
-                <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
-                    {% include 'modules/text.twig' with {} %}
+        {% elseif content.acf_fc_layout == 'image' %}
+            <div class="layout__container container">
+                <div class="row">
+                    <div class="col-12 col-md-10 offset-md-1">
+                        {% include 'modules/image.twig' %}
+                    </div>
                 </div>
             </div>
-        </div>
-    {% elseif content.acf_fc_layout == 'video' %}
-        <div class="layout__container">
-            <div class="row">
-                <div class="col-12 col-md-10 offset-md-1">
-                    {% include 'modules/video.twig' with { video: content } %}
+        {% elseif content.acf_fc_layout == 'read_more' %}
+            <div class="layout__container">
+                {% include 'modules/read_more.twig' with {} %}
+            </div>
+        {% elseif content.acf_fc_layout == 'image_slider' %}
+            <div class="layout__container">
+                {% include 'modules/image_slider.twig' with {} %}
+            </div>
+        {% elseif content.acf_fc_layout == 'teaser_slider' %}
+            <div class="layout__container">
+                {% include 'modules/teaser_slider.twig' with {} %}
+            </div>
+        {% elseif content.acf_fc_layout == 'testimonial' %}
+            <div class="layout__container container">
+                    <div class="row">
+                        <div class="col-12 col-md-10 offset-md-1">
+                            {% include 'modules/testimonial_slider.twig' with {} %}
+                    </div>
                 </div>
             </div>
-        </div>
-    {% endif %}
-{% endfor %}
+        {% elseif content.acf_fc_layout == 'text' %}
+            <div class="layout__container container">
+                <div class="row">
+                    <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+                        {% include 'modules/text.twig' with {} %}
+                    </div>
+                </div>
+            </div>
+        {% elseif content.acf_fc_layout == 'video' %}
+            <div class="layout__container">
+                <div class="row">
+                    <div class="col-12 col-md-10 offset-md-1">
+                        {% include 'modules/video.twig' with { video: content } %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
