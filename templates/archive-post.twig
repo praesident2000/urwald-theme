@@ -5,10 +5,7 @@
 
 {% block content %}
 	<div class="content__no-hero container">
-		<div class="btn-group filter-options">
-            <button class="btn btn--primary" data-group="allgemein">Space</button>
-            <button class="btn btn--primary" data-group="warnhinweis">Nature</button>
-          </div>
+		{# TO-DO: Add filter #}
 		<div id="post-masonry" class="post-masonry">
 			{% for post in news %}
 				{% include ['tease.twig'] %}

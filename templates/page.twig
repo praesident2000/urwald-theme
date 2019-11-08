@@ -6,7 +6,7 @@
             {% set meta = post.meta %}
             <div class="hero">
                 <div class="hero__image">
-                    {% include "partial/image_fit.twig" with { 'image': meta.featured_image, 'masked': false } %}
+                    {% include "partial/image_fit.twig" with { 'image': meta.featured_image } %}
                     <div class="hero__wrapper container">
                         <h1 class="hero__title">{{ meta.title }}</h1>
                     </div>
