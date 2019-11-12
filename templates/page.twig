@@ -3,41 +3,14 @@
 {% block content %}
 	<article class="{{post.post_type}}" id="post-{{post.ID}}">
         <section class="{{post.post_type}}__header rellax">
-            {% set meta = post.meta %}
-            <div class="hero">
-                <div class="hero__image">
-                    {% include "partial/image_fit.twig" with { 'image': meta.featured_image } %}
-                    <div class="hero__wrapper container">
-                        <h1 class="hero__title">{{ meta.title }}</h1>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="hero__intro copy-intro">
-                                {{ meta.intro }}
-                            </div>
-                            <div class="hero__feature">
-                                {% for feature in meta.content_meta_featured %}
-                                    {{ feature.text }}
-                                {% endfor %}
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="hero__map-image">
-                                {# To-Do add map image #}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% include "partial/hero.twig" with { 'meta': post.meta } %}
         </section>
 
         <section class="{{post.post_type}}__content">
             {% set post_content = post.get_field('content') %}
             {% include "layouts/content.twig" %}
         </section>
-        
+
         {% include "partial/related_articles.twig" %}
     </article>
 {% endblock %}

@@ -1,0 +1,27 @@
+<div class="hero">
+    <div class="hero__image">
+        {% include "partial/image_fit.twig" with { 'image': meta.featured_image } %}
+        <div class="hero__wrapper container">
+            <h1 class="hero__title">{{ meta.title }}</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="hero__intro copy-intro">
+                    {{ meta.intro }}
+                </div>
+                <div class="hero__feature">
+                    {% for feature in meta.content_meta_featured %}
+                        {{ feature.text }}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="hero__map-image">
+                    {# To-Do add map image #}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

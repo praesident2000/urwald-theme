@@ -8,33 +8,7 @@
 {% block content %}
 	<article class="{{post.post_type}}" id="post-{{post.ID}}">
         <section class="{{post.post_type}}__header">
-            {% set meta = post.meta %}
-            <div class="hero hero--alternate">
-                <div class="hero__image">
-                    {% include "partial/image_fit.twig" with { 'image': meta.featured_image, 'masked': true } %}
-                    <div class="hero__wrapper container">
-                        
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-lg-6 offset-lg-1">
-                            <h1 class="hero__title">{{ meta.title }}</h1>
-                        </div>
-                        <div class="col-12 col-lg-6 offset-lg-1">
-                            <div class="hero__intro copy-intro">
-                                {{ meta.intro }}
-                            </div>
-                            <div class="hero__feature">
-                                {% for feature in meta.content_meta_featured %}
-                                    {{ feature.text }}
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-clear"></div>
+            {% include "partial/hero-alternate.twig" with { 'meta': post.meta } %}
         </section>
 
         <section class="map">
