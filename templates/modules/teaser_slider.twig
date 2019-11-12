@@ -1,8 +1,49 @@
 <div class="teaser-slider">
     {% for slide in content.slides %}
-        <div class="teaser-slider__slide carousel-cell col-12 col-lg-8">
-            {% set image = slide.image %}
-            {% include 'partial/image_fit.twig' with {} %}
-        </div>
+        {% if slide.type == "article" %}
+            {% set article = TimberPost(slide.article) %}
+            {% set meta = article.meta %}
+            {% set image = meta.featured_image %}
+            <div class="teaser-slider__slide {{ slide.type}} carousel-cell container">
+                <div class="teaser-slider__image">
+                    {% include 'partial/image_fit.twig' %}
+                </div>
+                <div class="teaser-slider__content">
+                    <div class="teaser-slider__kicker"><strong>Wald &amp; Wissen</strong> - {{ article.category }}</div>
+                    <h2 class="teaser-slider__title">{{ meta.title }}</h2>
+                    <div class="teaser-slider__text">{{ meta.intro }}</div>
+                    <a class="teaser-slider__link" href="{{ article.link }}"><span class="arrow"></span>weiterlesen</a>
+                </div>
+            </div>
+        {% elseif slide.type == "tour" %}
+            {% set tour = TimberPost(slide.tour) %}
+            {% set meta = tour.meta %}
+            {% set image = meta.featured_image %}
+            {% set infos = tour.get_field('tour_meta') %}
+            <div class="teaser-slider__slide {{ slide.type}} carousel-cell container">
+                <div class="teaser-slider__image">
+                    {% include 'partial/image_fit.twig' %}
+                </div>
+                <div class="teaser-slider__content">
+                    <div class="teaser-slider__kicker">{{ slide.tour_label }}</div>
+                    <h2 class="teaser-slider__title">{{ meta.title }}</h2>
+                    <div class="teaser-slider__infos">
+                        <div class="row">
+                            <div class="col-12"><strong>Schwierigkeit: </strong>{{ infos.difficulty }}</div>
+                            <div class="col-4"><i class="fas fa-arrows-alt-h"></i><span class="teaser-slider__info">{{ infos.length }} km</div>
+                            <div class="col-5"><i class="fas fa-angle-up"></i><span class="teaser-slider__info">{{ infos.high_point }} m</div>
+                            <div class="col-4"></i><i class="far fa-clock"></i><span class="teaser-slider__info">{{ infos.time }} h</div>
+                            <div class="col-5"><i class="fas fa-angle-down"></i><span class="teaser-slider__info">{{ infos.low_point }} m</div>
+                        </div>
+                    </div>
+                    <a class="teaser-slider__link" href="{{ tour.link }}"><span class="arrow"></span>Infos zur Strecke</a>
+                </div>
+            </div>
+        {% else %}
+            <div class="teaser-slider__slide {{ slide.type}} carousel-cell container">
+                <div class="teaser-slider__image"></div>
+                <div class="teaser-slider__content">Editierbar</div>
+            </div>
+        {% endif %}
     {% endfor %}
 </div>
