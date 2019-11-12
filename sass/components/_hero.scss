@@ -31,4 +31,52 @@
             padding-left: $spacer * 2;
         }
     }
+
+    &--alternate {
+
+        @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+            
+            height: 900px;
+            padding-top: 180px;
+            overflow: hidden;
+            position: relative;
+
+            .hero__title {
+                max-width: 100%;
+                padding-top: 90px;
+                position: relative;
+            }
+
+            .hero__image {
+                left: 65%;
+                position: absolute;
+                height: 710px;
+                width: 710px;
+
+                &::before {
+                    content: "";
+                    background: $wine;
+                    mask-image: $jungle-clip-path;
+                    mask-repeat: no-repeat;
+                    mask-size: contain;
+                    mask-position: left;
+                    height: 1100px;
+                    width: 1100px;
+                    display: block;
+                    transform: translate(-40%,-65%);
+                }
+            }
+
+            .hero__intro {
+                padding-left: 45px;
+            }
+        }
+    }
+}
+
+.hero-clear {
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        margin-top: -280px;
+    }
 }

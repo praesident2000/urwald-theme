@@ -21,7 +21,7 @@
                         <div class="col-12 col-lg-6 offset-lg-1">
                             <h1 class="hero__title">{{ meta.title }}</h1>
                         </div>
-                        <div class="col-12 col-lg-5 offset-lg-2">
+                        <div class="col-12 col-lg-6 offset-lg-1">
                             <div class="hero__intro copy-intro">
                                 {{ meta.intro }}
                             </div>
@@ -34,6 +34,7 @@
                     </div>
                 </div>
             </div>
+            <div class="hero-clear"></div>
         </section>
 
         <section class="map">
@@ -43,11 +44,11 @@
         </section>
 
         <section class="{{post.post_type}}__content">
-            {% set content = post.rows %}
-            {% for row in content %}
-                {{ dump(row) }}
-            {% endfor %}
+            {% set post_content = post.get_field('content') %}
+            {% include "layouts/content.twig" %}
         </section>
+        
+        {% include "partial/related_articles.twig" %}
     </article>
 {% endblock %}
 
