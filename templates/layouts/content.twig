@@ -24,6 +24,10 @@
                     </div>
                 </div>
             </div>
+        {% elseif content.acf_fc_layout == 'numbers' %}
+            <div class="layout__container">
+                {% include 'modules/numbers.twig' %}
+            </div>
         {% elseif content.acf_fc_layout == 'read_more' %}
             <div class="layout__container">
                 <div class="container">
