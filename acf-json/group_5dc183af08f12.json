@@ -38,6 +38,13 @@
                 "operator": "==",
                 "value": "urwald_overlay"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-simple.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -48,5 +55,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572964055
+    "modified": 1573547444
 }

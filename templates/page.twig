@@ -36,6 +36,7 @@
             {% set post_content = post.get_field('content') %}
             {% include "layouts/content.twig" %}
         </section>
+        {% include "partial/related_articles.twig" %}
     </article>
 {% endblock %}
 

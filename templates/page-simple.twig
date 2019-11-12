@@ -1,0 +1,10 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="{{post.post_type}}" id="post-{{post.ID}}">
+        <section class="{{post.post_type}}__content content__no-hero">
+            {% set post_content = post.get_field('content') %}
+            {% include "layouts/content_simple.twig" %}
+        </section>
+    </article>
+{% endblock %}
