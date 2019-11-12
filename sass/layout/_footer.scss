@@ -14,7 +14,7 @@ $image-offset: 50px;
     }
 
     &__menu {
-        padding-bottom: $spacer * 2;
+        padding-bottom: $spacer;
     }
 
     
@@ -22,6 +22,10 @@ $image-offset: 50px;
         height: 120px;
         display: flex;
         align-items: center;
+    }
+
+    &__logo {
+        padding-right: $spacer * 2.5;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {

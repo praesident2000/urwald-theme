@@ -1,0 +1,68 @@
+.header-slider {
+    height: 920px;
+    // height: 100vh;
+    .flickity-slider {
+        transform: none !important;
+    }
+
+    &__slide {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        left: 0 !important;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+        z-index: -1;
+
+        &.is-selected {
+            opacity: 1;
+            z-index: 0;
+        }
+    }
+
+    &__image-wrapper {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &__image {
+        position: absolute;
+        top: -200px;
+        right: 80px;
+        height: 100%;
+        width: 920px;
+
+        .image-fit__image--masked {
+            mask-position: right;
+        }
+        .is-selected & {
+            &::before {
+                content: "";
+                background: $wine;
+                mask-image: $jungle-clip-path;
+                mask-repeat: no-repeat;
+                mask-size: contain;
+                mask-position: right;
+                height: 490px;
+                width: 490px;
+                display: block;
+                transform: translate(-25%,100%);
+            }
+
+        }
+    }
+
+    &__title {
+        margin-bottom: $spacer * 1.5;
+        margin-top: $spacer * 1.5;
+    }
+
+    &__wrapper {
+        margin-top: -460px;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+
+    }
+}

@@ -27,5 +27,13 @@
             padding: 20px;
             background: transparent;
         }
+
+        .tease__kicker {
+            margin-bottom: $spacer * 0.5;
+        }
+        
+        .tease__title {
+            margin-top: $spacer * 0.5;
+        }
     }
 }

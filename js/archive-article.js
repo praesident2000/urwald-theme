@@ -1,0 +1,1 @@
+const header_slider     = require('./directives/header-slider.js');
