@@ -1,0 +1,35 @@
+{# This file demonstrates using most of the index.twig template and modifying 
+   just a small part. See `search.twig` for an example of another approach #}
+
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<div class="content__no-hero">
+
+		{# TO-DO: Add header slider #}
+		
+		<section class="{{post.post_type}}__content">
+			{% set post_content = post.get_field('content') %}
+			{% include "layouts/content.twig" %}
+		</section>
+
+		{# TO-DO: Add filter #}
+		<div class="container">
+			<div id="post-masonry" class="post-masonry">
+				{% for post in articles %}
+					{% include ['tease-article.twig'] %}
+				{% endfor %}
+			</div>
+		</div>
+		
+		{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+	</div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script src="{{ site.theme.link }}/dist/page.min.js"></script> 
+    <script src="{{ site.theme.link }}/dist/archive.min.js"></script> 
+{% endblock %}
