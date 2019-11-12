@@ -33,3 +33,14 @@
         }
     }
 }
+
+.nav-footer {
+
+    &__item {
+        padding: $spacer * 0.25 0;
+    }
+    
+    &__link {
+        color: $mud;
+    }
+}

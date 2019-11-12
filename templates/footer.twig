@@ -1,14 +1,36 @@
 <footer id="footer" class="footer">
-    <div class="footer__image">
+    {% set footer = options.footer %}
 
+    <div class="footer__wrapper">
+        <div class="footer__image">
+            {% set image = footer.footer_image %}
+            {% include 'partial/image_fit.twig' %}
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 offset-lg-6">
+                    <div class="footer__newsletter">
+                        {% include "partial/newsletter.twig" %}
+                    </div>
+                    <div class="footer__menu">
+                        {% include "menu.twig" with {'menu': legal_menu.get_items, 'class': 'nav-footer'} %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="footer__newsletter">
-        {% include "partial/newsletter.twig" %}
-    </div>
-    <div class="footer__menu">
-    
-    </div>
-    <div class="footer__logos">
-
+    <div class="container">
+        <div class="row">
+            <div class="footer__logos col-12 col-lg-10 offset-lg-1">
+                {% for logo in footer.partner_logos %}
+                    <div class="footer__logo logo">
+                        <a class="logo__link" href="{{ logo.link["url"] }}" target="{{ logo.link["target"] }}">
+                            {% set image = TimberImage(logo.image) %}
+                            <img class="logo__image" src="{{ image.src }}" alt="{{ image.alt }}" />
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </footer>

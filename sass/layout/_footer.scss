@@ -1,4 +1,71 @@
+$image-offset: 50px;
+
 .footer {
     background-color: $eggshell;
     color: $mud;
+    margin-top: $spacer * 10;
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__image {
+        display: none;
+    }
+
+    &__menu {
+        padding-bottom: $spacer * 2;
+    }
+
+    
+    &__logos {
+        height: 120px;
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        &__image {
+            display: block;
+            height: calc(100% + #{$image-offset});
+            width: calc(50% - #{$spacer});
+            position: absolute;
+            transform: translate(0, -#{$image-offset});
+        }
+    }
+}
+
+.newsletter {
+
+    &__title {
+        font-weight: normal;
+    }
+
+    &__form, .row {
+        padding: $spacer * 2 0;
+    }
+
+    &__email {
+        -webkit-appearance: none;
+        border: none;
+        border-bottom: 2px solid currentColor;
+        background-color: $eggshell;
+        width: 100%;
+        font-size: 20px;
+        padding: $spacer * 0.5 0;
+
+        &::placeholder {
+            color: $mud;
+        }
+    }
+
+    &__submit {
+        font-size: 20px;
+        padding: $spacer * 0.5 $spacer * 1.5;
+
+        &.btn {
+            border: 2px solid currentColor;
+            border-radius: 50px;
+        }
+    }
 }

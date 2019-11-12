@@ -1,9 +1,23 @@
 <div class="newsletter">
-    <div class="newsletter__title">
 
-    </div>
-    <div class="newsletter__text">
+    <form class="newsletter__form" action="">
+
+        <h3 class="newsletter__title">
+            {{ footer.newsletter }}
+        </h3>
+
+        <div class="newsletter__text">
+            {{ footer.newsletter_text }}
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <input type="email" value="" name="EMAIL" class="newsletter__email" id="" placeholder="adresse@email.com"></input>
+            </div>
+            <div class="col-4">
+                <input type="submit" value="Anmelden" name="subscribe" id="" class="newsletter__submit btn">
+            </div>
+        </div>
+    </form>
     
-    </div>
 
 </div>
