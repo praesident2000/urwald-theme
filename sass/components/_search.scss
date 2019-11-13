@@ -1,0 +1,25 @@
+.search {
+
+    &__title {
+        font-weight: bold;
+        padding-bottom: $spacer * 0.5;
+    }
+
+    &__input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $lime;
+
+        &::placeholder {
+            font-weight: normal;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        font-size: 26px;
+        line-height: 32px;
+        padding-left: $spacer;
+    }
+
+}

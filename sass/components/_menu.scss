@@ -1,9 +1,3 @@
 .submenu {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 250ms ease-out;
 
-    .active & {
-        max-height: 500px;
-    }
 }

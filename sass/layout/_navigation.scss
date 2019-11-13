@@ -32,6 +32,35 @@
             }
         }
     }
+
+}
+
+.nav-sub {
+    padding-bottom: 30px;
+
+    &__item {
+        padding: $spacer * 0.5 0;
+        border-bottom: 1px solid $lime;
+
+        &:first-child {
+            border-top: 1px solid $lime;
+        }
+    }
+
+    &__link {
+        color: $white;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: none;
+
+        .header--active & {
+            color: $black;
+
+            &:hover {
+                color: $lime;
+            }
+        }
+    }
 }
 
 .nav-footer {

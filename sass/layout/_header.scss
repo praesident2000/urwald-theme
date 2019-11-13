@@ -51,6 +51,22 @@
             position: fixed;
         }
         
+        &__submenu {
+            color: $black;
+            font-size: 18px;
+            margin-top: -30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 250ms ease-out;
+
+        
+            &.active {
+                min-height: 140px;
+                max-height: 500px;
+            }
+        }
+
+
         &.header--active {
             background-color: $eggshell;
             box-shadow: $jungle-shadow;
