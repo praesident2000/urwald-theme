@@ -15,9 +15,7 @@
                     {{ meta.intro }}
                 </div>
                 <div class="hero__feature">
-                    {% for feature in meta.content_meta_featured %}
-                        {{ feature.text }}
-                    {% endfor %}
+                    {% include "layouts/content_meta_featured.twig" %}
                 </div>
             </div>
         </div>

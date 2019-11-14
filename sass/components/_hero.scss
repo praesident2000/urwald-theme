@@ -1,12 +1,18 @@
 .hero {
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
 
+        margin-bottom: $spacer * 2;
+
         & > * {
             position: relative;
         }
 
         &__image {
             height: 440px;
+
+            img {
+                filter: brightness(0.8);
+            }
         }
 
         &__wrapper {
@@ -29,6 +35,12 @@
         &__feature {
             margin-top: $spacer;
             padding-left: $spacer * 2;
+        }
+
+        &__map-image {
+            padding-top: $spacer * 4;
+            padding-left: $spacer * 2;
+            padding-bottom: $spacer * 2;
         }
     }
 

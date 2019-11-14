@@ -1,0 +1,13 @@
+<div class="layout">
+    {% for content in meta.content_meta_featured %}
+        {% if content.acf_fc_layout == 'text' %}
+            <div class="layout__container">
+                {% include 'modules/text.twig' with {} %}
+            </div>
+        {% elseif content.acf_fc_layout == 'read_more' %}
+            <div class="layout__container">
+                {% include 'modules/read_more.twig' with {} %}
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>

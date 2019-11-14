@@ -7,19 +7,20 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-5">
                 <div class="hero__intro copy-intro">
                     {{ meta.intro }}
                 </div>
                 <div class="hero__feature">
-                    {% for feature in meta.content_meta_featured %}
-                        {{ feature.text }}
-                    {% endfor %}
+                    {% include "layouts/content_meta_featured.twig" %}
                 </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-7">
                 <div class="hero__map-image">
-                    {# To-Do add map image #}
+                    {% set map = post.get_field('map') %}
+                    {% if map.show_map %}
+                        {% include "partial/image_fluid.twig" with { 'image': map.map_image } %}
+                    {% endif %}
                 </div>
             </div>
         </div>
