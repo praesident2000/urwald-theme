@@ -1,0 +1,11 @@
+{% set image = TimberImage(image) %}
+{% set copyright = image.get_field('copyright') %}
+<div class="image-fluid">
+    <img
+        class="image-fluid__image lozad"
+        data-src="{{ image.src }}"
+        data-srcset="{{ image.src("medium") }} 320w,{{ image.src("medium_large") }} 768w,{{ image.src("large") }} 1024w,{{ image.src }} 1600w"
+        alt="{{ image.alt }}"
+    />
+    {% if copyright %}<div class="image-fluid__copyright">{{ copyright }}</div>{% endif %}
+</div>
