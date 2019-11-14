@@ -4,10 +4,34 @@
 	<div class="content-wrapper">
 		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
 			<div class="content__no-hero container">
-				<div class="post-header row">
+				<div class="post-header">
 					{% set meta = post.meta %}
+					<div class="row">
+						<div class="col-12 col-md-10 offset-md-1 col-lg-5 offset-lg-3">
+							<h2 class="post-header__title">{{ meta.title }}</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-3">
+							<div class="post-header__meta">
+								<div class="post-header__date">{{ post.date }}</div>	
+								<hr class="post-header__hr">
+								<div class="post-header__category">{{ post.category }}</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-6">
+							<div class="post-header__intro">{{ meta.intro }}</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="post-header__image">
+								{% include "partial/image_fit.twig" with { 'image': meta.featured_image } %}
+							</div>
+						</div>
+					</div>
+					
 					{# TO-DO: Add post header #}
-					<h2>{{ meta.title }}</h2>
 				</div>
 			<div>
 			<section class="{{post.post_type}}__content">

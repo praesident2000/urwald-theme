@@ -1,0 +1,24 @@
+.post-header {
+
+    &__meta {
+        text-align: center;
+    }
+
+    &__date {
+        font-weight: bold;
+    }
+
+    &__category {
+        font-size: 12px;
+    }
+
+    &__hr {
+        max-width: 125px;
+    }
+
+    &__image {
+        margin-top: $spacer * 2;
+        padding-top: 40%;
+        position: relative;
+    }
+}
