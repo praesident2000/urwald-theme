@@ -30,6 +30,17 @@
         font-weight: bold;
     }
 
+    .image-fit__image {
+        transition: transform 1s ease-in;
+    }
+
+    &:hover {
+        .image-fit__image {
+            transform: scale(1.05);
+            transition-duration: 3s;
+        }
+    }
+
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
         
         &__image {
