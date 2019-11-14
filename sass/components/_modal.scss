@@ -13,4 +13,24 @@
         border: none;
         border-radius: 0;
     }
+
+    .close {
+        position: absolute;
+        top: $spacer * 5;
+        right: $spacer * 5;
+        z-index: 1;
+        background-color: $eggshell;
+        border: 2px solid currentColor;
+        border-radius: 50%;
+        color: currentColor;
+        width: 36px;
+        height: 36px;
+        font-size: 32px;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        & > * {
+            margin-top: -4px;
+        }
+    }
 }
