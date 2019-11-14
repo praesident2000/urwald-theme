@@ -18,6 +18,7 @@
         bottom: auto;
         transform: translateY(-100%);
         transition: all 550ms ease-out;
+        min-height: 220px;
 
         &__wrapper {
             justify-content: space-between;

@@ -18,6 +18,7 @@
         display: inline-block;
         width: 28px;
         height: 24px;
+        z-index: 1;
     }
     &__inner, &__inner:after, &__inner:before {
         position: absolute;
@@ -69,7 +70,7 @@
         }
     }
 
-    &--active {
+    &.active {
         .hamburger__inner {
             transition-delay: .12s;
             transition-timing-function: cubic-bezier(.215,.61,.355,1);

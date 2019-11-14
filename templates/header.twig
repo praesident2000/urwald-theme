@@ -15,13 +15,12 @@
                     {% for item in main_menu.get_items %}
                         <li class="nav-main__item {{ item.classes | join(' ') }}" id="nav-item-{{ loop.index }}">
                             <a class="nav-main__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-                            {# {% include "menu.twig" with {'menu': item.children, 'class': 'submenu'} %} #}
                         </li>
                     {% endfor %}
                 </ul>
             </nav><!-- #nav -->
-            <div class="hamburger">
-                <div class="hamburger__box">
+            <div class="hamburger menu-item-has-children" id="nav-item-hamburger">
+                <div class="hamburger__box nav-main__link" >
                     <div class="hamburger__inner"></div>
                 </div>
             </div>
