@@ -62,6 +62,10 @@
         margin-top: -460px;
     }
 
+    &__link {
+        margin-top: $spacer * 2;
+        display: block;
+    }
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
 
     }
