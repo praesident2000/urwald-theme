@@ -16,7 +16,9 @@ if ($('.teaser-slider')[0]){
     const flkty = new Flickity( '.teaser-slider', {
         cellAlign: 'center',
         wrapAround: true,
+        prevNextButtons: false,
         setGallerySize: false,
+        pageDots: true,
         cellSelector: ".teaser-slider__slide"
     });
 }
