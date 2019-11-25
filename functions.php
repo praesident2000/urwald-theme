@@ -112,10 +112,38 @@ class StarterSite extends Timber\Site {
             'menu_icon' => 'dashicons-format-status',
             'menu_position' => 22,
             'supports' => ['title', 'custom-fields', 'revisions'],
-            'public' => true,
-            'has_archive' => false,
-            'show_in_nav_menus' => true,
-            'rewrite' => ['slug' => 'overlays', 'with_front' => false],
+            'public' => false,
+			'publicly_queryable' => true,
+			'show_ui' => true,
+			'exclude_from_search' => true,
+			'show_in_nav_menus' => false,
+			'has_archive' => false,
+			'rewrite' => false,
+		] );
+
+		register_post_type( 'urwald_slider', [
+            'labels' => [
+                'name' => __( 'Teaser Slider' ),
+                'singular_name' => __( 'Slider' ),
+                'add_new_item' => __( 'Neuen Slider hinzufügen' ),
+                'edit_item' => __( 'Slider bearbeiten' ),
+                'new_item' => __( 'Neuer Slider' ),
+                'view_item' => __( 'Slider ansehen' ),
+                'all_items' => __( 'Alle Slider' ),
+                'search_items' => __( 'Slider durchsuchen' ),
+                'not_found' => __( 'Keine Slider gefunden.' ),
+                'not_found_in_trash' => __( 'Keine Slider im Papierkorb gefunden.' ),
+            ],
+            'menu_icon' => 'dashicons-format-gallery',
+            'menu_position' => 23,
+            'supports' => ['title', 'custom-fields', 'revisions'],
+            'public' => false,
+			'publicly_queryable' => true,
+			'show_ui' => true,
+			'exclude_from_search' => true,
+			'show_in_nav_menus' => false,
+			'has_archive' => false,
+			'rewrite' => false,
 		] );
 
 	}

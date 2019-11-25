@@ -21,7 +21,7 @@
         right: 0;
         padding: $spacer * 2 $spacer * 3 $spacer * 2;
 
-        .article & {
+        .article &, .custom & {
             padding-bottom: $spacer * 4;
         }
     }
@@ -46,10 +46,18 @@
         padding-left: $spacer * 0.75;
     }
 
-    .article {
-        .teaser-slider__content {
-            background-color: $jungle;
-        }
+    &__button {
+        appearance: none;
+        background: transparent;
+        border: none;
+        display: block;
+        margin-top: $spacer * 2;
+        padding: 0;
+        position: relative;
+    }
+
+    .teaser-slider__content {
+        background-color: $jungle;
     }
 
     .tour {

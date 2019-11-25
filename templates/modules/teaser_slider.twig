@@ -1,5 +1,8 @@
+{% set slider = TimberPost(content.slider) %}
+{% set slides = slider.get_field("slides") %}
+
 <div class="teaser-slider">
-    {% for slide in content.slides %}
+    {% for slide in slides %} 
         {% if slide.type == "article" %}
             {% set article = TimberPost(slide.article) %}
             {% set meta = article.meta %}
@@ -40,10 +43,30 @@
                 </div>
             </div>
         {% else %}
+            {% set image = slide.image %}
             <div class="teaser-slider__slide {{ slide.type}} carousel-cell container">
-                <div class="teaser-slider__image"></div>
-                <div class="teaser-slider__content">Editierbar</div>
+                <div class="teaser-slider__image">
+                    {% include 'partial/image_fit.twig' %}
+                </div>
+                <div class="teaser-slider__content">
+                    <h2 class="teaser-slider__title">{{ slide.title }}</h2>
+                    <div class="teaser-slider__text">{{ slide.text }}</div>
+                    {% if slide.link_type == "overlay" %}
+                        {% set overlay = TimberPost(slide.overlay) %}
+                        <a class="teaser-slider__button" data-toggle="modal" data-target="#modal-{{ overlay.id }}"><div class="plus"><i class="plus__icon"></i></div> {{ slide.label }}</a>
+                    {% else %}
+                        {% set link = slide.link %}
+                        <a class="teaser-slider__button" href="{{ link.url }}" target="{{ link.target }}"><span class="arrow"></span>{{ link.title }}</a>
+                    {% endif %}
+                </div>
             </div>
         {% endif %}
     {% endfor %}
 </div>
+
+{% for slide in slides %} 
+    {% if slide.link_type == "overlay" %}
+        {% set overlay = TimberPost(slide.overlay) %}
+        {% include 'partial/modal.twig' with { overlay:overlay, id:overlay.id } %}
+    {% endif %}
+{% endfor %}

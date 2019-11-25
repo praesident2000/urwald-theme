@@ -352,139 +352,25 @@
                     "sub_fields": [
                         {
                             "key": "field_5dbff672cf9c7",
-                            "label": "Slides",
-                            "name": "slides",
-                            "type": "repeater",
+                            "label": "Slider",
+                            "name": "slider",
+                            "type": "post_object",
                             "instructions": "",
-                            "required": 0,
+                            "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "",
-                            "min": 1,
-                            "max": 8,
-                            "layout": "table",
-                            "button_label": "",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5dbff7d1cf9c8",
-                                    "label": "Type",
-                                    "name": "type",
-                                    "type": "select",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "article": "Artikel",
-                                        "tour": "Tour",
-                                        "custom": "Editierbar"
-                                    },
-                                    "default_value": [
-                                        "article"
-                                    ],
-                                    "allow_null": 0,
-                                    "multiple": 0,
-                                    "ui": 1,
-                                    "ajax": 0,
-                                    "return_format": "value",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "key": "field_5dc56ff43d2ee",
-                                    "label": "Artikel",
-                                    "name": "article",
-                                    "type": "post_object",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_5dbff7d1cf9c8",
-                                                "operator": "==",
-                                                "value": "article"
-                                            }
-                                        ]
-                                    ],
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "urwald_article"
-                                    ],
-                                    "taxonomy": "",
-                                    "allow_null": 0,
-                                    "multiple": 0,
-                                    "return_format": "id",
-                                    "ui": 1
-                                },
-                                {
-                                    "key": "field_5dc570ab3d2f0",
-                                    "label": "Beschriftung",
-                                    "name": "tour_label",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_5dbff7d1cf9c8",
-                                                "operator": "==",
-                                                "value": "tour"
-                                            }
-                                        ]
-                                    ],
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "Urwaldpfad",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_5dc570763d2ef",
-                                    "label": "Tour",
-                                    "name": "tour",
-                                    "type": "post_object",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_5dbff7d1cf9c8",
-                                                "operator": "==",
-                                                "value": "tour"
-                                            }
-                                        ]
-                                    ],
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "urwald_tour"
-                                    ],
-                                    "taxonomy": "",
-                                    "allow_null": 0,
-                                    "multiple": 0,
-                                    "return_format": "id",
-                                    "ui": 1
-                                }
-                            ]
+                            "post_type": [
+                                "urwald_slider"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "id",
+                            "ui": 1
                         }
                     ],
                     "min": "",
@@ -1122,5 +1008,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1573744197
+    "modified": 1574676095
 }

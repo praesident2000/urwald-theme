@@ -41,7 +41,7 @@ navs.on('click', (event) => {
 // handle header scroll behaviour
 window.addEventListener('scroll', () => {
     let scroll = $window.scrollTop();
-    console.log(scroll);
+    // console.log(scroll);
     if ( scroll > 0 ){
         if( scroll > position ) {
             header.removeClass('header--show');
