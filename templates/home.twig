@@ -5,10 +5,18 @@
         <section class="{{post.post_type}}__header">
             {% set meta = post.meta %}
             <div class="homepage-hero">
-                <div class="homepage-hero__image">
-                    {% include "partial/image_fit.twig" with { 'image': meta.featured_image, 'masked': true } %}
-                    
-                </div>
+                {% if post.homepage_video %}
+                    <div class="hero-video__decoration"></div>
+                    <div class="homepage-hero__video hero-video">
+                        <div class="background-wrapper">
+                            <iframe src="https://player.vimeo.com/video/{{ post.homepage_video }}?background=1?" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="homepage-hero__image">
+                        {% include "partial/image_fit.twig" with { 'image': meta.featured_image, 'masked': true } %}
+                    </div>
+                {% endif %}
                 <div class="homepage-hero__wrapper">
                     <h1 class="homepage-hero__title">{{ meta.title }}</h1>   
                 </div>

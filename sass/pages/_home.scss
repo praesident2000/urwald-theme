@@ -1,3 +1,5 @@
+$video-height: 120vh; //1400px;
+
 .homepage-hero {
 
     position: relative;
@@ -9,7 +11,7 @@
         left: 570px;
         top: 140px;
         width: 100%;
-        height: 1400px;
+        height: $video-height;
 
         .image-fit {
             overflow: visible;
@@ -33,6 +35,14 @@
         }
     }
 
+    &__video {
+        position: absolute;
+        left: 570px;
+        top: 140px;
+        width: 100%;
+        height: $video-height;
+    }
+
     &__wrapper {
         height: 100vh;
         position: relative;
@@ -45,5 +55,72 @@
         max-width: 485px;
         font-size: 75px;
         line-height: 88px;
+    }
+
+    .hero-video {
+        mask-image: $jungle-clip-path;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+        position: absolute;
+
+        &__wrapper {
+            height: 100%;
+            width: 100%;
+        }
+
+        &__video {
+            height: 100%;
+            width: auto;
+        }
+
+        &__decoration {
+            background: $lime;
+            mask-image: $jungle-clip-path;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: left;
+            height: 920px;
+            width: 100%;
+            display: block;
+            transform: translate(15%,-10%);
+            position: absolute;
+        }
+        
+        .background-wrapper {
+            width: 100%;
+            background-color: #000;
+            height: $video-height;
+            width: $video-height * 1.78;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        .background-wrapper:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.3);
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        .background-wrapper > iframe {
+            box-sizing: border-box;
+            height: 56.25vw;
+            left: 50%;
+            min-height: 100%;
+            min-width: 100%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            width: 177.77777778vh;
+            z-index: 0;
+        }
     }
 }
