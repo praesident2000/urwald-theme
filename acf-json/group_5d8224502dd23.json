@@ -344,6 +344,59 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5dde4876d3f33": {
+                    "key": "layout_5dde4876d3f33",
+                    "name": "tour_list",
+                    "label": "Routenliste",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dde49a0d3f34",
+                            "label": "Routenliste",
+                            "name": "tour_list",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 8,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5dde49d3d3f35",
+                                    "label": "Route",
+                                    "name": "tour",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+                                        "urwald_tour"
+                                    ],
+                                    "taxonomy": "",
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "return_format": "id",
+                                    "ui": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d838662d9e72": {
                     "key": "layout_5d838662d9e72",
                     "name": "teaser_slider",
@@ -1240,5 +1293,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1574844146
+    "modified": 1574849053
 }

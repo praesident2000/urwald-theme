@@ -1,0 +1,45 @@
+.card {
+
+    &__header {
+        position: relative;
+    }
+
+    &__image {
+        padding-top: 75%;
+
+        img {
+            filter: brightness(70%);
+        }
+    }
+
+    &__title {
+        position: absolute;
+        bottom: $spacer * 0.5;
+        left: $spacer;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 20px;
+        line-height: 28px;
+        max-width: 75%;
+    }
+
+    &__body {
+        background-color: rgba($white,0.1);
+        padding: $spacer * 0.25 $spacer * 0.25 $spacer * 1.5;
+        position: relative;
+
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: bold;
+        padding-top: $spacer;
+
+        i {
+            font-size: 22px;
+            margin-right: $spacer * 0.75;
+        }
+    }
+}

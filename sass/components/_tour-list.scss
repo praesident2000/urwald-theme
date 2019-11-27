@@ -1,0 +1,10 @@
+.tour-list {
+
+    padding-left: $spacer * 0.5;
+    padding-right: $spacer * 0.5;
+
+    & > [class^="col-"] {
+        padding-left: $spacer * 0.5;
+        padding-right: $spacer * 0.5;
+    }
+}

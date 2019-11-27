@@ -42,6 +42,10 @@
             <div class="layout__container">
                 {% include 'modules/image_slider.twig' with {} %}
             </div>
+        {% elseif content.acf_fc_layout == 'tour_list' %}
+            <div class="layout__container container">
+                {% include 'modules/tour-list.twig' with {} %}
+            </div>
         {% elseif content.acf_fc_layout == 'target_groups' %}
             <div class="layout__container">
                 {% include 'modules/target_group.twig' with {} %}
