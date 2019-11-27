@@ -484,7 +484,7 @@
                             "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "60",
                                 "class": "",
                                 "id": ""
                             },
@@ -493,6 +493,79 @@
                             "toolbar": "full",
                             "media_upload": 0,
                             "delay": 1
+                        },
+                        {
+                            "key": "field_5dde35ab5ddf8",
+                            "label": "Randspalte",
+                            "name": "margin_column",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layouts": {
+                                "layout_5dde369792d61": {
+                                    "key": "layout_5dde369792d61",
+                                    "name": "link",
+                                    "label": "Link",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5dde36a475717",
+                                            "label": "Link",
+                                            "name": "link",
+                                            "type": "link",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array"
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                "layout_5dde36b775718": {
+                                    "key": "layout_5dde36b775718",
+                                    "name": "quote",
+                                    "label": "Zitat",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5dde36c275719",
+                                            "label": "Zitat",
+                                            "name": "quote",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            },
+                            "button_label": "Eintrag hinzufügen",
+                            "min": "",
+                            "max": ""
                         }
                     ],
                     "min": "",
@@ -1167,5 +1240,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1574782980
+    "modified": 1574844146
 }

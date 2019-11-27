@@ -20,4 +20,16 @@
         transform: rotate(45deg);
         border-radius: 2px;
 	}
+
+	&--short {
+
+		margin-right: $spacer;
+		width: 34px;
+		&:before {
+			top: -6px;
+			width: 14px;
+			height: 14px;
+			border-radius: 3px;
+		}
+	}
 }

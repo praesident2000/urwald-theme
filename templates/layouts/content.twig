@@ -61,9 +61,12 @@
         {% elseif content.acf_fc_layout == 'text' %}
             <div class="layout__container container">
                 <div class="row">
-                    <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+                    <div class="col-12 {% if content.margin_column %}col-md-6{% else %}col-md-10{% endif %} offset-md-1 col-lg-5 offset-lg-3">
                         {% include 'modules/text.twig' with {} %}
                     </div>
+                    {% if content.margin_column %}
+                        {% include 'layouts/margin-column.twig' with {} %}
+                    {% endif %}
                 </div>
             </div>
         {% elseif content.acf_fc_layout == 'video' %}

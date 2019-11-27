@@ -1,0 +1,9 @@
+<div class="margin-column col-12 offset-md-1 col-md-3">
+    {% for margin_content in content.margin_column %}
+        {% if margin_content.acf_fc_layout == "link" %}
+            <a href="{{ margin_content.link.url }}" class="margin-column__link link" target="{{ margin_content.link.target }}"><span class="arrow arrow--short"></span>{{ margin_content.link.title }}</a>
+        {% elseif margin_content.acf_fc_layout == "quote" %}
+            <blockquote class="margin-column__quote">{{ margin_content.quote }}</blockquote>
+        {% endif %}
+    {% endfor %}
+</div>

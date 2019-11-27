@@ -6,4 +6,14 @@ a {
     &:hover {
         color: $lime;
     }
+
+    &.link {
+        color: $lime;
+        font-size: 18px;
+        font-weight: bold;
+
+        &:hover {
+            color: $white;
+        }
+    }
 }
