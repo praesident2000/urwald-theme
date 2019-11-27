@@ -1,0 +1,33 @@
+<div class="target-groups nav-tabs">
+    {# {{ dump(content) }} #}
+    <ul class="target-groups__nav nav" id="pills-tab" role="tablist">
+        {% for group in content.groups %}
+            <li class="target-groups__item nav-item">
+                <a class="target-groups__nav-link nav-link{% if loop.first %} active{% endif %}" id="pills-{{ loop.index }}-tab" data-toggle="pill" href="#pills-{{ loop.index }}" role="tab" aria-controls="pills-{{ loop.index }}" aria-selected="true">{{ group.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="target-groups__content tab-content" id="pills-tabContent">
+        {% for group in content.groups %}
+            <div class="target-groups__pane tab-pane fade{% if loop.first %} show active{% endif %}" id="pills-{{ loop.index }}" role="tabpanel" aria-labelledby="pills-{{ loop.index }}-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <h2 class="target-groups__title">{{ content.title }} <br><strong>als {{ group.title }}</strong> </h2>
+                            <div class="target-groups__text">{{ group.text }}</div>
+                            <a class="target-groups__link" href="{{ group.link }}"><span class="arrow"></span>Entdecken</a>
+                        </div>
+                        <div class="col-7">
+                            <div class="target-groups__image">
+                                {% include 'partial/image_fit.twig' with { 'image': group.image_1 } %}
+                            </div>
+                            <div class="target-groups__image">
+                                {% include 'partial/image_fit.twig' with { 'image': group.image_2 } %}
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
