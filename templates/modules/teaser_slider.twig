@@ -1,6 +1,20 @@
 {% set slider = TimberPost(content.slider) %}
 {% set slides = slider.get_field("slides") %}
 
+{% if content.title %}
+    <div class="layout__container container">
+        <div class="row">
+            <div class="col-10 offset-1 {% if content.text %}col-lg-4{% else %}col-lg-8{% endif %} offset-lg-2">
+                <h3>{{ content.title }}</h3>
+            </div>
+            {% if content.text %}
+                <div class="col-10 offset-1 col-lg-5">
+                    <p>{{ content.text }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}
 <div class="teaser-slider">
     {% for slide in slides %} 
         {% if slide.type == "article" %}

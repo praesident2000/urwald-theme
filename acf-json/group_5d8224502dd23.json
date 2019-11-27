@@ -404,6 +404,51 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5dde6f8f9bf60",
+                            "label": "Titel",
+                            "name": "title",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 2,
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_5dde6fb29bf61",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5dde6f8f9bf60",
+                                        "operator": "!=empty"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
                             "key": "field_5dbff672cf9c7",
                             "label": "Slider",
                             "name": "slider",
@@ -1293,5 +1338,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1574849053
+    "modified": 1574866884
 }
