@@ -143,6 +143,31 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5dde905b30e9a": {
+                    "key": "layout_5dde905b30e9a",
+                    "name": "call_to_action",
+                    "label": "Call To Action",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dde906530e9b",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5db01c694d695": {
                     "key": "layout_5db01c694d695",
                     "name": "double_image",
@@ -1338,5 +1363,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1574866884
+    "modified": 1574867063
 }

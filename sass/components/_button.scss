@@ -7,6 +7,7 @@
 
     &--rounded {
         border-radius: 50rem;
+        padding: .5rem 1.5rem;
     }
 
     &--map {
@@ -30,5 +31,14 @@
 
     &:focus {
         outline: none;
+    }
+
+    &--cta {
+        font-weight: bold;
+
+        &:hover {
+            color: $mud;
+            background: $white;
+        }
     }
 }
