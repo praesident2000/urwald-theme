@@ -170,8 +170,8 @@
                     "sub_fields": [
                         {
                             "key": "field_5dc937fb55f3b",
-                            "label": "Bild",
-                            "name": "image",
+                            "label": "Logo",
+                            "name": "logo",
                             "type": "image",
                             "instructions": "",
                             "required": 1,
@@ -230,5 +230,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1573486779
+    "modified": 1574947528
 }

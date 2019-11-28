@@ -40,14 +40,6 @@
         z-index: 1;
     }
 }
-.image-fluid {
-    position: relative;
-    width: auto;
-
-    &--rounded {
-        border-radius: 50%;
-    }
-}
 
 .image-module {
     
@@ -89,8 +81,13 @@
 }
 
 .image-fluid {
+    
+    &--rounded {
+        border-radius: 50%;
+    }
+
     &__image {
-        width: 100%;
+        max-width: 100%;
         height: auto;
     }
 

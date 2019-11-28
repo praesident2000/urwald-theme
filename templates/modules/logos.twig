@@ -1,0 +1,7 @@
+<div class="logo-bar row">
+    {% for logo in content.logos %}
+        <div class="col-6 col-md-3">
+            {% include 'partial/logo.twig' with { logo: logo } %}
+        </div>
+    {% endfor %}
+</div>

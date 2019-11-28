@@ -1,0 +1,28 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: $spacer * 1;
+    padding-top: $spacer * 1;
+
+    &__link {
+        display: block;
+    }
+}
+
+.logo-bar {
+    display: flex;
+    justify-content: center;
+    padding-left: $spacer * 0.5;
+    padding-right: $spacer * 0.5;
+
+    & > [class^="col-"] {
+        padding-left: $spacer * 0.5;
+        padding-right: $spacer * 0.5;
+    }
+
+    .logo {
+        background: $white;
+        height: 120px;
+    }
+}

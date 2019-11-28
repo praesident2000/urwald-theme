@@ -28,6 +28,10 @@
                     </div>
                 </div>
             </div>
+        {% elseif content.acf_fc_layout == 'logos' %}
+            <div class="layout__container container">
+                {% include 'modules/logos.twig' %}
+            </div>
         {% elseif content.acf_fc_layout == 'numbers' %}
             <div class="layout__container">
                 {% include 'modules/numbers.twig' %}

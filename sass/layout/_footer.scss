@@ -22,10 +22,15 @@ $image-offset: 50px;
         height: 120px;
         display: flex;
         align-items: center;
-    }
 
-    &__logo {
-        padding-right: $spacer * 2.5;
+
+        .logo {
+            padding-right: $spacer * 2.5;
+
+            &__image {
+                max-height: 60px;
+            }
+        }
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
