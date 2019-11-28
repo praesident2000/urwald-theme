@@ -1,0 +1,39 @@
+.post-filter {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: $spacer;
+
+    &__title {
+        display: inline;
+        font-family: $merriweather;
+        font-size: 20px;
+        margin-right: $spacer * 2;
+    }
+
+    &__select {
+        font-family: $merriweather;
+        font-size: 20px;
+        font-weight: bold;
+        padding-right: $spacer * 0.75;
+    }
+
+    &__select-wrapper {
+        position: relative;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            border-color: currentColor;
+            border-style: solid;
+            border-width: 3px 3px 0 0;
+            height: 12px;
+            right: 0px;
+            position: relative;
+            top: 3px;
+            transform: rotate(135deg);
+            width: 12px;
+            position: absolute;
+            pointer-events: none;
+        }
+    }
+}
