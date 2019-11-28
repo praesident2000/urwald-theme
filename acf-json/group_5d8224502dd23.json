@@ -1,6 +1,6 @@
 {
     "key": "group_5d8224502dd23",
-    "title": "Inhaltsmodule",
+    "title": "Module",
     "fields": [
         {
             "key": "field_5d822461c9a87",
@@ -1433,5 +1433,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1574939021
+    "modified": 1574951313
 }
