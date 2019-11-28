@@ -1,0 +1,37 @@
+.asset {
+    
+    padding-left: $spacer * 3;
+
+    display: flex;
+
+    &__logo {
+        width: 75px;
+
+        .logo {
+            padding: 0;
+        }
+    }
+
+    &__content {
+        padding-left: $spacer * 1.5;
+        padding-top: $spacer * 0.5;
+    }
+
+    &__kicker {
+        font-size: 14px;
+    }
+
+    &__title {
+        font-size: 24px;
+        margin-bottom: $spacer * 0.5;
+        margin-top: $spacer * 0.5;
+    }
+
+    &__copy { 
+        padding-bottom: $spacer * 1.25;
+    }
+
+    &__link {
+        font-weight: bold;
+    }
+}

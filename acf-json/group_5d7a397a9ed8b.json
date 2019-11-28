@@ -199,6 +199,11 @@
                 "param": "page_template",
                 "operator": "!=",
                 "value": "archive-article.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "downloads.php"
             }
         ]
     ],
@@ -210,5 +215,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1573745048
+    "modified": 1574951211
 }

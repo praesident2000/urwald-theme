@@ -1,0 +1,43 @@
+{# This file demonstrates using most of the index.twig template and modifying 
+   just a small part. See `search.twig` for an example of another approach #}
+
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content__no-hero container">
+		<div class="template-downloads row layout__container">
+			<div class="col-12 col-lg-5">
+				{% set header_text = post.get_field('text') %}
+				{{ header_text }}
+			</div>
+		</div>
+		<div class="assets row">
+			{% set media = post.get_field('media') %}
+			{% set icons = post.get_field('icons') %}
+			{% for item in media %}
+				<div class="asset asset-{{ item.type.value }} col-12 col-md-6">
+					<div class="asset__logo">
+						{% for icon in icons %}
+							{% if icon.type == item.type.value %}
+								{% include 'partial/logo.twig' with { logo: icon } %}
+							{% endif %}
+						{% endfor %}
+					</div>
+					<div class="asset__content">
+						<div class="asset__kicker">
+							{{ item.type.label }}
+						</div>
+						<h4 class="asset__title">
+							{{ item.title }}
+						</h4>
+						<div class="asset__copy">
+							{{ item.text }}
+						</div>
+						<a href="{{ item.file.url }}" class="asset__link" download>Download ({{item.file.subtype}}, {{ (item.file.filesize / 1000000)|number_format(1) }} mb)</a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}
