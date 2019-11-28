@@ -7,7 +7,7 @@
 	{% set post_content = true %}
 {% endif %}
 
-<article class="tease tease--article col-12 col-sm-6 col-lg-4" id="tease-{{post.ID}}" data-groups="["{{post.category}}"]" data-date-created="{{ post.date }}" data-title="{{ meta.title }}">
+<article class="tease tease--article col-12 col-sm-6 col-lg-4" id="tease-{{post.ID}}" data-groups='["{% for item in categories %}{{ item }}{% if not loop.last %} , {% endif %}{% endfor %}"]' data-date-created="{{ post.date }}" data-title="{{ meta.title }}">
 	{% block content %}
 		<div class="tease__image">
 			{% include "partial/image_fit.twig" with { 'image': meta.featured_image } %}

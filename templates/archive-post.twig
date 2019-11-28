@@ -5,37 +5,15 @@
 
 {% block content %}
 	<div class="content__no-hero container">
-		<div class="post-filter">
-			<div class="post-filter__title">Ich interessiere mich für</div>
-			<div class="post-filter__select-wrapper">
-				{# TO - DO Filter only used categories #}
-				{% set category_list = [] %}
-				{% for post in news %}
-					{% set post_categories = post.categories %}
-					{% for category in post_categories %}
-						{% if category.name not in category_list %}
-							{% set category_list = category_list|merge([category]) %}
-						{% endif %}
-					{% endfor %}
-				{% endfor %}
+		{% include "partial/post-filter.twig" with { filter_posts: news } %}
 
-				<select class="post-filter__select">
-					<option value="all">alle Themen</option>
-					{% for category in category_list %}
-						<option value="{{ category.slug }}">{{ category.name }}</option>
-					{% endfor %}
-				</select>
-			</div>
-			
-		</div>
-
-		<div id="post-masonry" class="post-masonry">
+		<div id="post-masonry" class="post-masonry layout__container">
 			{% for post in news %}
 				{% include ['tease.twig'] %}
 			{% endfor %}
 		</div>
 		
-		{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+		{% include 'partial/pagination.twig' with { posts: news, name: "Meldungen", pagination: news.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
 	</div>
 
 

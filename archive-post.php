@@ -13,7 +13,7 @@ $args_news = array(
 	'post_type' => 'post',
 	'orderby' => 'date',
 	'order' => 'DESC',
-	'posts_per_page' => 10,
+	'posts_per_page' => 6,
 	'paged' => $paged
 );
 

@@ -1,0 +1,15 @@
+.pagination {
+
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__next {
+
+        &:hover {
+            background: $white;
+            color: $mud;
+        }
+    }
+}

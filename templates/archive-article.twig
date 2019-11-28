@@ -47,7 +47,10 @@
 		{% include "layouts/content.twig" %}
 	</section>
 
-	{# TO-DO: Add filter #}
+	<div class="container">
+		{% include "partial/post-filter.twig" with { filter_posts: articles } %}
+	</div>
+
 	<div class="container">
 		<div id="post-masonry" class="post-masonry">
 			{% for post in articles %}

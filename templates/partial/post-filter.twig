@@ -1,0 +1,22 @@
+<div class="post-filter">
+    <div class="post-filter__title">Ich interessiere mich für</div>
+    <div class="post-filter__select-wrapper">
+        {% set category_list = [] %}
+        {% for post in filter_posts %}
+            {% set post_categories = post.categories %}
+            {% for category in post_categories %}
+                {% if category.name not in category_list %}
+                    {% set category_list = category_list|merge([category]) %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+
+        <select class="post-filter__select">
+            <option value="all">alle Themen</option>
+            {% for category in category_list %}
+                <option value="{{ category.slug }}">{{ category.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    
+</div>
