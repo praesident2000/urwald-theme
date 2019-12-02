@@ -2,10 +2,10 @@
     {% if logo.link %}
         <a href="{{ logo.link.url }}" class="logo__link" target="{{ logo.link.target }}">
             {% set image = TimberImage(logo.logo) %}
-            <img class="logo__image" src="{{ image.src }}" alt="{{ image.alt }}" />
+            <img class="logo__image lozad" data-src="{{ image.src }}" alt="{{ image.alt }}" />
         </a>
     {% else %}
         {% set image = TimberImage(logo.logo) %}
-        <img class="logo__image" src="{{ image.src }}" alt="{{ image.alt }}" />
+        <img class="logo__image lozad" data-src="{{ image.src }}" alt="{{ image.alt }}" />
     {% endif %}
 </div>
