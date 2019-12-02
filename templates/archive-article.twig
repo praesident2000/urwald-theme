@@ -4,11 +4,8 @@
 {% extends "base.twig" %}
 
 {% block content %}
-
-	{# TO-DO: Add header slider #}
 	
 	<section class="header-slider">
-		{# {{ dump(post.slides) }} #}
 		{% for slide in post.get_field('slides') %}
 			{% set article = TimberPost(slide.article) %}
             {% set meta = article.meta %}
@@ -65,7 +62,7 @@
 
 {% block scripts %}
     {{ parent() }}
-    <script src="{{ site.theme.link }}/dist/page.min.js"></script> 
-    <script src="{{ site.theme.link }}/dist/archive.min.js"></script> 
-    <script src="{{ site.theme.link }}/dist/archive-article.min.js"></script> 
+    <script type="deferjs" src="{{ site.theme.link }}/dist/page.min.js"></script> 
+    <script type="deferjs" src="{{ site.theme.link }}/dist/archive.min.js"></script> 
+    <script type="deferjs" src="{{ site.theme.link }}/dist/archive-article.min.js"></script> 
 {% endblock %}

@@ -31,7 +31,7 @@
 {% block scripts %}
     {{ parent() }}
 	{% set tour_id = tour.tour_id %}
-    <script>
+    <script type="deferjs">
 		var id = "{{ tour_id }}"; 
 		var conf = { 
 			id: id,
