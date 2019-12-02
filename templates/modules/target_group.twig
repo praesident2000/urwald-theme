@@ -19,10 +19,10 @@
                         </div>
                         <div class="col-7">
                             <div class="target-groups__image">
-                                {% include 'partial/image_fit.twig' with { 'image': group.image_1 } %}
+                                {% include 'partial/image_fit.twig' with { 'image': group.image_1, img_type: "medium" } %}
                             </div>
                             <div class="target-groups__image">
-                                {% include 'partial/image_fit.twig' with { 'image': group.image_2 } %}
+                                {% include 'partial/image_fit.twig' with { 'image': group.image_2, img_type: "medium" } %}
                                 </div>
                         </div>
                     </div>

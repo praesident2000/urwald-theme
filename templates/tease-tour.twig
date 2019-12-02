@@ -4,7 +4,7 @@
 <div class="tour card">
     <div class="card__header">
         <div class="card__image">
-            {% include "partial/image_fit.twig" with { image: meta.featured_image } %}
+            {% include "partial/image_fit.twig" with { image: meta.featured_image, img_type: "thumbnail" } %}
         </div>
         <h4 class="card__title">{{ meta.title }}</h4>
     </div>

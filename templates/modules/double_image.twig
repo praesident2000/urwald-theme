@@ -1,13 +1,13 @@
 <div class="double-image-module">
     <div class="double-image-module__image-container">
-        {% include "partial/image_fit.twig" with { 'image': content.image_1, 'masked': false } %}
+        {% include "partial/image_fit.twig" with { 'image': content.image_1, 'masked': false, img_type: "medium" } %}
         <div class="double-image-module__description">
             {{ content.description_1 }}
         </div>
     </div>
 
     <div class="double-image-module__image-container">
-        {% include "partial/image_fit.twig" with { 'image': content.image_2, 'masked': false } %}
+        {% include "partial/image_fit.twig" with { 'image': content.image_2, 'masked': false, img_type: "medium" } %}
         <div class="double-image-module__description">
             {{ content.description_2 }}
         </div>

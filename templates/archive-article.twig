@@ -15,7 +15,7 @@
 			<div class="header-slider__slide carousel-cell">
 				<div class="header-slider__image-wrapper">
 					<div class="header-slider__image">
-						{% include 'partial/image_fit.twig' with { 'image':meta.featured_image, 'masked': true } %}
+						{% include 'partial/image_fit.twig' with { 'image':meta.featured_image, 'masked': true, img_type: 'medium' } %}
 					</div>
 				</div>
 				<div class="header-slider__wrapper container">

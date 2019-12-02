@@ -4,7 +4,7 @@
             {% set image = slide.image %}
             <div class="testimonial-slider__image-wrapper col-6 col-lg-3">
                 <div class="testimonial-slider__image image--rounded">
-                    {% include 'partial/image_fit.twig' with { 'rounded': true } %}
+                    {% include 'partial/image_fit.twig' with { 'rounded': true, img_type: "medium" } %}
                 </div>
             </div>
             <div class="testimonial-slider__wrapper col-6 col-lg-8">

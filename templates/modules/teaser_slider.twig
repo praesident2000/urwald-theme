@@ -23,7 +23,7 @@
             {% set image = meta.featured_image %}
             <div class="teaser-slider__slide {{ slide.type}} carousel-cell container">
                 <div class="teaser-slider__image">
-                    {% include 'partial/image_fit.twig' %}
+                    {% include 'partial/image_fit.twig' with { img_type: "medium" } %}
                 </div>
                 <div class="teaser-slider__content">
                     <div class="teaser-slider__kicker"><strong>Wald &amp; Wissen</strong> - {{ article.category }}</div>
@@ -39,7 +39,7 @@
             {% set infos = tour.get_field('tour_meta') %}
             <div class="teaser-slider__slide {{ slide.type}} carousel-cell container">
                 <div class="teaser-slider__image">
-                    {% include 'partial/image_fit.twig' %}
+                    {% include 'partial/image_fit.twig' with { img_type: "medium" } %}
                 </div>
                 <div class="teaser-slider__content">
                     <div class="teaser-slider__kicker">{{ slide.tour_label }}</div>
@@ -60,7 +60,7 @@
             {% set image = slide.image %}
             <div class="teaser-slider__slide {{ slide.type}} carousel-cell container">
                 <div class="teaser-slider__image">
-                    {% include 'partial/image_fit.twig' %}
+                    {% include 'partial/image_fit.twig' with { img_type: "medium" } %}
                 </div>
                 <div class="teaser-slider__content">
                     <h2 class="teaser-slider__title">{{ slide.title }}</h2>
