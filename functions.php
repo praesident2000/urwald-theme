@@ -45,6 +45,8 @@ class StarterSite extends Timber\Site {
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_menus' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
+		add_action( 'wp_enqueue_scripts', array($this, 'deregister_scripts'), 100 );
+		add_action( 'wp_print_styles', array($this, 'wps_deregister_styles'), 100 );
 		parent::__construct();
 	}
 	/** This is where you can register custom post types. */
@@ -234,6 +236,10 @@ class StarterSite extends Timber\Site {
 }
 
 new StarterSite();
+
+if ( class_exists( 'Timber' ) ){
+    Timber::$cache = false;
+}
 
 if( function_exists('acf_add_options_page') ) {
  	
