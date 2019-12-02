@@ -22,6 +22,7 @@
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/modal";
 @import "../node_modules/flickity/css/flickity";
+@import "../node_modules/lazyframe/src/scss/lazyframe";
 
 
 @import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
@@ -68,6 +69,8 @@
 @import "components/pagination";
 @import "components/logos";
 @import "components/assets";
+@import "components/video";
+
 
 
 // PAGES

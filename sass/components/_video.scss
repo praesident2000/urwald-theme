@@ -1,0 +1,22 @@
+.video {
+
+    .lazyframe[data-vendor="youtube"] {
+        background-color: $jungle;
+        font-family: $brandon,Arial,Helvetica,sans-serif;
+    }
+
+    &__frame.lazyframe[data-vendor="youtube"]::after {
+        background-image:  url(../assets/play.svg#play);
+        width: 64px;
+        height: 88px;
+        opacity: 0.75;
+        transition: opacity 0.5s ease-in;
+    }
+
+    &__frame.lazyframe[data-vendor="youtube"]:hover {
+
+        &::after {
+            opacity: 1;
+        }
+    }
+}

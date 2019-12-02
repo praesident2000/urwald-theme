@@ -809,25 +809,6 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
-                        },
-                        {
-                            "key": "field_5d833b79e6bd0",
-                            "label": "Beschreibung",
-                            "name": "description",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -1433,5 +1414,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1574951313
+    "modified": 1575283531
 }
