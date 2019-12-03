@@ -40,25 +40,6 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
-                },
-                {
-                    "key": "field_5de639473f5a5",
-                    "label": "Typographie",
-                    "name": "typography",
-                    "type": "file",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_size": "",
-                    "max_size": "0.1",
-                    "mime_types": "svg"
                 }
             ]
         },
@@ -242,5 +223,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1575370372
+    "modified": 1575386790
 }
