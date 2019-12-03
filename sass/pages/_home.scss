@@ -1,10 +1,16 @@
 $video-height: 120vh; //1400px;
 
+.home {
+    .bread-crumbs {
+        display: none;
+    }
+}
+
 .homepage-hero {
 
     position: relative;
     overflow: hidden;
-    height: 1600px;
+    height: 1680px;
 
     &__image {
         position: absolute;

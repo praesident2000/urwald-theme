@@ -7,7 +7,8 @@ $templates = array( 'archive-post.twig' );
 
 $context = Timber::get_context();
 $context['posts'] = new Timber\PostQuery();
-$context['post'] = $post;
+$timber_post = new Timber\Post();
+$context['post'] = $timber_post;
 
 $args_news = array(
 	'post_type' => 'post',
