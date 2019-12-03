@@ -24,7 +24,6 @@ if ($('.teaser-slider')[0]){
 }
 
 if ($('.testimonial-slider')[0]){
-    console.log("check");
     const flkty = new Flickity( '.testimonial-slider', {
         cellAlign: 'center',
         pageDots: true,

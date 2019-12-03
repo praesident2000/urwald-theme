@@ -4,6 +4,7 @@ const $window  = $(window);
 const header   = $('.header');
 const navs     = $('.menu-item-has-children .nav-main__link');
 const items    = $('.header__submenu');
+const svg      = $('.header-logo__svg');
 
 let position   = $window.scrollTop();
 let open       = false; 
@@ -16,23 +17,29 @@ navs.on('click', (event) => {
     const $parentId = $parent.attr('id');
 
     if (open == false && !$parent.hasClass('active') ) {
+        // all closed
         open = true;
         $parent.addClass('active');
+        svg.addClass('active');
         items.removeClass('active');
         $('.' + $parentId ).addClass('active');
         header.addClass('header--active');
     } 
     else if ( open == true && !$parent.hasClass('active') ) {
+        // open and not active
         open = true;
         navs.closest('.menu-item-has-children').removeClass('active');
         $parent.addClass('active');
+        svg.addClass('active');
         items.removeClass('active');
         $('.' + $parentId ).addClass('active');
     }
     else if ( open == true && $parent.hasClass('active') ) {
+        // open and active
         open = true;
         $parent.removeClass('active');
         items.removeClass('active');
+        svg.removeClass('active');
         // $('.' + $parentId ).removeClass('active');
         // header.removeClass('header--active');
     }
@@ -47,6 +54,7 @@ window.addEventListener('scroll', () => {
             header.removeClass('header--show');
             header.removeClass('header--active');
             items.removeClass('active');
+            svg.removeClass('active');
             navs.closest('.menu-item-has-children').removeClass('active');
         }
         else {
@@ -55,12 +63,13 @@ window.addEventListener('scroll', () => {
         }
         position = scroll;
     } 
-    else if ( scroll == 0 && open == true ) {
-
-    }
     else {
         header.addClass('header--show');
-        header.removeClass('header--active'); 
+        header.removeClass('header--active');
+        items.removeClass('active');
+        svg.removeClass('active');
+        navs.closest('.menu-item-has-children').removeClass('active');
+        open = false; 
     }
 });
 
@@ -71,6 +80,13 @@ window.addEventListener('click', (event) => {
         open = false;
         header.removeClass('header--active');
         items.removeClass('active');
+        svg.removeClass('active');
         navs.closest('.menu-item-has-children').removeClass('active');
+    }
+});
+
+$(document).ready(function(){
+    if ( position > 0 ){
+        header.addClass('header--active');
     }
 });

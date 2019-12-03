@@ -53,6 +53,10 @@
             .header-logo__svg {
                 display: none;
 
+                &.active {
+                    display: block;
+                }
+
                 svg {
                     fill: $black;
                 }
