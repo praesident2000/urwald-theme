@@ -2,12 +2,13 @@
     {% block header %}
         <div class="header__wrapper container">
             {% set logo = options.logo %}
-            <h1 class="header__logo-container" role="banner">
-                <a class="header__logo-link" href="{{site.url}}" rel="home">
-                    {% set logo = TimberImage(options.logo) %}
-                    <img class="header__logo-image lozad" src="{{ logo.src }}" alt="{{ logo.alt }}" />
-                    {% set logo = TimberImage(options.logo_inverted) %}
-                    <img class="header__logo-inverse-image lozad" src="{{ logo.src }}" alt="{{ logo.alt }}" />
+            <h1 class="header-logo__container" role="banner">
+                <a class="header-logo__link" href="{{site.url}}" rel="home">
+                    {% set image = TimberImage(logo.image) %}
+                    <img class="header-logo__image lozad" src="{{ image.src }}" alt="{{ image.alt }}" />
+                    <div class="header-logo__svg">
+                        {% include "partial/typography_svg.twig" %}
+                    </div>
                 </a>
             </h1>
             <nav id="nav-main" role="navigation">

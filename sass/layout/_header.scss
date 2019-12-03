@@ -1,10 +1,10 @@
 .header {
 
-    position: absolute;
+    position: fixed ;
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color: $eggshell;
+    background-color: $white;
     z-index: 1000;
 
     &__wrapper {
@@ -18,33 +18,11 @@
         bottom: auto;
         transform: translateY(-100%);
         transition: all 550ms ease-out;
-        min-height: 220px;
+        min-height: 194px;
+        display: grid;
 
         &__wrapper {
             justify-content: space-between;
-        }
-
-        &__logo-container {
-            min-height: 138px;
-        }
-
-        &__logo-image {
-            position: absolute;
-            transition: opacity 500ms ease-out;
-
-            .header--active & {
-                opacity: 0;
-            }
-        }
-
-        &__logo-inverse-image {
-            opacity: 0;
-            position: absolute;
-            transition: opacity 500ms ease-out;
-
-            .header--active & {
-                opacity: 1;
-            }
         }
 
         &--show {
@@ -69,12 +47,47 @@
 
 
         &.header--active {
-            background-color: $eggshell;
+            background-color: $white;
             box-shadow: $jungle-shadow;
+
+            .header-logo__svg {
+                display: none;
+
+                svg {
+                    fill: $black;
+                }
+            }
         }
 
         .admin-bar & {
             padding-top: 32px;
+        }
+    }
+}
+
+.header-logo {
+    &__container {
+        display: block;
+    }
+
+    &__svg {
+        display: none;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+
+
+        &__image {
+            margin-left: $spacer;
+        }
+
+        &__svg {
+            display: block;
+
+            svg {
+                fill: $white;
+                transition: fill 0.3 ease-in;
+            }
         }
     }
 }
