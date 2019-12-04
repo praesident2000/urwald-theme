@@ -8,8 +8,9 @@
                 {% if post.homepage_video %}
                     <div class="hero-video__decoration"></div>
                     <div class="homepage-hero__video hero-video">
-                        <div class="background-wrapper">
-                            <iframe src="https://player.vimeo.com/video/{{ post.homepage_video }}?background=1?" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        {% set image = TimberImage(meta.featured_image) %}
+                        <div class="background-wrapper" style="background: transparent url({{ image.src }}) 50% 50% / cover no-repeat;">
+                            <iframe class="video fade" src="about:blank" data-src="https://player.vimeo.com/video/{{ post.homepage_video }}?background=1?" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                         </div>
                     </div>
                 {% else %}
@@ -39,5 +40,12 @@
 
 {% block scripts %}
     {{ parent() }}
-    <script type="deferjs" src="{{ site.theme.link }}/dist/page.min.js"></script> 
+    <script type="deferjs" src="{{ site.theme.link }}/dist/page.min.js"></script>
+    <script type="text/javascript">
+        deferiframe('iframe.video', 500, 'lazied', function(frame) {
+            frame.onload = function() {
+                frame.className+=' show';
+            }
+        });
+    </script>
 {% endblock %}
