@@ -1,13 +1,41 @@
-{# see `archive.twig` for an alternative strategy of extending templates #}
 {% extends "base.twig" %}
 
 {% block content %}
-  {# see `base.twig:27` for where this block's content will be inserted #}
-  <div class="content-wrapper">
-    {% for post in posts %}
-      {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-    {% endfor %}
+	<div class="content__no-hero container">
+		{# {% include "partial/post-filter.twig" with { filter_posts: news } %} #}
 
-    {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
-  </div>
+		<form class="search search--large col-12" role="search" method="get" action="{{ site.url }}">
+			<div class="row">
+				<div class="col-9">
+					<div class="row">
+						<div class="col-5">
+							<h3 class="search__title">Suchergebnisse für</h3>
+						</div>
+						<div class="col-7">
+						<input id="search1" name="s" class="search__input" type="text" value="{{ function('get_search_query') }}" autocomplete="off" placeholder="Suchbegriff"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<button id="submit-search" class="search__submit" type="submit" value=""><div class="search__icon"><i class="fas fa-search"></i></div></button>
+				</div>
+			</div>
+		</form>
+
+		<div id="post-masonry" class="post-masonry layout__container row">
+			{% for post in posts %}
+				{% include ['tease.twig'] with { search: true } %}
+			{% endfor %}
+		</div>
+
+		{% include 'partial/pagination.twig' with { posts: news, name: "Meldungen", pagination: news.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+	</div>
+
+
+	{% include "partial/related_articles.twig" %}
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script type="deferjs" src="{{ site.theme.link }}/dist/archive.min.js"></script> 
 {% endblock %}

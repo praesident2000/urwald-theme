@@ -1,25 +1,43 @@
 .search {
 
     &__title {
-        font-weight: bold;
-        padding-bottom: $spacer * 0.5;
+        font-size: 32px;
+        margin: 0;
+        padding-top: $spacer * 0.25;
     }
 
     &__input {
         background-color: transparent;
         border: none;
         border-bottom: 1px solid $lime;
+        width: 100%;
 
         &::placeholder {
             font-weight: normal;
+
+            .search--large & {
+                font-size: 32px;
+            }
         }
+    }
+
+    &__submit {
+        background: transparent;
+        border: none;
+        display: inline-block;
+        padding: 0;
     }
 
     &__icon {
         display: inline-block;
         font-size: 26px;
         line-height: 32px;
-        padding-left: $spacer;
     }
 
+    &--large {
+
+        .search__input {
+            font-size: 32px;
+        }
+    }
 }

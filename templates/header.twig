@@ -42,12 +42,17 @@
         {% endfor %}
         <div class="header__submenu container nav-item-hamburger">
             <div class="row">
-                <div class="col-lg-3 offset-3">
-                    <div class="search">
-                        <div class="search__title">Suche</div>
-                        <input type="text" class="search__input" placeholder="Suchbegriff"><div class="search__icon"><i class="fas fa-search"></i></div>
+                <form class="col-lg-3 offset-3" role="search" method="get" action="{{ site.url }}" class="search">
+                    <div class="row">
+                        <div class="col-9">
+                            <input id="search2" name="s" class="search__input" type="text" value="{{ function('get_search_query') }}"
+                                autocomplete="off" placeholder="Suchbegriff"/>
+                        </div>
+                        <div class="col-3">
+                            <button id="submit-search" class="search__submit" type="submit" value=""><div class="search__icon"><i class="fas fa-search"></i></div></button>
+                        </div>
                     </div>
-                </div>
+                </form>
                 <div class="col-lg-3">
                     {% include "menu.twig" with {'menu': meta_menu.get_items, 'class': 'nav-sub'} %}
                 </div>
