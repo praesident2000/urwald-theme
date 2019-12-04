@@ -7,7 +7,7 @@
 	<div class="content__no-hero container">
 		{% include "partial/post-filter.twig" with { filter_posts: news } %}
 
-		<div id="post-masonry" class="post-masonry layout__container">
+		<div id="post-masonry" class="post-masonry layout__container row">
 			{% for post in news %}
 				{% include ['tease.twig'] %}
 			{% endfor %}

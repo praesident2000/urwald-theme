@@ -23,15 +23,15 @@
 							<div class="post-header__intro">{{ meta.intro }}</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-12">
-							<div class="post-header__image">
-								{% include "partial/image_fit.twig" with { 'image': meta.featured_image } %}
+					{% if meta.featured_image %}
+						<div class="row">
+							<div class="col-12">
+								<div class="post-header__image">
+									{% include "partial/image_fit.twig" with { 'image': meta.featured_image } %}
+								</div>
 							</div>
 						</div>
-					</div>
-					
-					{# TO-DO: Add post header #}
+					{% endif %}
 				</div>
 			<div>
 			<section class="{{post.post_type}}__content">

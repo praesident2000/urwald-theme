@@ -1,10 +1,15 @@
 {% set meta = post.meta %}
 {% set categories = [] %}
+{% set post_content = post.get_field('content') %}
 {% for category in post.categories %}
     {% set categories = categories|merge([category.slug]) %}
 {% endfor %}
-{% if post.get_field('content') %}
-	{% set post_content = true %}
+{% if post.type == 'post' and post_content and post_content.content_simple %}
+	{% set has_content = true %}
+{% elseif post.type != 'post' and post_content %}
+	{% set has_content = true %}
+{% elseif post.type == 'urwald_tour' %}
+	{% set has_content = true %}
 {% endif %}
 
 <article class="tease tease-{{post.post_type}} {% if 'warnhinweis' in categories %}tease--warning{% endif %} col-12 col-sm-6 col-lg-4" id="tease-{{post.ID}}" data-groups='["{% for item in categories %}{{ item }}{% if not loop.last %} , {% endif %}{% endfor %}"]' data-date-created="{{ post.date }}" data-title="{{ meta.title }}">
@@ -15,10 +20,11 @@
 			</div>
 		{% endif %}
 		<div class="tease__wrapper">
-			<p class="tease__kicker">{{ post.date }} - {{post.category}}</p>
-			<h3 class="tease__title">{% if post_content %}<a href="{{post.link}}">{{ meta.title }}</a>{% else %}{{ meta.title }}{% endif %}</h3>
+			{% if search %}<p class="tease__type">{{ post.type.labels.singular_name }}</p> {% endif %}
+			<p class="tease__kicker">{{ post.date }}{% if post.category %} - {{post.category}}{% endif %}</p>
+			<h3 class="tease__title">{% if has_content %}<a href="{{post.link}}">{{ meta.title }}</a>{% else %}{{ meta.title }}{% endif %}</h3>
 			<p class="tease__intro">{{ meta.intro }}</p>
-			{% if post_content %}
+			{% if has_content %}
 				<a class="tease__link" href="{{ post.link }}"><span class="arrow"></span>weiterlesen</a>
 			{% endif %}
 		</div>
