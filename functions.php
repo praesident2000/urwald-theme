@@ -47,6 +47,7 @@ class StarterSite extends Timber\Site {
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_action( 'wp_enqueue_scripts', array($this, 'deregister_scripts'), 100 );
 		add_action( 'wp_print_styles', array($this, 'wps_deregister_styles'), 100 );
+        add_theme_support( 'html5', ['search-form', 'gallery', 'caption'] );
 		parent::__construct();
 	}
 	/** This is where you can register custom post types. */
@@ -54,16 +55,16 @@ class StarterSite extends Timber\Site {
 
 		register_post_type( 'urwald_tour', [
             'labels' => [
-                'name' => __( 'Touren' ),
-                'singular_name' => __( 'Tour' ),
-                'add_new_item' => __( 'Neue Tour hinzufügen' ),
-                'edit_item' => __( 'Tour bearbeiten' ),
-                'new_item' => __( 'Neue Tour' ),
-                'view_item' => __( 'Tour ansehen' ),
-                'all_items' => __( 'Alle Touren' ),
-                'search_items' => __( 'Touren durchsuchen' ),
-                'not_found' => __( 'Keine Touren gefunden.' ),
-                'not_found_in_trash' => __( 'Keine Touren im Papierkorb gefunden.' ),
+                'name' => __( 'Routen' ),
+                'singular_name' => __( 'Route' ),
+                'add_new_item' => __( 'Neue Route hinzufügen' ),
+                'edit_item' => __( 'Route bearbeiten' ),
+                'new_item' => __( 'Neue Route' ),
+                'view_item' => __( 'Routen ansehen' ),
+                'all_items' => __( 'Alle Routen' ),
+                'search_items' => __( 'Routen durchsuchen' ),
+                'not_found' => __( 'Keine Routen gefunden.' ),
+                'not_found_in_trash' => __( 'Keine Routen im Papierkorb gefunden.' ),
             ],
             'menu_icon' => 'dashicons-location-alt',
             'menu_position' => 21,
