@@ -56,8 +56,12 @@
         }
     }
 
-    &__list {
+    &__link {
         color: $crab;
+
+        &:hover {
+            color: darken($crab, 25%);
+        }
     }
 
     &__item {

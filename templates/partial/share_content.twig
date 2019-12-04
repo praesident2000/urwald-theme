@@ -2,10 +2,26 @@
     <div id="share" class="share__btn"><span class="share__highlight">Inhalt teilen</span></div>
     <div class="share__wrapper">
         <ul class="share__list">
-            <li class="share__item"><i class="fab fa-facebook-f"></i></li>
-            <li class="share__item"><i class="fab fa-twitter"></i></li>
-            <li class="share__item"><i class="fab fa-whatsapp"></i></li>
-            <li class="share__item"><i class="far fa-envelope"></i></li>
+            <li class="share__item">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=%20{{ post.link }}" class="share__link" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li class="share__item">
+                <a href="https://twitter.com/share?status={{ post.link }}" class="share__link" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li class="share__item">
+                <a href="https://wa.me/?text={{ post.link }}" class="share__link" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </li>
+            <li class="share__item">
+                <a href="mailto:?subject=&body={{ post.link }}" class="share__link">
+                    <i class="far fa-envelope"></i>
+                </a>
+            </li>
         </ul>
     </div>
 </div>
