@@ -92,7 +92,7 @@
                             "min": 2,
                             "max": 8,
                             "layout": "table",
-                            "button_label": "",
+                            "button_label": "Bild hinzufügen",
                             "sub_fields": [
                                 {
                                     "key": "field_5dbff840cf9cb",
@@ -284,10 +284,10 @@
                                 "id": ""
                             },
                             "collapsed": "",
-                            "min": 0,
-                            "max": 0,
+                            "min": 1,
+                            "max": 4,
                             "layout": "table",
-                            "button_label": "",
+                            "button_label": "Logo hinzufügen",
                             "sub_fields": [
                                 {
                                     "key": "field_5ddfa9549febf",
@@ -462,7 +462,7 @@
                             "min": 1,
                             "max": 8,
                             "layout": "table",
-                            "button_label": "",
+                            "button_label": "Route hinzufügen",
                             "sub_fields": [
                                 {
                                     "key": "field_5dde49d3d3f35",
@@ -861,7 +861,7 @@
                             "min": 2,
                             "max": 4,
                             "layout": "table",
-                            "button_label": "",
+                            "button_label": "Zahl hinzufügen",
                             "sub_fields": [
                                 {
                                     "key": "field_5dcab9ea6a350",
@@ -949,9 +949,9 @@
                             },
                             "collapsed": "",
                             "min": 1,
-                            "max": 5,
+                            "max": 6,
                             "layout": "table",
-                            "button_label": "",
+                            "button_label": "Zielgruppe hinzufügen",
                             "sub_fields": [
                                 {
                                     "key": "field_5ddd23acabf80",
@@ -1069,13 +1069,13 @@
                     "max": ""
                 }
             },
-            "button_label": "Eintrag hinzufügen",
+            "button_label": "Inhaltselement hinzufügen",
             "min": "",
             "max": ""
         },
         {
             "key": "field_5da097e00e3d7",
-            "label": "Page Header Module",
+            "label": "Header Inhaltsmodule",
             "name": "content_meta_featured",
             "type": "flexible_content",
             "instructions": "",
@@ -1222,7 +1222,7 @@
                     "max": ""
                 }
             },
-            "button_label": "Eintrag hinzufügen",
+            "button_label": "Inhaltselement hinzufügen",
             "min": "",
             "max": ""
         },
@@ -1392,7 +1392,7 @@
                     "max": ""
                 }
             },
-            "button_label": "Eintrag hinzufügen",
+            "button_label": "Inhaltselement hinzufügen",
             "min": "",
             "max": ""
         }
@@ -1414,5 +1414,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1575283531
+    "modified": 1575466702
 }

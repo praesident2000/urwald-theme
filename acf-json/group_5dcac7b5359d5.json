@@ -19,7 +19,7 @@
             "min": 1,
             "max": 7,
             "layout": "table",
-            "button_label": "",
+            "button_label": "Slide hinzufügen",
             "sub_fields": [
                 {
                     "key": "field_5dcac800ecc4d",
@@ -63,5 +63,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1573570622
+    "modified": 1575466224
 }

@@ -38,7 +38,7 @@
             "min": 0,
             "max": 0,
             "layout": "table",
-            "button_label": "",
+            "button_label": "Medien hinzufügen",
             "sub_fields": [
                 {
                     "key": "field_5ddfd55b13385",
@@ -208,5 +208,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1574954607
+    "modified": 1575466015
 }

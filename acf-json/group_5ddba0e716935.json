@@ -354,7 +354,7 @@
                     "max": ""
                 }
             },
-            "button_label": "Eintrag hinzufügen",
+            "button_label": "Slide hinzufügen",
             "min": "",
             "max": 8
         }
@@ -380,5 +380,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1574686180
+    "modified": 1575466195
 }

@@ -73,7 +73,7 @@
             "min": 1,
             "max": 2,
             "layout": "table",
-            "button_label": "",
+            "button_label": "Artikel hinzufügen",
             "sub_fields": [
                 {
                     "key": "field_5db0415ebbe4b",
@@ -117,12 +117,12 @@
         ]
     ],
     "menu_order": 10,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1571835111
+    "modified": 1575466486
 }
