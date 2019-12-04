@@ -22,7 +22,7 @@
 			</div>
 		</form>
 
-		<div id="post-masonry" class="post-masonry layout__container row">
+		<div id="post-masonry" class="post-masonry layout__container">
 			{% for post in posts %}
 				{% include ['tease.twig'] with { search: true } %}
 			{% endfor %}
