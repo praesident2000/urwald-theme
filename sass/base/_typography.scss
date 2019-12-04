@@ -39,7 +39,7 @@ h6 {
 
 p {
     font-size: 14px;
-    line-height: 10px;
+    line-height: 18px;
 }
 
 .copy-intro {
@@ -54,12 +54,17 @@ p {
 blockquote, .quote {
     color: $lime;
     font-family: $merriweather;
-    font-size: 22px;
+    font-size: 20px;
     font-style: italic;
     line-height: 28px;
     border-left: 1px solid $lime;
     margin-left: 0;
     padding-left: $spacer;
+
+    p {
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 
 @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
@@ -101,5 +106,15 @@ blockquote, .quote {
     .copy-intro {
         font-size: 18px;
         line-height: 22px;
+    }
+
+    blockquote, .quote, blockquote p {
+        font-size: 22px;
+        line-height: 28px;
+
+        p {
+            font-size: 22px;
+            line-height: 28px;
+        }
     }
 }

@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: $crab;
+    color: lighten($mud,20%);
 }
 
 a:active, a:hover {
@@ -20,8 +20,22 @@ a:active, a:hover {
     background: $eggshell;
 }
 
+.wp-core-ui .button-primary.active, .wp-core-ui .button-primary.active:focus, .wp-core-ui .button-primary.active:hover, .wp-core-ui .button-primary:active {
+    background: $crab;
+    border-color: $crab;
+}
+
+.wp-core-ui .button-primary.focus, .wp-core-ui .button-primary.hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:hover {
+    background: $crab;
+    border-color: $crab;
+}
+
 .wp-core-ui .button-link {
     color: $jungle;
+}
+
+.wp-core-ui .button-primary.focus, .wp-core-ui .button-primary:focus {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px $crab;
 }
 
 [data-layout="testimonial"] img {
@@ -117,4 +131,14 @@ a:active, a:hover {
 .wp-admin select:hover {
     color: darken($mud, 20%);
     border-color: $mud;
+}
+
+.acf-fc-popup a:hover {
+    background: $crab;
+    color: #fff;
+}
+
+.wpbody .acf-switch.-on {
+    background: lighten($crab,10%);
+    border-color: $crab;
 }
