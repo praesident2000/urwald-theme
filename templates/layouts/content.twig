@@ -10,7 +10,11 @@
             </div>
         {% elseif content.acf_fc_layout == 'call_to_action' %}
             <div class="layout__container container">
-                {% include 'modules/cta.twig' with { link: content.link} %}
+                <div class="row">
+                    <div class="col-12 col-lg-6 offset-lg-3">
+                        {% include 'modules/cta.twig' with { link: content.link} %}
+                    </div>
+                </div>
             </div>
         {% elseif content.acf_fc_layout == 'double_image' %}
             <div class="layout__container container">
