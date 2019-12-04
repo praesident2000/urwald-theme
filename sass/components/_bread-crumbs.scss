@@ -1,19 +1,23 @@
 .bread-crumbs {
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    top: 480px;
-    left: 20px;
-    transform: rotate(90deg) translate(-50%, -50%);
-    transform-origin: center left;
 
-    &__hyphen {
+    display: none;
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        top: 480px;
+        left: 20px;
+        transform: rotate(90deg) translate(-50%, -50%);
+        transform-origin: center left;
 
-        background: #fff;
-        display: inline-block;
-        width: 20px;
-        height: 1px;
-        margin: 0 $spacer * 0.5;
+        &__hyphen {
+
+            background: #fff;
+            display: inline-block;
+            width: 20px;
+            height: 1px;
+            margin: 0 $spacer * 0.5;
+        }
     }
 }
