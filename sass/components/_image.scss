@@ -34,10 +34,18 @@
         position: absolute;
         color: $white;
         cursor: default;
-        bottom: $spacer;
-        right: $spacer;
-        font-size: 11px;
+        bottom: $spacer * 0.5;
+        left: $spacer * 0.5;
+        font-size: 12px;
         z-index: 1;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+
+        &__copyright {
+            bottom: $spacer;
+            font-size: 11px;
+        }
     }
 }
 
@@ -48,10 +56,20 @@
         position: relative;
     }
 
+    &__description {
+        font-size: 14px;
+        padding-top: $spacer * 0.5;
+    }
+
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
         &__image-container {
             padding-top: 0%;
             height: 520px;
+        }
+
+        &__description {
+            font-size: 16px;
+            padding-top: $spacer * 0.75;
         }
     }
 }

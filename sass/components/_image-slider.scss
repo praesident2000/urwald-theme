@@ -1,12 +1,32 @@
 .image-slider {
-    height: 675px;
+    height: 100vh;
 
     &__image {
-        height: 600px;
+        height: 85vh;
         position: relative;
+        margin-left: -16px;
+        margin-right: -16px;
     }
 
     &__text {
         padding-top: $spacer * 0.75;
+    }
+
+    .flickity-page-dots {
+        bottom: $spacer;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        height: 675px;
+
+        &__image {
+            height: 600px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .flickity-page-dots {
+            display: none;
+        }
     }
 }

@@ -5,7 +5,7 @@ if ($('.image-slider')[0]){
     const flkty = new Flickity( '.image-slider', {
         cellAlign: 'center',
         cellSelector: ".image-slider__slide",
-        pageDots: false,
+        pageDots: true,
         prevNextButtons: false,
         setGallerySize: false,
         wrapAround: true
