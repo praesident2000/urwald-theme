@@ -7,12 +7,14 @@
             <div class="row">
                 {% set related_articles = post.get_field('related_articles') %}
                 {% for related in related_articles %}
-                    <div class="related-article col-12 col-lg-{{ 12 / loop.length }} {% if loop.length == 1 %}related-article--large{% endif %}">
+                    <div class="related-article col-12 col-md-{{ 12 / loop.length }} {% if loop.length == 1 %}related-article--large{% endif %}">
 
                         {% set related_article = TimberPost(related.article) %}
                         {% set article_meta = related_article.get_field('meta') %}
                         <div class="related-article__image">
                             {% include "partial/image_fit.twig" with { 'image': article_meta.featured_image } %}
+                        </div>
+                        <div class="related-article__wrapper">
                             <div class="related-article__wrapper">
                                 <div class="related-article__kicker">{{ related_article.category }}</div>
                                 <h3 class="related-article__title">{{ article_meta.title }}</h3>

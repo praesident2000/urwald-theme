@@ -9,6 +9,7 @@
 
 .related-article {
     position: relative;
+    margin-bottom: $spacer * 2.5;
 
     &__image {
         position: relative;
@@ -17,6 +18,14 @@
 
     &__wrapper {
         padding-left: $spacer;
+
+        & > & {
+            padding-left: 0;
+        }
+    }
+
+    &__kicker {
+        display: none;
     }
 
     &__text {
@@ -42,6 +51,8 @@
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+
+        margin-bottom: 0;
         
         &__image {
             height: 360px;
@@ -49,12 +60,17 @@
         }
 
         &__wrapper {
-            bottom: -$spacer * 1.8;
-            max-width: 65%;
-            position: absolute;
+            position: relative;
+            
+            & > & {
+                bottom: -$spacer * 1.25;
+                max-width: 65%;
+                position: absolute;
+            }
         }
 
         &__kicker {
+            display: block;
             font-size: 18px;
         }
 

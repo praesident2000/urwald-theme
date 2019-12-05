@@ -3,7 +3,7 @@ $image-offset: 50px;
 .footer {
     background-color: $eggshell;
     color: $mud;
-    margin-top: $spacer * 10;
+    margin-top: $spacer * 4;
 
     &__wrapper {
         position: relative;
@@ -35,6 +35,10 @@ $image-offset: 50px;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+
+
+        margin-top: $spacer * 10;
+
         &__image {
             display: block;
             height: calc(100% + #{$image-offset});
