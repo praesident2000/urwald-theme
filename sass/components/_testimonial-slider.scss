@@ -1,39 +1,83 @@
 .testimonial-slider{
-
-    height: 300px;
+    
+    height: 400px;
 
     &__image-wrapper {
+        display: flex;
+        justify-content: center;
         padding: 0;
     }
 
     &__image {
-        padding-top: 100%;
-        max-width: 100%;
+        height: 190px;
+        width: 190px;
+        position: relative;
     }
 
     &__slide {
         display: flex;
+        flex-wrap: wrap;
         position: relative;
         width: 100%;
     }
 
     &__wrapper {
-        padding: $spacer * 2;
+        padding: $spacer * 2 0;
+        height: 210px;
     }
 
     &__text {
         color: $white;
         font-style: italic;
-        font-size: 28px;
-        line-height: 40px;
+        font-size: 18px;
+        line-height: 26px;
         padding-left: 0;
         border: none;
+        text-align: center;
     }
 
     &__author {
         padding-top: $spacer * 0.75;
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .image-fit__copyright {
+        display: none;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+
+        height: 200px;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+
+        height: 300px;
+
+        &__image {
+            height: auto;
+            max-width: 100%;
+            width: 100%;
+            padding-top: 100%;
+        }
+
+        &__wrapper {
+            padding: $spacer * 2 $spacer * 4;
+        }
+
+        &__text {
+            font-size: 28px;
+            line-height: 40px;
+            text-align: left;
+        }
+        
+        &__author {
+            font-size: 20px;
+            line-height: 24px;
+            text-align: left;
+        }
+
     }
 
 }
