@@ -76,23 +76,57 @@
 
 .double-image-module {
     position: relative;
-    
+
+    &__image-container {
+
+        .image-fit {
+            padding-top: 60%;
+            position: relative;
+        }
+    }
+
+    &__description {
+        padding-top: $spacer * 0.5;
+        padding-bottom: $spacer * 2;
+    }
+
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
         height: 420px;
 
         &__image-container {
             position: absolute;
-            height: 90%;
-            width: 52.5%;
+            height: 88%;
+            width: 54%;
+            padding-bottom: 0;
+            top: 0;
+            left: 0;
 
-            &:first-child {
-                top: 0;
-                left: 0;
-            }
 
-            &:last-child {
+            &--second {
+                top: auto;
+                left: auto;
                 bottom: 0;
                 right: 0;
+            }
+
+            .image-fit {
+                padding-top: 0;
+                position: unset;
+            }
+        }
+
+        &__description {
+            padding-bottom: 0;
+            padding-top: 0;
+            position: absolute;
+            left: $spacer * 0.5;
+            bottom: $spacer * 0.5;
+
+            &--second {
+                top: $spacer * 0.5;
+                left: auto;
+                bottom: auto;
+                right: $spacer * 0.5;
             }
         }
     }

@@ -1,15 +1,15 @@
 <div class="double-image-module">
     <div class="double-image-module__image-container">
         {% include "partial/image_fit.twig" with { 'image': content.image_1, 'masked': false, img_type: "medium" } %}
-        <div class="double-image-module__description">
-            {{ content.description_1 }}
-        </div>
+    </div>
+    <div class="double-image-module__description">
+        {{ content.description_1 }}
     </div>
 
-    <div class="double-image-module__image-container">
+    <div class="double-image-module__image-container double-image-module__image-container--second">
         {% include "partial/image_fit.twig" with { 'image': content.image_2, 'masked': false, img_type: "medium" } %}
-        <div class="double-image-module__description">
-            {{ content.description_2 }}
-        </div>
+    </div>
+    <div class="double-image-module__description double-image-module__description--second">
+        {{ content.description_2 }}
     </div>
 </div>
