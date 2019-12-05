@@ -4,11 +4,11 @@
 {% if content.title %}
     <div class="layout__container container">
         <div class="row">
-            <div class="col-10 offset-1 {% if content.text %}col-lg-4{% else %}col-lg-8{% endif %} offset-lg-2">
+            <div class="col-10 offset-1 {% if content.text %}col-md-5 col-lg-4{% else %}col-md-8{% endif %} offset-lg-2">
                 <h3>{{ content.title }}</h3>
             </div>
             {% if content.text %}
-                <div class="col-10 offset-1 col-lg-5">
+                <div class="col-10 offset-1 col-md-5">
                     <p>{{ content.text }}</p>
                 </div>
             {% endif %}

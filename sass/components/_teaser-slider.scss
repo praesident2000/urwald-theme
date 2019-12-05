@@ -1,28 +1,36 @@
 .teaser-slider {
-    height: 460px;
+    min-height: 625px;
+    height: 100vh;
     position: relative;
 
+    &__slide {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     &__image {
-        margin-top: 40px;
-        height: 400px;
         position: relative;
-        width: calc(50% + 40px);
+        min-height: 300px;
+        height: 50vh;
+        width: 100%;
     }
 
     &__title {
-        margin-top: $spacer;
+        margin-bottom: $spacer * 0.75;
+        margin-top: $spacer * 0.75;
     }
 
     &__content{
-        width: calc(50% + 60px);
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: $spacer * 2 $spacer * 3 $spacer * 2;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        min-height: 325px;
+        height: 50vh;
+        width: 100%;
+        padding: $spacer * 1 $spacer * 1.5 $spacer * 1;
 
         .article &, .custom & {
-            padding-bottom: $spacer * 4;
+            padding-bottom: $spacer * 2;
         }
     }
 
@@ -51,7 +59,7 @@
         background: transparent;
         border: none;
         display: block;
-        margin-top: $spacer * 2;
+        margin-top: $spacer;
         padding: 0;
         position: relative;
     }
@@ -66,4 +74,50 @@
         }
     }
 
+    .flickity-page-dots {
+        bottom: auto;
+        top: 43.5%;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        height: 460px;
+
+        &__slide {
+            padding-left: $spacer;
+            padding-right: $spacer;
+        }
+
+        &__image {
+            margin-top: 40px;
+            height: 400px;
+            min-width: 460px;
+            width: calc(50% + 40px);
+        }
+        
+        &__content{
+            height: auto;
+            width: calc(50% + 60px);
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: $spacer * 2 $spacer * 3 $spacer * 2;
+    
+            .article &, .custom & {
+                padding-bottom: $spacer * 4;
+            }
+        }
+        
+        &__title {
+            margin-bottom: $spacer;
+            margin-top: $spacer;
+        }
+
+        &__button {
+            margin-top: $spacer * 2;
+        }
+        .flickity-page-dots {
+            bottom: -25px;
+            top: auto;
+        }
+    }
 }
