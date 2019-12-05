@@ -1,0 +1,8 @@
+.cta {
+    text-align: center;
+
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        text-align: left;
+    }
+}
