@@ -917,7 +917,7 @@
                     "sub_fields": [
                         {
                             "key": "field_5ddd2317abf7e",
-                            "label": "Titel",
+                            "label": "Mobil-Titel",
                             "name": "title",
                             "type": "text",
                             "instructions": "",
@@ -976,7 +976,7 @@
                                     "key": "field_5ddd2495abf81",
                                     "label": "Text",
                                     "name": "text",
-                                    "type": "textarea",
+                                    "type": "wysiwyg",
                                     "instructions": "",
                                     "required": 1,
                                     "conditional_logic": 0,
@@ -986,10 +986,10 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": "",
-                                    "maxlength": "",
-                                    "rows": "",
-                                    "new_lines": ""
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
                                 },
                                 {
                                     "key": "field_5ddd24d9abf82",
@@ -1414,5 +1414,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1575553834
+    "modified": 1575557920
 }
