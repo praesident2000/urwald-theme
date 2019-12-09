@@ -1,0 +1,17 @@
+<div class="accordion" id="urwald-accordion">
+    {% for section in content.sections %}
+		<div class="accordion__segment">
+			<div class="accordion__header" id="accordion-heading-{{ loop.index }}">
+				<button class="accordion__button {% if not loop.first %}collapsed{% endif %}" type="button" data-toggle="collapse" data-target="#collapse-{{ loop.index }}" aria-expanded="{% if loop.first %}true{% else %}false{% endif %}" aria-controls="collapse-{{ loop.index }}">
+					{{ section.title }} <i class="fas fa-chevron-down"></i>
+				</button>
+			</div>
+
+			<div id="collapse-{{ loop.index }}" class="accordion__collapse collapse {% if loop.first %}show{% endif %}" aria-labelledby="accordion-heading-{{ loop.index }}" data-parent="#urwald-accordion">
+				<div class="accordion__body">
+					{{ section.text }}
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>

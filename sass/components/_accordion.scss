@@ -1,0 +1,64 @@
+.accordion {
+    
+    display: block;
+
+    &__segment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &:nth-child(odd) {
+
+            .accordion__header {
+                background: rgba($white, 0.5);
+            }
+        }
+    }
+
+    &__header {
+        font-weight: bold;
+        font-family: $merriweather;
+    }
+
+    &__button {
+        background: none;
+        border: none;
+        border-bottom: 1px solid;
+        border-top: 1px solid;
+        border-color: $white;
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        padding: $spacer * 0.75;
+        width: 100%;
+        
+        &.collapsed {
+            margin-bottom: -1px;
+
+            i {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+    &__collapse {
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 500ms ease-out;
+
+        &.show  {
+            max-height: 2000px;
+            transition: max-height 500ms ease-in;
+        }
+    }
+
+    &__body {
+        position: relative;
+        min-height: 1px;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        padding: $spacer 0;
+        min-width: 0;
+    }
+}

@@ -1,9 +1,9 @@
 <div class="layout">
     {% for content in post_content %}
         {% if content.acf_fc_layout == 'accordion' %}
-            <div class="layout__container">
+            <div class="layout__container container">
                 <div class="row">
-                    <div class="{{ column_layout_classes }}">
+                    <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-2">
                         {% include 'modules/accordion.twig' with {} %}
                     </div>
                 </div>

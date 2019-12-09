@@ -16,6 +16,90 @@
                 "id": ""
             },
             "layouts": {
+                "layout_5dea2a217b00e": {
+                    "key": "layout_5dea2a217b00e",
+                    "name": "accordion",
+                    "label": "Akkordeon",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dea2a537b00f",
+                            "label": "Segmente",
+                            "name": "sections",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 2,
+                            "max": 8,
+                            "layout": "table",
+                            "button_label": "Segment hinzufügen",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5dea2b327b010",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5dea2b3d7b011",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 4,
+                                    "new_lines": ""
+                                },
+                                {
+                                    "key": "field_5dea2b537b012",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d8229ab4c39e": {
                     "key": "layout_5d8229ab4c39e",
                     "name": "image",
@@ -1414,5 +1498,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1575557920
+    "modified": 1575627961
 }
