@@ -43,6 +43,11 @@ p {
     line-height: 18px;
 }
 
+.text p {
+    font-size: 16px;
+    line-height: 20px;
+}
+
 .copy-intro {
     font-size: 16px;
     line-height: 20px;
@@ -71,7 +76,7 @@ blockquote, .quote {
 @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
 
     body {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     h1 {
@@ -105,22 +110,22 @@ blockquote, .quote {
     }
 
     p {
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    .copy-intro {
         font-size: 18px;
         line-height: 22px;
     }
 
+    .copy-intro {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
     blockquote, .quote, blockquote p {
-        font-size: 22px;
-        line-height: 28px;
+        font-size: 24px;
+        line-height: 30px;
 
         p {
-            font-size: 22px;
-            line-height: 28px;
+            font-size: 24px;
+            line-height: 30px;
         }
     }
 }

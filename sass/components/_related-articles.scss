@@ -94,6 +94,9 @@
             .related-article__link, .related-article__text, .related-article__wrapper {
                 margin-left: 50%;
             }
+            .related-article__wrapper > .related-article__wrapper {
+                margin-left: 0;
+            }
             .related-article__text {
                 max-width: 40%;
             }

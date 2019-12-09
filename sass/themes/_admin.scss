@@ -30,6 +30,12 @@ a:active, a:hover {
     border-color: $crab;
 }
 
+.wp-core-ui .button-primary-disabled, .wp-core-ui .button-primary.disabled, .wp-core-ui .button-primary:disabled, .wp-core-ui .button-primary[disabled] {
+    color: $white!important;
+    background: lighten($crab, 20%)!important;
+    border-color: lighten($crab, 20%)!important;
+}
+
 .wp-core-ui .button-link {
     color: $jungle;
 }
@@ -133,12 +139,37 @@ a:active, a:hover {
     border-color: $mud;
 }
 
-.acf-fc-popup a:hover {
+// ACF
+
+#poststuf .acf-fc-popup a:hover {
     background: $crab;
     color: #fff;
 }
 
-.wpbody .acf-switch.-on {
+#poststuff .acf-switch {
+    background: $white;
+    border: $crab solid 1px;
+}
+
+#poststuff .acf-switch:hover, .acf-switch.-focus {
+    border-color: darken($crab,10%);
+    background: $eggshell;
+    color: darken($crab,10%);
+}
+
+#poststuff .acf-switch:hover .acf-switch-slider, .acf-switch.-focus .acf-switch-slider {
+    border-color: darken($crab,10%);
+}
+
+#poststuff .acf-switch.-on {
     background: lighten($crab,10%);
     border-color: $crab;
+}
+
+#poststuff .acf-switch.-on .acf-switch-slider {
+    border-color: darken($crab,10%);
+}
+
+#poststuff .acf-switch .acf-switch-on {
+    text-shadow: darken($crab,10%) 0 1px 0;
 }

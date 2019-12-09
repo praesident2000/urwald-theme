@@ -7,8 +7,8 @@
 
     &__frame.lazyframe[data-vendor="youtube"]::after {
         background-image:  url(../assets/play.svg#play);
-        width: 64px;
-        height: 88px;
+        width: 44px;
+        height: 64px;
         opacity: 0.75;
         transition: opacity 0.5s ease-in;
     }
@@ -17,6 +17,14 @@
 
         &::after {
             opacity: 1;
+        }
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        
+        &__frame.lazyframe[data-vendor="youtube"]::after {
+            width: 64px;
+            height: 88px;
         }
     }
 }

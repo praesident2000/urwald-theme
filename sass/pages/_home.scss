@@ -10,7 +10,8 @@ $video-height: 120vh; //1400px;
 
     position: relative;
     overflow: hidden;
-    height: 1680px;
+    min-height: calc(#{$video-height} + 180px);
+    display: grid;
 
     &__image {
         position: absolute;
