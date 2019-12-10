@@ -51,13 +51,15 @@ $video-height: 120vh; //1400px;
     &__wrapper {
         height: 100vh;
         position: relative;
-    }
 
-    &__title {
-        position: absolute;
-        bottom:  calc(5% + 56px);
-        left: 40px;
-        max-width: 75%;
+        .container {
+            height: 100%;
+        }
+
+        .row {
+            height: 100%;
+            align-items: flex-end;
+        }
     }
 
     .hero-video {
@@ -132,9 +134,6 @@ $video-height: 120vh; //1400px;
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
         
         &__title {
-            left: 25%;
-            bottom: 5%;
-            max-width: 485px;
             font-size: 75px;
             line-height: 88px;
         }
