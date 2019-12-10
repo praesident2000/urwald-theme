@@ -68,5 +68,9 @@
     }
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
 
+        &__title {
+            font-size: 38px;
+            line-height: 58px;
+        }
     }
 }
