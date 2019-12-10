@@ -73,3 +73,35 @@
         color: $mud;
     }
 }
+
+.nav-mobile {
+    display: flex;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: $spacer * 0.5 0;
+    }
+
+    &__link {
+        border-right: 1px solid $mud;
+        color: $mud;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+.nav-mobile-sub {
+
+    &:first-child{
+        padding-top: $spacer;
+    }
+
+    &__item {
+        font-weight: bold;
+        font-size: 20px;
+        padding-top: $spacer * 2;
+    }
+}

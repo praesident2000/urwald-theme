@@ -33,4 +33,31 @@
             margin-top: -4px;
         }
     }
+
+    &--nav {
+        background-color: $mud;
+        color: $white;
+
+        .close {
+            bottom: 10%;
+            top: auto;
+            right: $spacer ;
+            z-index: 1;
+            background-color: transparent;
+            border: none;
+        }
+
+        .search {
+            padding-top: $spacer * 3;
+
+            &__input {
+                border-bottom: 1px solid $white;
+    
+                &::placeholder {
+                    color: $white;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 }

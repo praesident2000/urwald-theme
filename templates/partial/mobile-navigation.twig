@@ -10,15 +10,71 @@
             <ul class="nav-mobile">
                 {% for item in main_menu.get_items %}
                     <li class="nav-mobile__item {{ item.classes | join(' ') }}" id="nav-item-{{ loop.index }}">
-                        <a class="nav-mobile__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                        {% if item.children %}
+                            <a class="nav-mobile__link" data-toggle="modal" data-target="#modal-mobile-{{ loop.index }}">{{ item.title }}</a>
+                        {% else %}
+                            <a class="nav-mobile__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                        {% endif %}
                     </li>
                 {% endfor %}
             </ul>
         </nav><!-- #nav -->
         <div class="hamburger">
-            <div class="hamburger__box" >
+            <div class="hamburger__box" data-toggle="modal" data-target="#modal-mobile-meta">
                 <div class="hamburger__inner"></div>
             </div>
         </div>
     </div>
 </header>
+
+{% for item in main_menu.get_items %}
+    {% if item.children %}
+        <div class="modal modal--nav fade" id="modal-mobile-{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal__dialog modal-dialog" role="document">
+                <div class="modal__content modal-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                {% include "menu.twig" with {'menu': item.children, 'class': 'nav-mobile-sub'} %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endif %}
+{% endfor %}
+
+<div class="modal modal--nav fade" id="modal-mobile-meta" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal__dialog modal-dialog" role="document">
+        <div class="modal__content modal-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-11">
+                        {% include "menu.twig" with {'menu': meta_menu.get_items, 'class': 'nav-mobile-sub'} %}
+
+                        {% include "menu.twig" with {'menu': legal_menu.get_items, 'class': 'nav-mobile-sub'} %}
+
+                    </div>
+                    <form class="search col-10" role="search" method="get" action="{{ site.url }}" class="search">
+                            <div class="row">
+                                <div class="col-9">
+                                    <input id="search2" name="s" class="search__input" type="text" value="{{ function('get_search_query') }}"
+                                        autocomplete="off" placeholder="Suchbegriff"/>
+                                </div>
+                                <div class="col-3">
+                                    <button id="submit-search" class="search__submit" type="submit" value=""><div class="search__icon"><i class="fas fa-search"></i></div></button>
+                                </div>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>

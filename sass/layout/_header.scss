@@ -102,7 +102,7 @@
     bottom: 0;
     left: 0;
     background-color: $white;
-    z-index: 1000;
+    z-index: 1051;
     max-height: 56px;
     
     &__wrapper {
@@ -132,25 +132,6 @@
     #nav-mobile {
         width: 60%;
         display: flex;
-    }
-
-    .nav-mobile {
-        display: flex;
-
-        &__item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: $spacer * 0.5 0;
-        }
-
-        &__link {
-            border-right: 1px solid $mud;
-            color: $mud;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
     }
 
     .hamburger {
