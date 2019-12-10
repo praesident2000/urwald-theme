@@ -1,9 +1,16 @@
 .read-more {
+
+    margin-top: -$spacer * 2;
+
     &__button {
         background: transparent;
         border: none;
         color: $lime;
         font-weight: bold;
+
+        &:focus, &:active {
+            outline: none;
+        }
     }
 
     &__text {
