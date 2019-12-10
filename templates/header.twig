@@ -1,5 +1,5 @@
-<header class="header header--show">
-    {% block header %}
+{% block header %}
+    <header class="header header--show">
         <div class="header__wrapper container">
             {% set logo = options.logo %}
             <h1 class="header-logo__container" role="banner">
@@ -61,5 +61,6 @@
                 </div>
             </div>
         </div>
-    {% endblock %}
-</header>
+    </header>
+    {% include "partial/mobile-navigation.twig" %}
+{% endblock %}

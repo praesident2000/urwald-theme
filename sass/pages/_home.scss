@@ -7,7 +7,6 @@ $video-height: 120vh; //1400px;
 }
 
 .homepage-hero {
-
     position: relative;
     overflow: hidden;
     min-height: calc(#{$video-height} + 180px);
@@ -43,10 +42,9 @@ $video-height: 120vh; //1400px;
     }
 
     &__video {
+        left: 90px;
         position: absolute;
-        left: 570px;
-        top: 140px;
-        width: 100%;
+        width: 150%;
         height: $video-height;
     }
 
@@ -57,11 +55,9 @@ $video-height: 120vh; //1400px;
 
     &__title {
         position: absolute;
-        left: 25%;
-        bottom: 5%;
-        max-width: 485px;
-        font-size: 75px;
-        line-height: 88px;
+        bottom:  calc(5% + 56px);
+        left: 40px;
+        max-width: 75%;
     }
 
     .hero-video {
@@ -90,7 +86,7 @@ $video-height: 120vh; //1400px;
             height: 920px;
             width: 100%;
             display: block;
-            transform: translate(15%,-10%);
+            transform: translate(-15%,-40%);
             position: absolute;
         }
         
@@ -129,6 +125,31 @@ $video-height: 120vh; //1400px;
                 top: 0;
                 left: 0;
                 z-index: 10;
+            }
+        }
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        
+        &__title {
+            left: 25%;
+            bottom: 5%;
+            max-width: 485px;
+            font-size: 75px;
+            line-height: 88px;
+        }
+
+        &__video {
+            left: 570px;
+            top: 140px;
+            width: 100%;
+        }
+
+        .hero-video {
+
+            &__decoration {
+                height: 920px;
+                transform: translate(15%,-10%);
             }
         }
     }

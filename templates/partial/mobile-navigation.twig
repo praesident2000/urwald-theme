@@ -1,0 +1,24 @@
+<header class="mobile-header">
+    <div class="mobile-header__wrapper">
+        <div class="mobile-header__logo">
+            <a class="mobile-header__link" href="{{site.url}}" rel="home">
+                {% set image = TimberImage(logo.image) %}
+                <img class="mobile-logo lozad" src="{{ image.src }}" alt="{{ image.alt }}" />
+            </a>
+        </div>
+        <nav id="nav-mobile" role="navigation">
+            <ul class="nav-mobile">
+                {% for item in main_menu.get_items %}
+                    <li class="nav-mobile__item {{ item.classes | join(' ') }}" id="nav-item-{{ loop.index }}">
+                        <a class="nav-mobile__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav><!-- #nav -->
+        <div class="hamburger">
+            <div class="hamburger__box" >
+                <div class="hamburger__inner"></div>
+            </div>
+        </div>
+    </div>
+</header>
