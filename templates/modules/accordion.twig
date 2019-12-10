@@ -11,6 +11,9 @@
 				<div class="accordion__body">
 					{{ section.text }}
 				</div>
+				{% if section.link %}
+					<a class="accordion__link" href="{{ section.link.url }}" target="{{ section.link.target }}"><span class="arrow"></span>{{ section.link.title }}</a>
+				{% endif %}
 			</div>
 		</div>
 	{% endfor %}
