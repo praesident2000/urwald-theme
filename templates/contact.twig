@@ -1,0 +1,53 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    {% set meta = post.get_field('meta') %}
+    {% set persons = post.get_field('persons') %}
+	<article class="{{post.post_type}} contact" id="post-{{post.ID}}">
+        <section class="{{post.post_type}}__content content__no-hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-5">
+                        <div class="contact__intro">
+                            <h2>{{ meta.title }}</h2>
+                            <p>{{ meta.intro }}</p>
+                        </div>
+                        {% for person in persons %}
+                            <div class="person">
+                                <div class="person__title"></div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h6 class="person__title">
+                                            {{ person.title }}
+                                        </h6>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="person__image">
+                                            {% include 'partial/image_fit.twig' with { image: person.image, rounded: true, img_type: "medium" } %}
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="person__name">{{ person.name }}</div>
+                                        <div class="person__info">{{ person.description }}</div>
+                                        <div class="person__info">{{ person.adress }}</div>
+                                        <div class="person__info">{{ person.location }}</div>
+                                        <div class="person__spacer"></div>
+                                        <div class="person__info">T {{ person.telephone }}</div>
+                                        <div class="person__info">M {{ person.email }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="col-12 col-lg-6 offset-lg-1s">
+                        <div class="contact__form">
+                            <form action="" class="contact-form">
+                            
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>   
+{% endblock %}

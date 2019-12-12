@@ -1,0 +1,27 @@
+.person {
+
+    &__title {
+        margin-bottom: $spacer * 1.5;
+    }
+    
+    &__image {
+        height: auto;
+        max-width: 100%;
+        padding-top: 100%;
+        position: relative;
+        width: 100%;
+
+        .image-fit__copyright {
+            display: none;
+        }
+    }
+
+    &__name {
+        font-weight: bold;
+    }
+
+    &__spacer {
+        padding-top: $spacer * 2;
+    }
+
+}
