@@ -19,7 +19,7 @@
             "sub_fields": [
                 {
                     "key": "field_5d7a39ba4eebd",
-                    "label": "Title",
+                    "label": "Titel",
                     "name": "title",
                     "type": "text",
                     "instructions": "",
@@ -209,6 +209,11 @@
                 "param": "page_template",
                 "operator": "!=",
                 "value": "contact.php"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
             }
         ]
     ],
@@ -220,5 +225,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1576145860
+    "modified": 1576495345
 }

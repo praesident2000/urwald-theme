@@ -39,6 +39,23 @@
                 </div>
             </div>
         </section>
+        {% set home_map = post.get_field('homepage_map') %}
+        {% if home_map.show %}
+            <section class="homepage-map">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-8" style="height:500px">
+                            {# <div id="kartentest_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
+                                <script type="text/javascript" charset="utf-8" src="{{ site.theme.link }}/assets/kartentest_hype_generated_script.js?77932"></script>
+                            </div> #}
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            {{ home_map.text }}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {% endif %}
         <section class="{{post.post_type}}__content">
             {% set post_content = post.get_field('content') %}
             {% include "layouts/content.twig" %}
@@ -57,4 +74,5 @@
             }
         });
     </script>
+
 {% endblock %}
