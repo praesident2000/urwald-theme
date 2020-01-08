@@ -8,10 +8,10 @@
         data-src="{{ image.src }}"
         {% if img_type == "thumbnail" %}
             data-type="{{ img_type }}"
-            data-srcset="{{ image.src("thumbnail") }} 320w,{{ image.src("medium") }} 768w"
+            data-srcset="{{ image.src("thumbnail") }} 320w,{{ image.src("medium") }} 768w, {{ image.src("medium_large") }} 1024w"
         {% elseif img_type == "medium" %}
             data-type="{{ img_type }}"
-            data-srcset="{{ image.src("thumbnail") }} 320w, {{ image.src("medium") }} 768w,{{ image.src("large") }} 1024w"
+            data-srcset="{{ image.src("medium") }} 320w, {{ image.src("medium_large") }} 768w,{{ image.src("large") }} 1024w"
         {% else %}
             data-srcset="{{ image.src("medium") }} 320w,{{ image.src("medium_large") }} 768w,{{ image.src("large") }} 1024w,{{ image.src }} 1600w"
         {% endif %}
