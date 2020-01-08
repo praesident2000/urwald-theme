@@ -26,7 +26,9 @@
     }
 
     &--article {
-        
+
+        min-height: 420px;
+
         .tease__wrapper {
             padding: 20px;
             background: transparent;
@@ -37,7 +39,12 @@
         }
         
         .tease__title {
+            margin-bottom: $spacer * 0.5;
             margin-top: $spacer * 0.5;
         }
+    }
+
+    .image-fit__copyright {
+        display: none;
     }
 }

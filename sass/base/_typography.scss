@@ -119,17 +119,25 @@ blockquote, .quote {
         line-height: 22px;
     }
 
+    .text a {
+        color: $jungle;
+
+        &:hover {
+            color: darken($jungle,25%);
+        }
+    }
+
     .copy-intro {
         font-size: 22px;
         line-height: 26px;
     }
 
     blockquote, .quote, blockquote p {
-        font-size: 24px;
+        font-size: 20px;
         line-height: 30px;
 
         p {
-            font-size: 24px;
+            font-size: 20px;
             line-height: 30px;
         }
     }
