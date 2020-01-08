@@ -139,7 +139,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: $spacer * 0.5 0;
+        margin: .5rem 0;
+        border-left: 1px solid $mud;
 
         &__inner, &__inner:after, &__inner:before {
             background-color: $mud;

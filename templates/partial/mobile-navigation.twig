@@ -16,6 +16,9 @@
                             <a class="nav-mobile__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
                         {% endif %}
                     </li>
+                    {% if not loop.last %}
+                        <div class="nav-mobile__divider"></div>
+                    {% endif %}
                 {% endfor %}
             </ul>
         </nav><!-- #nav -->
