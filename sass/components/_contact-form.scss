@@ -2,6 +2,7 @@
 
     border-top: 2px solid $white;
     color: $white;
+    position: relative;
     text-align: center;
 
     &__input, &__message {
@@ -42,6 +43,7 @@
         font-size: 20px;
         margin-top: $spacer;
         padding: $spacer * 0.5 $spacer * 1.5;
+        position: relative;
         transition: all .3s ease-in-out;
 
         &:hover {

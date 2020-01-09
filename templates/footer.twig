@@ -1,6 +1,5 @@
-<footer id="footer" class="footer">
+<footer id="footer" class="footer {% if is_contact %}footer--contact{% endif %}">
     {% set footer = options.footer %}
-
     <div class="footer__wrapper">
         <div class="footer__image">
             {% set image = footer.footer_image %}

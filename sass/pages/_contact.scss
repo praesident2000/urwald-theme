@@ -1,11 +1,33 @@
 .contact {
 
-    &__highlight {
+    &__text {
+        position: relative;
+        padding-bottom: $spacer * 3;
+    }
 
-        &::before {
-            content: "";
-            display: block;
-            background: $wine;
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+
+        overflow: hidden;
+
+        &__text {
+            position: relative;
+            padding-bottom: $spacer * 6;
+        }
+
+        &__highlight {
+            padding-bottom: 160px;
+
+            &::before {
+                content: "";
+                display: block;
+                background: $wine;
+                height: calc(100% + 160px);
+                width: calc(100% + 360px);
+                position: absolute;
+                top: -90px;
+                left: -120px;
+                border-radius: 40px 45% 0 0;
+            }
         }
     }
 }

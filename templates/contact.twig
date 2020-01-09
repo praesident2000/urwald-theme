@@ -40,6 +40,9 @@
                         {% endfor %}
                     </div>
                     <div class="col-12 col-lg-6 offset-lg-2 contact__highlight">
+                        <div class="contact__text">
+                            {{ post.form_text }}
+                        </div>
                         <div class="contact__form">
                             {% set shortcode = '[contact-form-7 id="' ~ post.form_id ~ '" html_class="form contact-form"]' %}
                             {{ function('do_shortcode', shortcode ) }}
