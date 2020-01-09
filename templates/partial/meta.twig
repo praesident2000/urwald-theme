@@ -1,6 +1,35 @@
 <meta charset="{{ site.charset }}" />
-<meta name="description" content="{{ site.description }}">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#284034" />
+
+{% set yoast_desc = post._yoast_wpseo_metadesc %}
+{% set yoast_og_image = post.get_field('_yoast_wpseo_opengraph-image') %}
+{% set yoast_twitter_image = post.get_field('_yoast_wpseo_twitter-image') %}
+
+{% if yoast_desc is empty %}
+    {% if post.meta.intro is not empty %}
+        <meta name="description" content="{{ post.meta.intro }}">
+        <meta property="og:description" content="{{ post.meta.intro }}">
+        <meta property="twitter:description" content="{{ post.meta.intro }}">
+    {% else %}
+        <meta name="description" content="{{ site.description }}">
+        <meta property="og:description" content="{{ site.description }}">
+        <meta property="twitter:description" content="{{ site.description }}">
+    {% endif %}
+{% endif %}
+{% if yoast_og_image is empty %}
+    {% if post.meta.featured_image is not empty %}
+        <meta property="og:image" content="{{ TimberImage(post.meta.featured_image).src }}">
+    {% else %}
+        <meta property="og:image" content="{{ options.social_image }}">
+    {% endif %}
+{% endif %}
+{% if yoast_twitter_image is empty %}
+    {% if post.meta.featured_image is not empty %}
+        <meta property="twitter:image" content="{{ TimberImage(post.meta.featured_image).src }}">
+    {% else %}
+        <meta property="twitter:image" content="{{ options.social_image }}">
+    {% endif %}
+{% endif %}
