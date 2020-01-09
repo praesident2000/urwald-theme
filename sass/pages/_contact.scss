@@ -1,0 +1,11 @@
+.contact {
+
+    &__highlight {
+
+        &::before {
+            content: "";
+            display: block;
+            background: $wine;
+        }
+    }
+}

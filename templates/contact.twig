@@ -7,7 +7,7 @@
         <section class="{{post.post_type}}__content content__no-hero">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-5">
+                    <div class="col-12 col-lg-4">
                         <div class="contact__intro">
                             <h2>{{ meta.title }}</h2>
                             <p>{{ meta.intro }}</p>
@@ -39,11 +39,10 @@
                             </div>
                         {% endfor %}
                     </div>
-                    <div class="col-12 col-lg-6 offset-lg-1s">
+                    <div class="col-12 col-lg-6 offset-lg-2 contact__highlight">
                         <div class="contact__form">
-                            <form action="" class="contact-form">
-                            
-                            </form>
+                            {% set shortcode = '[contact-form-7 id="' ~ post.form_id ~ '" html_class="form contact-form"]' %}
+                            {{ function('do_shortcode', shortcode ) }}
                         </div>
                     </div>
                 </div>

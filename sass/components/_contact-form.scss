@@ -1,0 +1,79 @@
+.contact-form {
+
+    border-top: 2px solid $white;
+    color: $white;
+    text-align: center;
+
+    &__input, &__message {
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid $white;
+        padding: $spacer * 0.75 $spacer * 0.5;
+        width: 100%;
+
+        &::placeholder {
+            background: transparent;
+            color: $white;
+            font-weight: normal;
+        }
+
+    }
+
+    &__message {
+        &::placeholder {
+            background: transparent;
+            color: $white;
+            font-weight: normal;
+            padding: $spacer * 0.75 $spacer * 0.5;
+        }
+
+    }
+
+    &__acceptance {
+        display: block;
+        width: 100%;
+    }
+
+    &__submit, &__submit[type='submit'] {
+        background-color: transparent;
+        border: 2px solid currentColor;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: $spacer;
+        padding: $spacer * 0.5 $spacer * 1.5;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: $crab;
+            border-color: $crab;
+        }
+    }
+
+    .acceptance {
+        display: block;
+        text-align: left;
+
+        & * {
+            width: 100%;
+        }
+
+        .wpcf7-list-item {
+            padding: $spacer * 0.75 $spacer * 0.5;
+            margin: 0;
+        }
+
+        label {
+            display: flex;
+            width: 100%;
+
+            .contact-form__acceptance {
+                width: 10%;
+            }
+
+            & > span {
+                width: 90%;
+            }
+        }
+    }
+}
