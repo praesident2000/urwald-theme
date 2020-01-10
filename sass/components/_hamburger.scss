@@ -64,6 +64,11 @@
         margin-top:  $spacer * 2;
         border-top: 2px solid transparent;
         right: $spacer * 2;
+        transition: margin-top 0.25s ease-out;
+
+        .header--active & {
+            margin-top:  $spacer;
+        }
 
         .header--active &__inner, .header--active &__inner:after, .header--active &__inner:before {
             background-color: $black;

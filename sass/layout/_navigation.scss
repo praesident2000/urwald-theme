@@ -18,6 +18,11 @@
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
         justify-content: flex-end;
         margin-top: $spacer * 2;
+        transition: margin-top 0.25s ease-out;
+
+        .header--active & {
+            margin-top:  $spacer;
+        }
 
         &__item {
             border-top: 2px solid transparent;

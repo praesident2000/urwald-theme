@@ -8,15 +8,16 @@
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
 
+        display: grid;
+        position: fixed;
         width: 100%;
         background-color: $white;
-        background-color: transparent;
         top: 0;
         left: 0;
         bottom: auto;
         transform: translateY(-100%);
-        transition: all 550ms ease-out;
-        min-height: 194px;
+        transition: transform 550ms ease-out;
+        min-height: 90px;
         z-index: 1000;
 
         &__wrapper {
@@ -24,11 +25,15 @@
         }
 
         &--show {
-            display: grid;
-            transform: translateY(0);
-            position: fixed;
+            background-color: transparent;
+            transform: translateY(0%);
+            transition: transform 550ms ease-out;
         }
         
+        &-logo__container {
+            margin: $spacer * 0.75 0;
+        }
+
         &__submenu {
             color: $black;
             font-size: 18px;
@@ -82,10 +87,23 @@
 
         &__image {
             margin-left: $spacer;
+            max-height: 64px;
+            transition: max-height 0.25s ease-out;
+
+            .header--show & {
+                max-height: 100%;
+            }
+
+            .header--active & {
+                max-height: 64px;
+            }
         }
 
         &__svg {
-            display: block;
+            
+            .header--show & {
+                display: block;
+            }
 
             svg {
                 fill: $white;
