@@ -1,0 +1,10 @@
+.cookieConsentWrapper {
+    background: $lime;
+}
+.cookieConsent {
+
+    &__Button {
+        background-color: $mud;
+        color: $white;
+    }
+}

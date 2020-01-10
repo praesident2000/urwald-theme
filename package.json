@@ -7,6 +7,7 @@
     "test": "tests"
   },
   "dependencies": {
+    "@beyonk/gdpr-cookie-consent-banner": "^6.2.1",
     "@fortawesome/fontawesome-free": "^5.11.2",
     "bootstrap": "^4.3.1",
     "flickity": "^2.2.1",
