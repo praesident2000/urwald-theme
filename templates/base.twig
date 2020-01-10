@@ -12,7 +12,9 @@
 	</script>
 	{% block styles %}
 		<link rel="stylesheet" href="https://use.typekit.net/fas6fpm.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="{{ site.theme.link }}/dist/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="{{ site.theme.link }}/dist/style.css" type="text/css" media="screen" /><script type="text/javascript">
+			deferstyle('{{ site.theme.link }}/dist/theme.css', 'theme-css', 500);
+		</script>
 	{% endblock %}
 	{% block head %}
     	{{function('wp_head')}}

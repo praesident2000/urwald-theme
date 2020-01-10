@@ -12,7 +12,6 @@
 @import "base/root";
 @import "base/select";
 
-
 // VENDORS
 @import "../node_modules/bootstrap/scss/mixins/breakpoints";
 @import "../node_modules/bootstrap/scss/mixins/grid-framework";
@@ -23,21 +22,12 @@
 @import "../node_modules/bootstrap/scss/modal";
 @import "../node_modules/flickity/css/flickity";
 @import "../node_modules/lazyframe/src/scss/lazyframe";
-
-
-@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../node_modules/@beyonk/gdpr-cookie-consent-banner/dist/style.css";
 
 @import "vendors/lozad";
-@import "vendors/rellax";
-@import "vendors/oax";
-@import "vendors/flickity";
 
 // LAYOUT
 @import "layout/header";
-@import "layout/footer";
 @import "layout/navigation";
 @import "layout/content";
 @import "layout/layout";
@@ -49,40 +39,9 @@
 @import "components/menu";
 @import "components/hamburger";
 @import "components/hero";
-@import "components/related-articles";
-@import "components/testimonial-slider";
-@import "components/share";
-@import "components/image-slider";
-@import "components/arrow";
-@import "components/post-masonry";
-@import "components/tease";
-@import "components/read-more";
-@import "components/plus";
-@import "components/teaser-slider";
-@import "components/numbers";
-@import "components/header-slider";
-@import "components/search";
-@import "components/target-groups";
-@import "components/card";
-@import "components/tour-list";
-@import "components/post-filter";
-@import "components/pagination";
 @import "components/logos";
-@import "components/assets";
 @import "components/video";
 @import "components/bread-crumbs";
-@import "components/cta";
-@import "components/accordion";
-@import "components/person";
-@import "components/contact-form";
-
-
 
 // PAGES
 @import "pages/home";
-@import "pages/post";
-@import "pages/downloads";
-@import "pages/contact";
-
-
-// THEMES
