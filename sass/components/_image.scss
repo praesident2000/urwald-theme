@@ -121,12 +121,16 @@
             position: absolute;
             left: $spacer * 0.5;
             bottom: $spacer * 0.5;
+            max-width: calc(46% - #{$spacer});
+            padding-right: $spacer * 0.5;
 
             &--second {
                 top: $spacer * 0.5;
                 left: auto;
                 bottom: auto;
                 right: $spacer * 0.5;
+                padding-left: $spacer * 0.5;
+                padding-right: 0;
             }
         }
     }
