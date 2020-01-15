@@ -14,6 +14,8 @@ $context = Timber::get_context();
 $timber_post = new Timber\Post();
 $context['post'] = $timber_post;
 
+include('newsletter.php');
+
 if ( post_password_required( $timber_post->ID ) ) {
 	Timber::render( 'single-password.twig', $context );
 } else {

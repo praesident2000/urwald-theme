@@ -1,6 +1,6 @@
 <div class="newsletter">
 
-    <form class="newsletter__form" action="">
+    <form method="POST" class="newsletter__form" action="">
 
         <h3 class="newsletter__title">
             {{ footer.newsletter }}
@@ -9,12 +9,45 @@
         <div class="newsletter__text">
             {{ footer.newsletter_text }}
         </div>
+        {% if result is not empty %} #}
+            <section id="newsletter__registration">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10  offset-md-1 col-12">
+                            {% if result == "ok" %}
+                                <div><strong>Vielen Dank.</strong> Sie haben sich für den Newsletter registriert.</div>
+                            {% elseif result == "duplicate" %}
+                                <div>Sie haben sich bereits für den Newsletter registriert.</div>
+                            {% else %}
+                                <div>Bei der Anmeldung ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {% endif %}
         <div class="row">
+            <div class="col-lg-6">
+                <div class="post-filter__select-wrapper">
+                    <select name="salutation" class="newsletter__select">
+                        <option value="">Anrede</option>
+                        <option value="Frau">Frau</option>
+                        <option value="Herr">Herr</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6">
+                <input type="text" name="firstname" class="newsletter__input" placeholder="Vorname"></input>
+            </div>
+            <div class="col-lg-6">
+                <input type="text" name="lastname" class="newsletter__input" placeholder="Nachname"></input>
+            </div>
             <div class="col-10 col-lg-8">
-                <input type="email" value="" name="EMAIL" class="newsletter__email" id="" placeholder="adresse@email.com"></input>
+                <input type="email" value="" name="email" class="newsletter__input" placeholder="adresse@email.com"></input>
             </div>
             <div class="col-12 col-lg-4">
-                <input type="submit" value="Anmelden" name="subscribe" id="" class="newsletter__submit btn">
+                <input type="submit" value="Anmelden" name="subscribe" class="newsletter__submit btn">
             </div>
         </div>
     </form>

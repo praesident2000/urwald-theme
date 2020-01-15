@@ -10,4 +10,6 @@ $context['post'] = $timber_post;
 $context['is_contact'] = true;
 $templates = array( 'contact.twig' );
 
+include('newsletter.php');
+
 Timber::render( $templates , $context );

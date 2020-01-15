@@ -23,4 +23,6 @@ $categories = get_categories();
 $context['categories'] = $categories;
 $context['articles'] = new Timber\PostQuery( $args_articles );
 
+include('newsletter.php');
+
 Timber::render( $templates, $context );

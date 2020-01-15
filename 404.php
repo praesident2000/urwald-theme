@@ -10,4 +10,7 @@
  */
 
 $context = Timber::get_context();
+
+include('newsletter.php');
+
 Timber::render( '404.twig', $context );

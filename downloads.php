@@ -9,4 +9,6 @@ $timber_post = new Timber\Post();
 $context['post'] = $timber_post;
 $templates = array( 'downloads.twig' );
 
+include('newsletter.php');
+
 Timber::render( $templates , $context );

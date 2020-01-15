@@ -27,6 +27,8 @@ $timber_post = new Timber\Post();
 $context['post'] = $timber_post;
 $templates = array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' );
 
+include('newsletter.php');
+
 if ( is_front_page() ) {
 	array_unshift( $templates, 'home.twig' );
 }
