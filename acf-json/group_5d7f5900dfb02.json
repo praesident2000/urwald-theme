@@ -38,7 +38,7 @@
                 },
                 {
                     "key": "field_5dc1915b33eb9",
-                    "label": "Featured Image",
+                    "label": "Artikelbild",
                     "name": "featured_image",
                     "type": "image",
                     "instructions": "",
@@ -224,5 +224,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1573558644
+    "modified": 1578991749
 }
