@@ -57,4 +57,4 @@ gulp.task("default", gulp.parallel(sass,css,js,watchFiles));
 
 gulp.task('run', gulp.parallel(sass,css,js));
 
-gulp.task('watch', gulp.series(watchFiles));
+gulp.task('watch', gulp.parallel(watchFiles));

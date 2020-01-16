@@ -42,14 +42,14 @@ $video-height: 120vh; //1400px;
     }
 
     &__video {
-        left: 90px;
+        left: $spacer * 4;
         position: absolute;
         width: 150%;
-        height: $video-height;
+        height: $video-height * 0.9;
     }
 
     &__wrapper {
-        height: 100vh;
+        height: 90vh;
         position: relative;
 
         .container {
@@ -62,77 +62,17 @@ $video-height: 120vh; //1400px;
         }
     }
 
-    .hero-video {
-        mask-image: $jungle-clip-path;
-        mask-repeat: no-repeat;
-        mask-size: contain;
-        mask-position: center;
-        position: absolute;
-
-        &__wrapper {
-            height: 100%;
-            width: 100%;
-        }
-
-        &__video {
-            height: 100%;
-            width: auto;
-        }
-
-        &__decoration {
-            background: $lime;
-            mask-image: $jungle-clip-path;
-            mask-repeat: no-repeat;
-            mask-size: contain;
-            mask-position: left;
-            height: 920px;
-            width: 100%;
-            display: block;
-            transform: translate(-15%,-40%);
-            position: absolute;
-        }
-        
-        .background-wrapper {
-            width: 100%;
-            background-color: transparent;
-            height: $video-height;
-            width: $video-height * 1.78;
-            overflow: hidden;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-        }
-        
-        .background-wrapper > iframe {
-            box-sizing: border-box;
-            height: 56.25vw;
-            left: 50%;
-            min-height: 100%;
-            min-width: 100%;
-            transform: translate(-50%, -50%);
-            position: absolute;
-            top: 50%;
-            width: 177.77777778vh;
-            z-index: 0;
-
-            &:before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                background-color: rgba($black,0.2);
-                top: 0;
-                left: 0;
-                z-index: 10;
-            }
-        }
+    &__title {
+        font-size: 42px;
+        line-height: 52px;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
         
+        &__wrapper {
+            height: 100vh;
+        }
+
         &__title {
             font-size: 75px;
             line-height: 88px;
@@ -142,6 +82,7 @@ $video-height: 120vh; //1400px;
             left: 570px;
             top: 140px;
             width: 100%;
+            height: $video-height;
         }
 
         .hero-video {
@@ -150,6 +91,89 @@ $video-height: 120vh; //1400px;
                 height: 920px;
                 transform: translate(15%,-10%);
             }
+        }
+    }
+}
+
+.hero-video {
+    mask-image: $jungle-clip-path;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    position: absolute;
+
+    &__wrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__video {
+        height: 100%;
+        width: auto;
+    }
+
+    &__decoration {
+        background: $lime;
+        mask-image: $jungle-clip-path;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: left;
+        height: 920px;
+        width: 100%;
+        display: block;
+        transform: translate(-15%,-40%);
+        position: absolute;
+    }
+    
+    .background-wrapper {
+        width: 100%;
+        background-color: transparent;
+        height: $video-height;
+        width: $video-height * 1.78;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+    
+    .background-wrapper > iframe {
+        box-sizing: border-box;
+        height: 56.25vw;
+        left: 49%;
+        min-height: 100%;
+        min-width: 100%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        width: 177.77777778vh;
+        z-index: 0;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($black,0.2);
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+    }
+}
+
+.homepage-map {
+    display: none;
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        display: block;
+        margin-bottom: $spacer * 4;
+
+        &__wrapper {
+            height: 530px;
+            width: 100%;
         }
     }
 }
