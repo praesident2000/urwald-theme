@@ -17,7 +17,9 @@
                         <div class="related-article__wrapper">
                             <div class="related-article__wrapper">
                                 <div class="related-article__kicker">{{ related_article.category }}</div>
-                                <h3 class="related-article__title">{{ article_meta.title }}</h3>
+                                <a class="related-article__title" href="{{ related_article.link }}">
+                                    <h3 class="related-article__title">{{ article_meta.title }}</h3>
+                                </a>
                             </div>
                         </div>
                         <div class="related-article__text">
