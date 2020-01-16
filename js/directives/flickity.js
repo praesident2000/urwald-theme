@@ -33,7 +33,19 @@ if ($('.testimonial-slider')[0]){
         cellSelector: ".testimonial-slider__slide"
     });
 }
-  
+
+if ($('.numbers-slider')[0]){
+    const flkty = new Flickity( '.numbers-slider', {
+        cellAlign: 'center',
+        pageDots: true,
+        prevNextButtons: false,
+        wrapAround: false,
+        setGallerySize: false,
+        groupCells: '100%',
+        cellSelector: ".numbers-slider__slide"
+    });
+}
+
 // START – Flickity previous next classes
 Flickity.createMethods.push( '_createPrevNextCells' );
 

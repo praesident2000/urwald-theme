@@ -3,9 +3,18 @@
         {% include "partial/image_fit.twig" with { 'image': content.image, 'masked': false } %}
     </div>
     <div class="container">
-        <div class="numbers__wrapper">
+        {# <div class="numbers__wrapper">
             {% for number in content.numbers %}
                 <div class="number col-10 col-md-3 offset-md-0">
+                    <div class="number__title">{{ number.number }}</div>
+                    <hr class="number__hr">
+                    <div class="number__text">{{ number.text }}</div>
+                </div>
+            {% endfor %}
+        </div> #}
+        <div class="numbers-slider" style="height:320px;">
+            {% for number in content.numbers %}
+                <div class="number numbers-slider__slide col-12 col-md-3 {% if loop.length > 1 or loop.length < 4 %}offset-md-1{% else %}offset-md-0{% endif %}">
                     <div class="number__title">{{ number.number }}</div>
                     <hr class="number__hr">
                     <div class="number__text">{{ number.text }}</div>

@@ -14,6 +14,24 @@
         padding-top: $spacer * 4;
     }
 
+    &__slider {
+        height: 320px;
+    }
+
+    .flickity-slider {
+        display: flex;
+        align-items: center;
+    }
+
+    .flickity-page-dots {
+        bottom: -$spacer * 2.25;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        .flickity-page-dots {
+            display: none;
+        }
+    }
 }
 
 .number {
