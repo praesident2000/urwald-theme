@@ -1,10 +1,5 @@
 {% extends "page.twig" %}
 
-{% block head %}
-	{{ parent() }}
-	<script type="text/javascript" src="//www.outdooractive.com/alpportal/oa_head.js?proj=api-dev-oa&amp;key=yourtest-outdoora-ctiveapi&amp;lang=de"></script>
-{% endblock %}
-
 {% block content %}
 	<article class="{{post.post_type}}" id="post-{{post.ID}}">
         <section class="{{post.post_type}}__header">
@@ -29,15 +24,31 @@
 {% block scripts %}
     {{ parent() }}
     <script type="deferjs">
+        const documentHead = document.head;
 
-        var conf = {
-            frontendtype:   "tour",          // choose content type
-            zoom:           11,              // set initial zoom level
-            initDataPointList : { searchNearby : { radius : 25000 } },
-            center:       [ 10.438, 51.102 ] // set initial map center
-        };
+        // load outdooractive javascript API
+        let element = document.createElement('script');
 
-        var fvp = oa.api.flexviewpage( conf );
+        element.setAttribute('type', 'text/javascript');
+        {# element.setAttribute('src',  "http://www.outdooractive.com/alpportal/oa_head.js?proj=api-dev-oa&key=yourtest-outdoora-ctiveapi&callback=initOA&lang=de"); #}
+        element.setAttribute('src',  "http://www.outdooractive.com/alpportal/oa_head.js?proj=api-fv-thueringer-urwaldpfade&key=ISJMRUV9-EMWGKNCR-4OSSF7HO&callback=initOA&lang=de");
+        documentHead.appendChild(element);
+
+        function initOA() {
+            var conf = {
+                frontendtype:   "tour",          // choose content type
+                zoom:           11,              // set initial zoom level
+                initDataPointList : { searchNearby : { radius : 25000 } },
+                center:       [ 10.438, 51.102 ], // set initial map center
+                actionOpenType : "page-load",
+                openOOIUrl : function(data) {
+                    var base_url = window.location.origin;
+                    return base_url + "/routen/" + data.title;
+                },
+            };
+
+            var fvp = oa.api.flexviewpage( conf );
+        }
 
     </script>
 {% endblock %}

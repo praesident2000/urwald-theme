@@ -137,6 +137,8 @@
 }
 .map {
 
+    min-height: 50vh;
+
     margin-top: $spacer * 4;
 
     &__wrapper {
