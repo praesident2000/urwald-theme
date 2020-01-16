@@ -1,10 +1,5 @@
 {% extends "base.twig" %}
 
-{% block head %}
-	{{ parent() }}
-	<script type="text/javascript" src="//www.outdooractive.com/alpportal/oa_head.js?proj=api-dev-oa&amp;key=yourtest-outdoora-ctiveapi&amp;lang=de"></script>
-{% endblock %}
-
 {% set tour = post.get_field('tour_meta') %}
 {% set meta = post.meta %}	
 
@@ -32,13 +27,27 @@
     {{ parent() }}
 	{% set tour_id = tour.tour_id %}
     <script type="deferjs">
-		var id = "{{ tour_id }}"; 
-		var conf = { 
-			id: id,
-			actionOpenType: "in-page"
-		};
 
-		// instantiate FlexView API detail page
-		dp = oa.api.detailpage( conf );
+		const documentHead = document.head;
+
+        // load outdooractive javascript API
+        let element = document.createElement('script');
+
+        element.setAttribute('type', 'text/javascript');
+        element.setAttribute('src',  "http://www.outdooractive.com/alpportal/oa_head.js?proj=api-dev-oa&key=yourtest-outdoora-ctiveapi&callback=initOA&lang=de");
+        {# element.setAttribute('src',  "http://www.outdooractive.com/alpportal/oa_head.js?proj=api-fv-thueringer-urwaldpfade&key=ISJMRUV9-EMWGKNCR-4OSSF7HO&callback=initOA&lang=de"); #}
+        documentHead.appendChild(element);
+
+        function initOA() {
+
+			var id = "{{ tour_id }}"; 
+			var conf = { 
+				id: id,
+				actionOpenType: "in-page"
+			};
+
+			// instantiate FlexView API detail page
+			dp = oa.api.detailpage( conf );
+		}
 	</script> 
 {% endblock %}
