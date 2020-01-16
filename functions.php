@@ -72,7 +72,7 @@ class StarterSite extends Timber\Site {
             'public' => true,
             'has_archive' => true,
             'show_in_nav_menus' => true,
-            'rewrite' => ['slug' => 'tours', 'with_front' => false],
+            'rewrite' => ['slug' => 'routen', 'with_front' => false],
             'taxonomies' => ['category'],
 		] );
 
@@ -95,7 +95,7 @@ class StarterSite extends Timber\Site {
             'public' => true,
             'has_archive' => true,
             'show_in_nav_menus' => true,
-            'rewrite' => ['slug' => 'articles', 'with_front' => false],
+            'rewrite' => ['slug' => 'artikel', 'with_front' => false],
             'taxonomies' => ['category'],
 		] );
 
