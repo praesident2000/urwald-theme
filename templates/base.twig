@@ -54,7 +54,9 @@
 		{% endblock %}
 
 		{% block scripts %}
-		    <script type="deferjs" src="{{ site.theme.link }}/dist/index.min.js"></script>
+			<script type="text/javascript">
+				deferscript("{{ site.theme.link }}/dist/index.min.js", 'index', 800);
+			</script>
 		{% endblock %}
 	</body>
 </html>
