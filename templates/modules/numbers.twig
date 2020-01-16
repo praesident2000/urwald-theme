@@ -12,7 +12,7 @@
                 </div>
             {% endfor %}
         </div> #}
-        <div class="numbers-slider" style="height:320px;">
+        <div class="numbers-slider">
             {% for number in content.numbers %}
                 <div class="number numbers-slider__slide col-12 col-md-3 {% if loop.length > 1 or loop.length < 4 %}offset-md-1{% else %}offset-md-0{% endif %}">
                     <div class="number__title">{{ number.number }}</div>
