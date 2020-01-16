@@ -16,18 +16,6 @@
         display: block;
         object-fit: cover;
         z-index: 1;
-
-        &--masked {
-            mask-image: $jungle-clip-path;
-            mask-repeat: no-repeat;
-            mask-size: contain;
-            mask-position: center;
-        }
-
-        &--rounded {
-            border-radius: 50%;
-        }
-
     }
 
     &__copyright {
@@ -41,6 +29,21 @@
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+
+        &__image {
+    
+            &--masked {
+                mask-image: $jungle-clip-path;
+                mask-repeat: no-repeat;
+                mask-size: contain;
+                mask-position: center;
+            }
+    
+            &--rounded {
+                border-radius: 50%;
+            }
+    
+        }
 
         &__copyright {
             bottom: $spacer;

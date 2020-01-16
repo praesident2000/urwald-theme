@@ -1,22 +1,20 @@
 .header-slider {
-    height: 920px;
-    // height: 100vh;
+    height: calc(100vh - 56px);
+
     .flickity-slider {
         transform: none !important;
     }
 
     &__slide {
-        position: relative;
+        // position: relative;
         height: 100%;
         width: 100%;
         left: 0 !important;
         opacity: 0;
-        transition: opacity 1.5s ease-in;
-        z-index: -1;
+        transition: opacity 1.5s ease-out;
 
         &.is-selected {
             opacity: 1;
-            z-index: 0;
         }
     }
 
@@ -27,30 +25,9 @@
     }
 
     &__image {
-        position: absolute;
-        top: -200px;
-        right: 80px;
+        position: relative;
         height: 100%;
-        width: 920px;
-
-        .image-fit__image--masked {
-            mask-position: right;
-        }
-        .is-selected & {
-            &::before {
-                content: "";
-                background: $wine;
-                mask-image: $jungle-clip-path;
-                mask-repeat: no-repeat;
-                mask-size: contain;
-                mask-position: right;
-                height: 490px;
-                width: 490px;
-                display: block;
-                transform: translate(-25%,100%);
-            }
-
-        }
+        filter: brightness(0.5);
     }
 
     &__title {
@@ -66,11 +43,49 @@
         margin-top: $spacer * 2;
         display: block;
     }
+
+    .flickity-page-dots {
+        bottom: $spacer * 2.5;
+    }
+    
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+
+        height: 920px;
 
         &__title {
             font-size: 38px;
             line-height: 58px;
+        }
+
+        &__image {
+            position: absolute;
+            filter: none;
+            top: -200px;
+            right: 80px;
+            width: 920px;
+    
+            .image-fit__image--masked {
+                mask-position: right;
+            }
+            .is-selected & {
+                &::before {
+                    content: "";
+                    background: $wine;
+                    mask-image: $jungle-clip-path;
+                    mask-repeat: no-repeat;
+                    mask-size: contain;
+                    mask-position: right;
+                    height: 490px;
+                    width: 490px;
+                    display: block;
+                    transform: translate(-25%,100%);
+                }
+    
+            }
+        }
+
+        .flickity-page-dots {
+            display: none;
         }
     }
 }
