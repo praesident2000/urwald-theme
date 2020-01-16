@@ -34,7 +34,6 @@
 		</div>
 
 		{% include 'header.twig' %}
-		{% include 'partial/share_content.twig' %}
 		{% set map_url = TimberPost(options.map_link).link %}
 		<a href="{{ map_url }}" class="btn btn--map"><i class="far fa-map"></i></a>
 
@@ -58,5 +57,6 @@
 				deferscript("{{ site.theme.link }}/dist/index.min.js", 'index', 800);
 			</script>
 		{% endblock %}
+		{% include 'partial/share_content.twig' %}
 	</body>
 </html>
