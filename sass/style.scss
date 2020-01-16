@@ -22,7 +22,6 @@
 @import "../node_modules/bootstrap/scss/modal";
 @import "../node_modules/flickity/css/flickity";
 @import "../node_modules/lazyframe/src/scss/lazyframe";
-// @import "../node_modules/@beyonk/gdpr-cookie-consent-banner/dist/style.css";
 
 @import "vendors/lozad";
 
@@ -44,6 +43,7 @@
 @import "components/bread-crumbs";
 @import "components/tease";
 @import "components/post-masonry";
+@import "components/header-slider";
 
 // PAGES
 @import "pages/home";
