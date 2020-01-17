@@ -14,7 +14,7 @@ $args_articles = array(
 	'post_type' => 'urwald_article',
 	'orderby' => 'date',
 	'order' => 'DESC',
-	'posts_per_page' => 10,
+	'posts_per_page' => 12,
 	'paged' => $paged
 );
 
