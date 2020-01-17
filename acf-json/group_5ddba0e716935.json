@@ -356,7 +356,7 @@
             },
             "button_label": "Slide hinzufügen",
             "min": "",
-            "max": 8
+            "max": 10
         }
     ],
     "location": [
@@ -380,5 +380,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1575466195
+    "modified": 1579253284
 }
