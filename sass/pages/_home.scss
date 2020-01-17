@@ -19,14 +19,6 @@ $video-height: 120vh; //1400px;
         width: 100%;
         height: $video-height;
 
-        .image-fit {
-            overflow: visible;
-        }
-
-        .image-fit__image--masked {
-            mask-position: left;
-        }
-
         &::before {
             content: "";
             background: $lime;
@@ -38,6 +30,22 @@ $video-height: 120vh; //1400px;
             width: 100%;
             display: block;
             transform: translate(-25%, -25%);
+        }
+
+        .image-fit {
+            overflow: visible;
+        }
+
+        .image-fit__image--masked {
+            mask-position: left;
+        }
+
+        .image-fit__copyright {
+            left: 50%;
+
+            &::before {
+                display: none;
+            }
         }
     }
 

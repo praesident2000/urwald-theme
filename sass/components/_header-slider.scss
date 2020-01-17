@@ -28,6 +28,11 @@
         position: relative;
         height: 100%;
         filter: brightness(0.5);
+
+
+        .image-fit__copyright {
+            left: 50%;
+        }
     }
 
     &__title {
