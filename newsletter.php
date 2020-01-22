@@ -7,7 +7,7 @@ if(isset($_POST['submit_btn'])){
     $lastname   = $_POST['lastname'];
     $url  = 'https://api.campaign.episerver.net/http/form/wT5fE1bkfvgwSG0Xa3dAZ0P7SiFBF1lF/subscribe';
     $url .= '?bmRecipientId=' . urlencode(utf8_decode($email));
-    $url .= '&bmOptInId=' . '285288455464';
+    // $url .= '&bmOptInId=' . '285288455464';
     $url .= '&salutation=' . utf8_decode($salutation);
     $url .= '&firstname=' . utf8_decode($firstname);
     $url .= '&lastname=' . utf8_decode($lastname);
