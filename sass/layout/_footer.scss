@@ -138,6 +138,14 @@ $image-offset: 50px;
         color: $mud;
     }
 
+    .hamburger {
+        padding: 0;
+    }
+
+    .hamburger__inner, .hamburger__inner:after, .hamburger__inner:before {
+        background-color: $mud;
+    }
+
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
 
         &__submit {
@@ -146,6 +154,13 @@ $image-offset: 50px;
 
         .row {
             justify-content: flex-start;
+        }
+
+        .hamburger {
+            position: relative;
+            margin-top: 0;
+            right: auto;
+            border-top: none;
         }
     }
 }
