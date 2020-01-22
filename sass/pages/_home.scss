@@ -14,23 +14,8 @@ $video-height: 120vh; //1400px;
 
     &__image {
         position: absolute;
-        left: 570px;
-        top: 140px;
         width: 100%;
-        height: $video-height;
-
-        &::before {
-            content: "";
-            background: $lime;
-            mask-image: $jungle-clip-path;
-            mask-repeat: no-repeat;
-            mask-size: contain;
-            mask-position: left;
-            height: 920px;
-            width: 100%;
-            display: block;
-            transform: translate(-25%, -25%);
-        }
+        height: 100vh;
 
         .image-fit {
             overflow: visible;
@@ -41,7 +26,9 @@ $video-height: 120vh; //1400px;
         }
 
         .image-fit__copyright {
-            left: 50%;
+            top: $spacer * 4;
+            transform: rotate(90deg);
+            transform-origin: top;
 
             &::before {
                 display: none;
@@ -86,8 +73,47 @@ $video-height: 120vh; //1400px;
             line-height: 88px;
         }
 
+        &__image {
+            position: absolute;
+            left: 35%;
+            top: 140px;
+            width: 100%;
+            height: $video-height;
+    
+            &::before {
+                content: "";
+                background: $lime;
+                mask-image: $jungle-clip-path;
+                mask-repeat: no-repeat;
+                mask-size: contain;
+                mask-position: left;
+                height: 920px;
+                width: 100%;
+                display: block;
+                transform: translate(-25%, -25%);
+            }
+    
+            .image-fit {
+                overflow: visible;
+            }
+    
+            .image-fit__image--masked {
+                mask-position: left;
+            }
+    
+            .image-fit__copyright {
+                top: $spacer * 4;
+                transform: rotate(90deg);
+                transform-origin: top;
+    
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
         &__video {
-            left: 570px;
+            left: 30%;
             top: 140px;
             width: 100%;
             height: $video-height;
