@@ -95,6 +95,12 @@
             .hero__intro {
                 padding-left: 45px;
             }
+
+            .image-fit__copyright {
+                top: $spacer * 4;
+                transform: rotate(90deg);
+                transform-origin: top;
+            }
         }
     }
 }
