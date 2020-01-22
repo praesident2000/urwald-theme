@@ -2,5 +2,5 @@ vendor
 wp-content
 node_modules
 css
-dist
+# dist
 *.DS_Store
