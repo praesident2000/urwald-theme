@@ -9,11 +9,11 @@
         <div class="newsletter__text">
             {{ footer.newsletter_text }}
         </div>
-        {% if result is not empty %} #}
-            <section id="newsletter__registration">
+        {% if result is not empty %}
+            <section class="newsletter__result">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-10  offset-md-1 col-12">
+                        <div class="col-10 col-md-8 offset-md-1">
                             {% if result == "ok" %}
                                 <div><strong>Vielen Dank.</strong> Sie haben sich für den Newsletter registriert.</div>
                             {% elseif result == "duplicate" %}
@@ -21,6 +21,13 @@
                             {% else %}
                                 <div>Bei der Anmeldung ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.</div>
                             {% endif %}
+                        </div>
+                        <div class="col-2">
+                            <div id="newsletter-close" class="hamburger active">
+                                <div class="hamburger__box">
+                                    <div class="hamburger__inner"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -47,7 +54,7 @@
                 <input type="email" value="" name="email" class="newsletter__input" placeholder="adresse@email.com"></input>
             </div>
             <div class="col-12 col-lg-4">
-                <input type="submit" value="Anmelden" name="subscribe" class="newsletter__submit btn">
+                <input type="submit" value="Anmelden" name="submit_btn" class="newsletter__submit btn">
             </div>
         </div>
     </form>

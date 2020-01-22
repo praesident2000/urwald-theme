@@ -128,6 +128,16 @@ $image-offset: 50px;
         justify-content: center;
     }
 
+    &__result {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        background: $lime;
+        z-index: 900;
+        color: $mud;
+    }
+
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
 
         &__submit {

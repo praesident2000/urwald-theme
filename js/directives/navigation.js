@@ -90,3 +90,7 @@ $(document).ready(function(){
         header.addClass('header--active');
     }
 });
+
+$('#newsletter-close').on('click', () => {
+    $(this).nearest('.newsletter__result').fade();
+});
