@@ -10,7 +10,7 @@
             {{ footer.newsletter_text }}
         </div>
         {% if result is not empty %}
-            <section class="newsletter__result">
+            <section id="newsletter-result" class="newsletter__result">
                 <div class="container">
                     <div class="row">
                         <div class="col-10 col-md-8 offset-md-1">
@@ -45,13 +45,13 @@
             </div>
             <div class="col-lg-6"></div>
             <div class="col-10 col-lg-6">
-                <input type="text" name="firstname" class="newsletter__input" placeholder="Vorname"></input>
+                <input type="text" name="firstname" class="newsletter__input" placeholder="Vorname" required></input>
             </div>
             <div class="col-10 col-lg-6">
-                <input type="text" name="lastname" class="newsletter__input" placeholder="Nachname"></input>
+                <input type="text" name="lastname" class="newsletter__input" placeholder="Nachname" required></input>
             </div>
             <div class="col-10 col-lg-8">
-                <input type="email" value="" name="email" class="newsletter__input" placeholder="adresse@email.com"></input>
+                <input type="email" value="" name="email" class="newsletter__input" placeholder="adresse@email.com" required></input>
             </div>
             <div class="col-12 col-lg-4">
                 <input type="submit" value="Anmelden" name="submit_btn" class="newsletter__submit btn">

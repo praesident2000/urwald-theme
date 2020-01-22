@@ -92,5 +92,5 @@ $(document).ready(function(){
 });
 
 $('#newsletter-close').on('click', () => {
-    $(this).closest('.newsletter__result').fadeOut();
+    $('#newsletter-result').fadeOut();
 });
