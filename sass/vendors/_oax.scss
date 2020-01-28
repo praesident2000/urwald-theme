@@ -221,5 +221,27 @@
         .oax_snippet_labels:after {
             display: none;
         }
+
+        .oax_btn_transpOnLight {
+            border: 1px solid $mud;
+            background-color: $white;
+            color: $mud;
+        }
+
+        .oax_btn_dark {
+            border: 1px solid $white;
+            background-color: $mud;
+            color: $white;
+        }
+
+        .oax-backcont-flexview a, .oax-backcont-detailpage a, .oax-to-flexview a {
+            color: $white;
+        }
+
+        @media screen and (max-width: map-get($grid-breakpoints, "xl")) {
+            &_aw {
+                background-color: $white;
+            }
+        }
     }
 }

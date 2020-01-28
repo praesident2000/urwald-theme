@@ -1,5 +1,5 @@
 .post-masonry {
-    margin-top: $spacer * 4;
+    margin-top: $spacer * 2;
 
     padding-left: $spacer * 0.5;
     padding-right: $spacer * 0.5;
@@ -7,5 +7,9 @@
     .tease {
         padding-left: $spacer * 0.5;
         padding-right: $spacer * 0.5;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        margin-top: $spacer * 4;
     }
 }

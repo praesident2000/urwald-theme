@@ -6,14 +6,13 @@
     &__title {
         display: inline;
         font-family: $merriweather;
-        font-size: 20px;
         margin-right: $spacer * 2;
+        padding-left: $spacer * 0.5;
     }
 
     &__select {
         font-family: $merriweather;
-        font-size: 20px;
-        font-weight: bold;
+        font-size: 19px;
         padding-right: $spacer * 0.75;
     }
 
@@ -34,6 +33,15 @@
             width: 12px;
             position: absolute;
             pointer-events: none;
+        }
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        &__title {
+            font-size: 20px;
+        }
+        &__select {
+            font-size: 20px;
+            font-weight: bold;
         }
     }
 }

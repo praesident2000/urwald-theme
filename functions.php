@@ -239,7 +239,7 @@ class StarterSite extends Timber\Site {
 new StarterSite();
 
 if ( class_exists( 'Timber' ) ){
-    Timber::$cache = false;
+    Timber::$cache = true;
 }
 
 if( function_exists('acf_add_options_page') ) {
@@ -249,7 +249,8 @@ if( function_exists('acf_add_options_page') ) {
 	   'page_title' 	=> 'Theme Optionen',
 	   'menu_title' 	=> 'Optionen',
 	   'menu_slug' 	    => 'theme-settings',
-	   'redirect' 		=> false
+	   'redirect' 		=> false,
+	   'autoload'       => true,
    ));
 
 };
