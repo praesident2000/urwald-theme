@@ -22,7 +22,17 @@
         <div class="row">
             <div class="footer__logos col-12 col-lg-10 offset-lg-1">
                 {% for logo in footer.partner_logos %}
-                    {% include 'partial/logo.twig' with { logo: logo } %}
+                    <div class="logo">
+                        {% if logo.link %}
+                            <a href="{{ logo.link }}" class="logo__link" target="_blank">
+                                {% set image = TimberImage(logo.logo) %}
+                                <img class="logo__image lozad" data-src="{{ image.src }}" alt="{{ image.alt }}" />
+                            </a>
+                        {% else %}
+                            {% set image = TimberImage(logo.logo) %}
+                            <img class="logo__image lozad" data-src="{{ image.src }}" alt="{{ image.alt }}" />
+                        {% endif %}
+                    </div>
                 {% endfor %}
             </div>
         </div>
